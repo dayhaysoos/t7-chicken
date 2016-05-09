@@ -2,6 +2,7 @@ const path = require('path');
 const merge = require('webpack-merge');
 const webpack = require('webpack');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
+//const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
@@ -26,8 +27,14 @@ const common = {
     loaders: [
       {
         test: /\.css$/,
-        loaders: ['style', 'css'],
+        //loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+        loaders: ['style', 'css', 'sass'],
         include: PATHS.app
+      },
+      {
+        test: /\.scss$/,
+        //loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+        loaders: ['style', 'css', 'sass']
       },
       {
         test: /\.jsx?$/,
@@ -36,6 +43,11 @@ const common = {
       }
     ]
   }
+  // plugins: [
+  // new ExtractTextPlugin('index.css', {
+  //   allChunks: true
+  // })
+  // ]
 };
 
 if(TARGET === 'start' || !TARGET) {
