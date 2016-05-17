@@ -38,6 +38,11 @@
     "webpack-merge": "^0.12.0"
   },
   "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^6.2.0",
+    "mongoose": "^4.4.17",
+    "morgan": "^1.7.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2"
   }
