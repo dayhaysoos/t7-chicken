@@ -5,7 +5,7 @@ const initialState = {
 	data: []
 }
 
-function tekkenChicken(state = initialState, action) {
+export function tekkenChicken(state = initialState, action) {
 	switch (action.type) {
 		case GET_JSON:
 		return Object.assign({}, state, {
