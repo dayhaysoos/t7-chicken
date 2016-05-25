@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
 import styles from './components/App.scss';
+import routes from './routes.jsx';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+console.log(routes);
+
+ReactDOM.render(routes(), document.getElementById('app'));
+
+
+
+
