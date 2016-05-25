@@ -15,7 +15,6 @@ export default class App extends React.Component {
     return(
             <div className="container">
                 <Navbar />
-                <Table />
             </div>
         );
   }
