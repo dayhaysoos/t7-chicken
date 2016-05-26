@@ -11,7 +11,7 @@ export default class Navbar extends React.Component {
 					<ul className="nav navbar-nav">
 						<li><a href="#">TC</a></li>
 						<li><Link to="/">Home</Link></li>
-						<li><Link to="/table">Home</Link></li>
+						<li><Link to="/frame-data">Frame Data</Link></li>
 					</ul>
 					<ul className="nav navbar-nav navbar-right">
 					<li><Link to="/login">Login</Link></li>

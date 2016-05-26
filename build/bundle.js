@@ -20477,7 +20477,7 @@
 				{ path: '/', component: _App2.default },
 				_react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
 				_react2.default.createElement(_reactRouter.Route, { path: '/login', component: _Login2.default }),
-				_react2.default.createElement(_reactRouter.Route, { path: '/table', component: _Table2.default }),
+				_react2.default.createElement(_reactRouter.Route, { path: '/framedata', component: _FrameData2.default }),
 				_react2.default.createElement(_reactRouter.Route, { path: '/register', component: _Register2.default })
 			)
 		);
@@ -20491,10 +20491,6 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _Navbar = __webpack_require__(174);
-
-	var _Navbar2 = _interopRequireDefault(_Navbar);
-
 	var _Home = __webpack_require__(236);
 
 	var _Home2 = _interopRequireDefault(_Home);
@@ -20503,9 +20499,9 @@
 
 	var _Login2 = _interopRequireDefault(_Login);
 
-	var _Table = __webpack_require__(238);
+	var _FrameData = __webpack_require__(238);
 
-	var _Table2 = _interopRequireDefault(_Table);
+	var _FrameData2 = _interopRequireDefault(_FrameData);
 
 	var _Register = __webpack_require__(239);
 
@@ -20612,17 +20608,17 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'nav',
-					null,
+					{ className: 'navbar' },
 					_react2.default.createElement(
 						'div',
-						{ 'class': 'container-fluid' },
-						_react2.default.createElement('div', { 'class': 'navbar-header' }),
+						{ className: 'container-fluid' },
+						_react2.default.createElement('div', { className: 'navbar-header' }),
 						_react2.default.createElement(
 							'div',
-							{ 'class': 'navbar-collapse collaspse' },
+							{ className: 'navbar-collapse collaspse' },
 							_react2.default.createElement(
 								'ul',
-								{ 'class': 'nav navbar-nav' },
+								{ className: 'nav navbar-nav' },
 								_react2.default.createElement(
 									'li',
 									null,
@@ -20633,42 +20629,42 @@
 									)
 								),
 								_react2.default.createElement(
-									_reactRouter.Link,
-									{ to: '/' },
+									'li',
+									null,
 									_react2.default.createElement(
-										'li',
-										null,
+										_reactRouter.Link,
+										{ to: '/' },
 										'Home'
 									)
 								),
 								_react2.default.createElement(
-									_reactRouter.Link,
-									{ to: '/login' },
+									'li',
+									null,
 									_react2.default.createElement(
-										'li',
-										null,
-										'Login'
-									)
-								),
-								_react2.default.createElement(
-									_reactRouter.Link,
-									{ to: '/table' },
-									_react2.default.createElement(
-										'li',
-										null,
-										'Table'
+										_reactRouter.Link,
+										{ to: '/frame-data' },
+										'Frame Data'
 									)
 								)
 							),
 							_react2.default.createElement(
 								'ul',
-								{ 'class': 'nav navbar-nav navbar-right' },
+								{ className: 'nav navbar-nav navbar-right' },
 								_react2.default.createElement(
-									_reactRouter.Link,
-									{ to: '/register' },
+									'li',
+									null,
 									_react2.default.createElement(
-										'li',
-										null,
+										_reactRouter.Link,
+										{ to: '/login' },
+										'Login'
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									_react2.default.createElement(
+										_reactRouter.Link,
+										{ to: '/register' },
 										'Register'
 									)
 								)
@@ -26228,11 +26224,20 @@
 			value: function render() {
 				return _react2.default.createElement(
 					"div",
-					{ className: "container home-container" },
+					{ className: "container" },
 					_react2.default.createElement(
-						"h1",
-						null,
-						"Welcome to Tekken Chicken!"
+						"div",
+						{ className: "jumbotron text-center" },
+						_react2.default.createElement(
+							"h1",
+							null,
+							"Welcome To Tekken Chicken!"
+						),
+						_react2.default.createElement(
+							"p",
+							null,
+							"Tekken Chicken is a suite of tools designed to help any Tekken fans take their skills to the next level!"
+						)
 					)
 				);
 			}
@@ -26332,30 +26337,30 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Table = function (_React$Component) {
-		_inherits(Table, _React$Component);
+	var FrameData = function (_React$Component) {
+		_inherits(FrameData, _React$Component);
 
-		function Table() {
-			_classCallCheck(this, Table);
+		function FrameData() {
+			_classCallCheck(this, FrameData);
 
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(Table).apply(this, arguments));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(FrameData).apply(this, arguments));
 		}
 
-		_createClass(Table, [{
+		_createClass(FrameData, [{
 			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
 					"h2",
 					{ id: "test" },
-					"Table"
+					"Frame Data"
 				);
 			}
 		}]);
 
-		return Table;
+		return FrameData;
 	}(_react2.default.Component);
 
-	exports.default = Table;
+	exports.default = FrameData;
 
 /***/ },
 /* 239 */
