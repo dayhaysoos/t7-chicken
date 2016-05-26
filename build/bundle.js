@@ -20145,7 +20145,7 @@
 
 
 	// module
-	exports.push([module.id, "#test {\n  color: purple; }\n", ""]);
+	exports.push([module.id, "#test {\n  color: purple; }\n\n.register-container .form-signin {\n  margin: 0 auto;\n  max-width: 330px; }\n\n.login-container .form-signin {\n  margin: 0 auto;\n  max-width: 330px; }\n", ""]);
 
 	// exports
 
@@ -20477,7 +20477,7 @@
 				{ path: '/', component: _App2.default },
 				_react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
 				_react2.default.createElement(_reactRouter.Route, { path: '/login', component: _Login2.default }),
-				_react2.default.createElement(_reactRouter.Route, { path: '/framedata', component: _FrameData2.default }),
+				_react2.default.createElement(_reactRouter.Route, { path: '/frame-data', component: _FrameData2.default }),
 				_react2.default.createElement(_reactRouter.Route, { path: '/register', component: _Register2.default })
 			)
 		);
@@ -26289,14 +26289,37 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					{ className: 'login-container' },
+					{ className: 'login-container container text-center' },
 					_react2.default.createElement(
 						'form',
-						{ 'login-form': true, method: 'POST' },
-						_react2.default.createElement('label', { className: 'form-label', htmlFor: 'username' }),
-						_react2.default.createElement('input', { className: 'form-input', name: 'username', type: 'text', placeholder: 'username' }),
-						_react2.default.createElement('label', { className: 'form-label', htmlFor: 'password' }),
-						_react2.default.createElement('input', { className: 'form-input', name: 'password', type: 'text', placeholder: 'password' })
+						{ className: 'form-signin' },
+						_react2.default.createElement(
+							'h2',
+							{ className: 'form-signin-heading' },
+							'Please sign in'
+						),
+						_react2.default.createElement(
+							'label',
+							{ htmlFor: 'inputEmail', className: 'sr-only' },
+							'Email address'
+						),
+						_react2.default.createElement('input', { type: 'email', id: 'inputEmail', className: 'form-control', placeholder: 'Email address', required: '', autofocus: '' }),
+						_react2.default.createElement(
+							'label',
+							{ htmlFor: 'inputPassword', className: 'sr-only' },
+							'Password'
+						),
+						_react2.default.createElement('input', { type: 'password', id: 'inputPassword', className: 'form-control', placeholder: 'Password', required: '' }),
+						_react2.default.createElement(
+							'button',
+							{ className: 'btn btn-lg btn-primary btn-block', type: 'submit' },
+							'Sign in'
+						)
+					),
+					_react2.default.createElement(
+						'h2',
+						null,
+						'Or'
 					),
 					_react2.default.createElement(
 						_reactRouter.Link,
@@ -26401,21 +26424,26 @@
 			value: function render() {
 				return _react2.default.createElement(
 					"div",
-					{ className: "register-container" },
+					{ className: "register-container container" },
 					_react2.default.createElement(
 						"form",
-						{ "class-name": "register-form", method: "POST" },
+						{ className: "form-signin", method: "POST" },
+						_react2.default.createElement(
+							"h2",
+							{ className: "form-signin-header text-center" },
+							"Register"
+						),
 						_react2.default.createElement("label", { className: "form-label", htmlFor: "register-email" }),
-						_react2.default.createElement("input", { className: "form-input", name: "register-email", type: "text", placeholder: "email" }),
+						_react2.default.createElement("input", { className: "form-input form-control", name: "register-email", type: "text", placeholder: "email", required: "" }),
 						_react2.default.createElement("label", { className: "form-label", htmlFor: "register-username" }),
-						_react2.default.createElement("input", { className: "form-input", name: "register-username", type: "text", placeholder: "username" }),
+						_react2.default.createElement("input", { className: "form-input form-control", name: "register-username", type: "text", placeholder: "username", required: "" }),
 						_react2.default.createElement("label", { className: "form-label", htmlFor: "register-password" }),
-						_react2.default.createElement("input", { className: "form-input", name: "register-password", type: "text", placeholder: "password" }),
+						_react2.default.createElement("input", { className: "form-input form-control", name: "register-password", type: "text", placeholder: "password", required: "" }),
 						_react2.default.createElement("label", { className: "form-label", htmlFor: "confirm-password" }),
-						_react2.default.createElement("input", { className: "form-input", name: "confirm-password", type: "text", placeholder: "confirm password" }),
+						_react2.default.createElement("input", { className: "form-input form-control", name: "confirm-password", type: "text", placeholder: "confirm password", required: "" }),
 						_react2.default.createElement(
 							"button",
-							null,
+							{ className: "btn btn-lg btn-primary btn-block", type: "submit" },
 							"Create Account"
 						)
 					)
