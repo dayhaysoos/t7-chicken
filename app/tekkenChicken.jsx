@@ -1,6 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import styles from './components/App.scss';
+
+//import css 
+import css from './components/App.scss';
+
+// import components
 import App from './components/App.jsx';
 import Home from './components/Home/Home.jsx';
 import Login from './components/Login/Login.jsx';
@@ -17,11 +21,10 @@ const router = (
 		<Provider store={store}>
 			<Router history={browserHistory}>
 				<Route path="/" component={App}>
-					<IndexRoute component={Home}>
+					<IndexRoute component={Home}></IndexRoute>
 						<Route path="/login" component={Login}></Route>
 						<Route path="/frame-data" component={FrameData}></Route>
 						<Route path="/register" component={Register}></Route>
-					</IndexRoute>
 				</Route>
 			</Router>
 		</Provider>

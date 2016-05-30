@@ -109,7 +109,7 @@
 	//Router dependencies
 
 
-	(0, _reactDom.render)(_react2.default.createElement('router', null), document.getElementById('app'));
+	(0, _reactDom.render)(router, document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -27677,7 +27677,11 @@
 	  var useRefresh = !isSupported || forceRefresh;
 
 	  function getCurrentLocation(historyState) {
-	    historyState = historyState || window.history.state || {};
+	    try {
+	      historyState = historyState || window.history.state || {};
+	    } catch (e) {
+	      historyState = {};
+	    }
 
 	    var path = _DOMUtils.getWindowPath();
 	    var _historyState = historyState;
