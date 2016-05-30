@@ -86,6 +86,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// import components
+
+
 	var router = _react2.default.createElement(
 		_reactRedux.Provider,
 		{ store: _store2.default },
@@ -95,18 +98,18 @@
 			_react2.default.createElement(
 				_reactRouter.Route,
 				{ path: '/', component: _App4.default },
-				_react2.default.createElement(
-					_reactRouter.IndexRoute,
-					{ component: _Home2.default },
-					_react2.default.createElement(_reactRouter.Route, { path: '/login', component: _Login2.default }),
-					_react2.default.createElement(_reactRouter.Route, { path: '/frame-data', component: _FrameData2.default }),
-					_react2.default.createElement(_reactRouter.Route, { path: '/register', component: _Register2.default })
-				)
+				_react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
+				_react2.default.createElement(_reactRouter.Route, { path: '/login', component: _Login2.default }),
+				_react2.default.createElement(_reactRouter.Route, { path: '/frame-data', component: _FrameData2.default }),
+				_react2.default.createElement(_reactRouter.Route, { path: '/register', component: _Register2.default })
 			)
 		)
 	);
 
 	//Router dependencies
+
+
+	//import css
 
 
 	(0, _reactDom.render)(router, document.getElementById('app'));
