@@ -1,3 +1,13 @@
 #test {
 	color: purple;
 }
+
+select {
+	width: 200px;
+    height: 30px;
+    border: #FEFEFE 1px solid;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 10px 1px #C0C0C0;
+    text-transform: capitalize;
+    text-align-last: center;
+}
