@@ -72,7 +72,7 @@
 
 	var _FrameData2 = _interopRequireDefault(_FrameData);
 
-	var _Register = __webpack_require__(264);
+	var _Register = __webpack_require__(266);
 
 	var _Register2 = _interopRequireDefault(_Register);
 
@@ -80,11 +80,14 @@
 
 	var _reactRedux = __webpack_require__(186);
 
-	var _store = __webpack_require__(265);
+	var _store = __webpack_require__(267);
 
 	var _store2 = _interopRequireDefault(_store);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// import components
+
 
 	var router = _react2.default.createElement(
 		_reactRedux.Provider,
@@ -95,18 +98,18 @@
 			_react2.default.createElement(
 				_reactRouter.Route,
 				{ path: '/', component: _App4.default },
-				_react2.default.createElement(
-					_reactRouter.IndexRoute,
-					{ component: _Home2.default },
-					_react2.default.createElement(_reactRouter.Route, { path: '/login', component: _Login2.default }),
-					_react2.default.createElement(_reactRouter.Route, { path: '/frame-data', component: _FrameData2.default }),
-					_react2.default.createElement(_reactRouter.Route, { path: '/register', component: _Register2.default })
-				)
+				_react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
+				_react2.default.createElement(_reactRouter.Route, { path: '/login', component: _Login2.default }),
+				_react2.default.createElement(_reactRouter.Route, { path: '/frame-data(/:character)', component: _FrameData2.default }),
+				_react2.default.createElement(_reactRouter.Route, { path: '/register', component: _Register2.default })
 			)
 		)
 	);
 
 	//Router dependencies
+
+
+	//import css
 
 
 	(0, _reactDom.render)(router, document.getElementById('app'));
@@ -22256,6 +22259,7 @@
 	exports.increment = increment;
 	exports.addComment = addComment;
 	exports.removeComment = removeComment;
+	exports.getData = getData;
 	//increment
 	function increment(index) {
 		return {
@@ -22278,7 +22282,15 @@
 		return {
 			type: 'REMOVE_COMMENT',
 			postId: postId,
-			index: index
+			i: i
+		};
+	}
+
+	//get character data
+	function getData(name) {
+		return {
+			type: 'GET_DATA',
+			name: name
 		};
 	}
 
@@ -28012,7 +28024,140 @@
 /* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Table = __webpack_require__(264);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var CharacterList = function (_React$Component) {
+		_inherits(CharacterList, _React$Component);
+
+		function CharacterList() {
+			_classCallCheck(this, CharacterList);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(CharacterList).apply(this, arguments));
+		}
+
+		_createClass(CharacterList, [{
+			key: 'renderCharNames',
+			value: function renderCharNames(charData) {
+				var charNames = [];
+				for (var key in charData) {
+					if (charData.hasOwnProperty(key)) {
+						this.charData = charData;
+						charNames.push(_react2.default.createElement(
+							'option',
+							{ key: key, className: 'character-name' },
+							this.charData[key].metadata.character
+						));
+					}
+				}
+				return charNames;
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'select',
+					{ onChange: this.props.onChange, className: 'char-list', defaultValue: 'Select Character', selected: true },
+					_react2.default.createElement(
+						'option',
+						{ value: 'Select', selected: true },
+						'Select Character'
+					),
+					this.renderCharNames(this.props.charData)
+				);
+			}
+		}]);
+
+		return CharacterList;
+	}(_react2.default.Component);
+
+	var FrameData = function (_React$Component2) {
+		_inherits(FrameData, _React$Component2);
+
+		function FrameData(props) {
+			_classCallCheck(this, FrameData);
+
+			var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(FrameData).call(this, props));
+
+			_this2.state = {
+				selected: false,
+				character: null
+			};
+
+			_this2.handleChange = _this2.handleChange.bind(_this2);
+			return _this2;
+		}
+
+		_createClass(FrameData, [{
+			key: 'componentWillMount',
+			value: function componentWillMount() {
+				function requireAll(requireContext) {
+					return requireContext.keys().map(requireContext);
+				}
+
+				var data = requireAll(__webpack_require__(265));
+
+				this.setState({ data: data });
+			}
+		}, {
+			key: 'handleChange',
+			value: function handleChange(event) {
+				this.setState({ character: event.target.value });
+				var charRef = this.state.character;
+
+				//get moves for character
+				var moveList = [];
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				console.log(this.state);
+				return _react2.default.createElement(
+					'div',
+					{ className: 'frame-data-container container text-center' },
+					_react2.default.createElement(
+						'h2',
+						null,
+						'Frame Data'
+					),
+					_react2.default.createElement(CharacterList, { onChange: this.handleChange, charData: this.state.data, value: this.state.character }),
+					_react2.default.createElement(_Table2.default, null)
+				);
+			}
+		}]);
+
+		return FrameData;
+	}(_react2.default.Component);
+
+	exports.default = FrameData;
+
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -28033,33 +28178,46 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var FrameData = function (_React$Component) {
-		_inherits(FrameData, _React$Component);
+	var Table = function (_React$Component) {
+		_inherits(Table, _React$Component);
 
-		function FrameData() {
-			_classCallCheck(this, FrameData);
+		function Table() {
+			_classCallCheck(this, Table);
 
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(FrameData).apply(this, arguments));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Table).apply(this, arguments));
 		}
 
-		_createClass(FrameData, [{
-			key: "render",
+		_createClass(Table, [{
+			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
-					"h2",
-					{ id: "test" },
-					"Frame Data"
+					'h1',
+					null,
+					'hi'
 				);
 			}
 		}]);
 
-		return FrameData;
+		return Table;
 	}(_react2.default.Component);
 
-	exports.default = FrameData;
+	exports.default = Table;
 
 /***/ },
-/* 264 */
+/* 265 */
+/***/ function(module, exports) {
+
+	function webpackContext(req) {
+		throw new Error("Cannot find module '" + req + "'.");
+	}
+	webpackContext.keys = function() { return []; };
+	webpackContext.resolve = webpackContext;
+	module.exports = webpackContext;
+	webpackContext.id = 265;
+
+
+/***/ },
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28130,7 +28288,7 @@
 	exports.default = Register;
 
 /***/ },
-/* 265 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28142,33 +28300,30 @@
 
 	var _redux = __webpack_require__(173);
 
-	var _reactRouterRedux = __webpack_require__(266);
+	var _reactRouterRedux = __webpack_require__(268);
 
 	var _reactRouter = __webpack_require__(202);
 
-	var _index = __webpack_require__(271);
+	var _index = __webpack_require__(273);
 
 	var _index2 = _interopRequireDefault(_index);
-
-	var _characters = __webpack_require__(274);
-
-	var _characters2 = _interopRequireDefault(_characters);
-
-	var _frameData = __webpack_require__(275);
-
-	var _frameData2 = _interopRequireDefault(_frameData);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	//create object for default data
 
-	var defaultState = exports.defaultState = {
-		characters: _characters2.default,
-		frameData: _frameData2.default
-	};
+	function requireAll(requireContext) {
+		return requireContext.keys().map(requireContext);
+	}
 
 	//import root reducer
 
+
+	var data = requireAll(__webpack_require__(265));
+
+	var defaultState = exports.defaultState = {
+		data: data
+	};
 
 	var store = (0, _redux.createStore)(_index2.default, defaultState);
 
@@ -28177,7 +28332,7 @@
 	exports.default = store;
 
 /***/ },
-/* 266 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28187,7 +28342,7 @@
 	});
 	exports.routerMiddleware = exports.routerActions = exports.goForward = exports.goBack = exports.go = exports.replace = exports.push = exports.CALL_HISTORY_METHOD = exports.routerReducer = exports.LOCATION_CHANGE = exports.syncHistoryWithStore = undefined;
 
-	var _reducer = __webpack_require__(267);
+	var _reducer = __webpack_require__(269);
 
 	Object.defineProperty(exports, 'LOCATION_CHANGE', {
 	  enumerable: true,
@@ -28202,7 +28357,7 @@
 	  }
 	});
 
-	var _actions = __webpack_require__(268);
+	var _actions = __webpack_require__(270);
 
 	Object.defineProperty(exports, 'CALL_HISTORY_METHOD', {
 	  enumerable: true,
@@ -28247,11 +28402,11 @@
 	  }
 	});
 
-	var _sync = __webpack_require__(269);
+	var _sync = __webpack_require__(271);
 
 	var _sync2 = _interopRequireDefault(_sync);
 
-	var _middleware = __webpack_require__(270);
+	var _middleware = __webpack_require__(272);
 
 	var _middleware2 = _interopRequireDefault(_middleware);
 
@@ -28261,7 +28416,7 @@
 	exports.routerMiddleware = _middleware2['default'];
 
 /***/ },
-/* 267 */
+/* 269 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28305,7 +28460,7 @@
 	}
 
 /***/ },
-/* 268 */
+/* 270 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28347,7 +28502,7 @@
 	var routerActions = exports.routerActions = { push: push, replace: replace, go: go, goBack: goBack, goForward: goForward };
 
 /***/ },
-/* 269 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28360,7 +28515,7 @@
 
 	exports['default'] = syncHistoryWithStore;
 
-	var _reducer = __webpack_require__(267);
+	var _reducer = __webpack_require__(269);
 
 	var defaultSelectLocationState = function defaultSelectLocationState(state) {
 	  return state.routing;
@@ -28499,7 +28654,7 @@
 	}
 
 /***/ },
-/* 270 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28509,7 +28664,7 @@
 	});
 	exports['default'] = routerMiddleware;
 
-	var _actions = __webpack_require__(268);
+	var _actions = __webpack_require__(270);
 
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
@@ -28537,7 +28692,7 @@
 	}
 
 /***/ },
-/* 271 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28548,43 +28703,20 @@
 
 	var _redux = __webpack_require__(173);
 
-	var _reactRouterRedux = __webpack_require__(266);
+	var _reactRouterRedux = __webpack_require__(268);
 
-	var _frameData = __webpack_require__(272);
+	var _data = __webpack_require__(274);
 
-	var _frameData2 = _interopRequireDefault(_frameData);
-
-	var _characters = __webpack_require__(273);
-
-	var _characters2 = _interopRequireDefault(_characters);
+	var _data2 = _interopRequireDefault(_data);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var rootReducer = (0, _redux.combineReducers)({ frameData: _frameData2.default, characters: _characters2.default, routing: _reactRouterRedux.routerReducer });
+	var rootReducer = (0, _redux.combineReducers)({ data: _data2.default, routing: _reactRouterRedux.routerReducer });
 
 	exports.default = rootReducer;
 
 /***/ },
-/* 272 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	function frameData() {
-		var state = arguments.length <= 0 || arguments[0] === undefined ? [] : arguments[0];
-		var action = arguments[1];
-
-		console.log(state, action);
-		return state;
-	}
-
-	exports.default = frameData;
-
-/***/ },
-/* 273 */
+/* 274 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -28596,7 +28728,7 @@
 	// 1.Action (info about what happened)
 	// 2. Copy of Current State
 
-	function characters() {
+	function data() {
 		var state = arguments.length <= 0 || arguments[0] === undefined ? [] : arguments[0];
 		var action = arguments[1];
 
@@ -28604,389 +28736,22 @@
 		return state;
 	}
 
-	exports.default = characters;
+	exports.default = data;
 
-/***/ },
-/* 274 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	   value: true
-	});
-	var characters = [{
-	   "code": "BAcyDyQwcXX",
-	   "caption": "Lunch #hamont",
-	   "likes": 56,
-	   "id": "1161022966406956503",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/e35/12552326_495932673919321_1443393332_n.jpg"
-	}, {
-	   "code": "BAcJeJrQca9",
-	   "caption": "Snow! ⛄️🌨❄️ #lifewithsnickers",
-	   "likes": 59,
-	   "id": "1160844458347054781",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e35/12407344_1283694208323785_735653395_n.jpg"
-	}, {
-	   "code": "BAF_KY4wcRY",
-	   "caption": "Cleaned my office and mounted my recording gear overhead. Stoked for 2016!",
-	   "likes": 79,
-	   "id": "1154606670337393752",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xpf1/t51.2885-15/e35/923995_1704188643150533_1383710275_n.jpg"
-	}, {
-	   "code": "BAPIPRjQce9",
-	   "caption": "Making baby pancakes for one early rising baby. ☕️🍴",
-	   "likes": 47,
-	   "id": "1157179863266871229",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/e35/12407480_1654828594805097_152207166_n.jpg"
-	}, {
-	   "code": "-hZh6IQcfN",
-	   "caption": "New Stickers just came in. I'll do another mailing in a few weeks if you want some. #javascript",
-	   "likes": 66,
-	   "id": "1126293663140399053",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/e35/11875511_1562439187344831_813588280_n.jpg"
-	}, {
-	   "code": "-B3eiIwcYV",
-	   "caption": "Tacos for breakfast. I love you Austin. 🇺🇸",
-	   "likes": 33,
-	   "id": "1117418173361145365",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e35/11917950_927755223968499_1198055371_n.jpg"
-	}, {
-	   "code": "BAhvZrRwcfu",
-	   "caption": "Tried poke for the first time at @pokehbar. Delicious! It's like a bowl of sushi",
-	   "likes": 30,
-	   "id": "1162418651480049646",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xpa1/t51.2885-15/e35/12501993_1504179163220771_2060674913_n.jpg"
-	}, {
-	   "code": "BAAJqbOQcW5",
-	   "caption": "Brunchin'",
-	   "likes": 40,
-	   "id": "1152964002473690553",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/e35/1516572_445736812276082_2116173059_n.jpg"
-	}, {
-	   "code": "_4jHytwcUA",
-	   "caption": "2015 can be summed up with one baby and a many lines of code. And sometimes a coding baby. 👶🏼⌨",
-	   "likes": 62,
-	   "id": "1150824171912152320",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e35/10723795_1149927178351091_1859033096_n.jpg"
-	}, {
-	   "code": "_zbaOlQcbn",
-	   "caption": "Lekker Chocoladeletter",
-	   "likes": 52,
-	   "id": "1149382879529256679",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xfp1/t51.2885-15/e35/12346073_1035047523184672_768982339_n.jpg"
-	}, {
-	   "code": "_rmvQfQce8",
-	   "caption": "Just discovered the #hamont farmers market has a new ramen place! 🍜",
-	   "likes": 35,
-	   "id": "1147180903383025596",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xft1/t51.2885-15/e35/12331739_1671776806423597_995664526_n.jpg"
-	}, {
-	   "code": "_ep9kiQcVy",
-	   "caption": "⛄️",
-	   "likes": 64,
-	   "id": "1143535906423162226",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xft1/t51.2885-15/e35/12354078_447337935474115_1484398925_n.jpg"
-	}, {
-	   "code": "_XpJcrwcSn",
-	   "caption": "6 page spread on flexbox in this months netmag!",
-	   "likes": 74,
-	   "id": "1141561999742846119",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xfp1/t51.2885-15/e35/12362588_1688046211438811_1395882545_n.jpg"
-	}, {
-	   "code": "_KnU7MwceA",
-	   "caption": "Hanging out in my office waiting for 5:00 beers to come around.",
-	   "likes": 54,
-	   "id": "1137894817632733056",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xfp1/t51.2885-15/e35/12301208_1533749386944985_1334730917_n.jpg"
-	}, {
-	   "code": "_HMejJQcY5",
-	   "caption": "Today I learned that a long pull espresso is called a 'lungo'",
-	   "likes": 18,
-	   "id": "1136932306813044281",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xft1/t51.2885-15/e35/12357319_493317964181479_310198908_n.jpg"
-	}, {
-	   "code": "_Fq2zmwcaz",
-	   "caption": "Awesome hand lettered gift from @eunibae and the HackerYou crew.",
-	   "likes": 48,
-	   "id": "1136502965197194931",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xfp1/t51.2885-15/e35/12317458_1692845870986430_331905833_n.jpg"
-	}, {
-	   "code": "_A2r0aQcfD",
-	   "caption": "Some serious hardware meet JavaScript hacks going down this week at hackeryou. Excited for demo day!",
-	   "likes": 57,
-	   "id": "1135147611821557699",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e35/12276809_750065668431999_184252508_n.jpg"
-	}, {
-	   "code": "-1rhFawccs",
-	   "caption": "Some major audio upgrades coming to my next videos 😍",
-	   "likes": 39,
-	   "id": "1132002270913873708",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e35/12331333_1650987978502155_1162510634_n.jpg"
-	}, {
-	   "code": "-pjx-gQcVi",
-	   "caption": "My baby and me. Thanks to @bearandsparrow for this one.",
-	   "likes": 81,
-	   "id": "1128590547628442978",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xtf1/t51.2885-15/e35/12298962_863814057068027_460827278_n.jpg"
-	}, {
-	   "code": "-oTZ0zQcWt",
-	   "caption": "It's too early. Send coffee.",
-	   "likes": 81,
-	   "id": "1128237044221461933",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xtf1/t51.2885-15/e35/12328347_990748230999662_1512917342_n.jpg"
-	}, {
-	   "code": "-mxKQoQcQh",
-	   "caption": "They both have figured it out. #lifewithsnickers",
-	   "likes": 47,
-	   "id": "1127804966031967265",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xtp1/t51.2885-15/e35/12256736_1758525004381641_1136705181_n.jpg"
-	}, {
-	   "code": "-fasqlQceO",
-	   "caption": "Kaitlin decorated the house for the Christmas. So gezellig! #casabos",
-	   "likes": 46,
-	   "id": "1125735850454402958",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xpt1/t51.2885-15/e35/12277581_1028556737218368_1184190781_n.jpg"
-	}, {
-	   "code": "-VBgtGQcSf",
-	   "caption": "Trying the new Hamilton Brewery beer. Big fan.",
-	   "likes": 27,
-	   "id": "1122810327591928991",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e35/12224456_175248682823294_1558707223_n.jpg"
-	}, {
-	   "code": "-FpTyHQcau",
-	   "caption": "I'm in Austin for a conference and doing some training. Enjoying some local brew with my baby.",
-	   "likes": 82,
-	   "id": "1118481761857291950",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xpt1/t51.2885-15/e35/11326072_550275398458202_1726754023_n.jpg"
-	}];
-
-	exports.default = characters;
-
-/***/ },
-/* 275 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var frameData = {
-	  "BAhvZrRwcfu": [{
-	    "text": "Totally need to try this.",
-	    "user": "heavymetaladam"
-	  }],
-	  "BAcyDyQwcXX": [{
-	    "text": "Wes. WE should have lunch.",
-	    "user": "jdaveknox"
-	  }, {
-	    "text": "#adults",
-	    "user": "jdaveknox"
-	  }, {
-	    "text": "@jdaveknox yes!",
-	    "user": "wesbos"
-	  }, {
-	    "text": "😍 love Hamilton!",
-	    "user": "willowtreemegs"
-	  }],
-	  "BAPIPRjQce9": [{
-	    "text": "Those are cute! They're like silver dollar pancakes.",
-	    "user": "rrsimonsen"
-	  }, {
-	    "text": "I like baby pancakes but gluten free please!! I'll bring the coffee!! See you in 6 days!!!!!! 😝😛😝♥️",
-	    "user": "terzisn"
-	  }, {
-	    "text": "... and apparently growing baby. 👀. Yum.",
-	    "user": "henrihelvetica"
-	  }, {
-	    "text": "@wesbos 👍 my daughter is a pancake eating machine!",
-	    "user": "brentoage"
-	  }, {
-	    "text": "Nice stove!",
-	    "user": "haaps"
-	  }, {
-	    "text": "Genius bottle use! Do you make a single batch of batter or make a lot and freeze it?",
-	    "user": "gobananna"
-	  }, {
-	    "text": "@gobananna I just made a batch and put in in a FIFO bottle. Keeps in the fridge for a few days.",
-	    "user": "wesbos"
-	  }, {
-	    "text": "@haaps thanks! It's a Jenn air - so nice to cool with!",
-	    "user": "wesbos"
-	  }, {
-	    "text": "Where would you go and for how long, if you had location freedom? - Greg 🌎",
-	    "user": "world_greg"
-	  }],
-	  "BAF_KY4wcRY": [{
-	    "text": "Looking great Wes! I'd like to see the other side of the room too.",
-	    "user": "axcdnt"
-	  }, {
-	    "text": "I've never caught your podcast. Have one right? Btw - they don't have a Canary pillow? 😝",
-	    "user": "henrihelvetica"
-	  }, {
-	    "text": "Great way to start the year.",
-	    "user": "pmgllc"
-	  }, {
-	    "text": "Are there 4k monitors?",
-	    "user": "alexbaumgertner"
-	  }, {
-	    "text": "@axcdnt that is where I put all the junk. I'll have to clean that side too @henrihelvetica no podcast yet! @pmgllc ohh yeah! @alexbaumgertner yep - the main one is 4K - I'm loving it",
-	    "user": "wesbos"
-	  }, {
-	    "text": "That chrome pillow. 😉",
-	    "user": "imagesofthisandthat"
-	  }, {
-	    "text": "@wesbos is that the Dell 4k? The MacBook Pro powers it well? I also have a Retina™ / x1 setup as well. Very handy.",
-	    "user": "henrihelvetica"
-	  }, {
-	    "text": "#minimalsetups",
-	    "user": "wesbos"
-	  }],
-	  "_4jHytwcUA": [{
-	    "text": "that is the sound of success!",
-	    "user": "mdxprograms"
-	  }],
-	  "_zbaOlQcbn": [{
-	    "text": "Did she get to eat her letter?",
-	    "user": "pathiebert"
-	  }, {
-	    "text": "Nope @pathiebert! She has too much teeth now (8) so that would definitely be her first cavity 😉",
-	    "user": "kaitbos"
-	  }],
-	  "_rmvQfQce8": [{
-	    "text": "A+",
-	    "user": "mrjoedee"
-	  }, {
-	    "text": "I recently went to a ramen place in Philly. So amazing!",
-	    "user": "jrtashjian"
-	  }],
-	  "_ep9kiQcVy": [{
-	    "text": "All bundled up!  Where ya goin?",
-	    "user": "sophie_and_sadie"
-	  }],
-	  "_XpJcrwcSn": [{
-	    "text": "Super congrats! That's wicked cool and looks great.",
-	    "user": "pmgllc"
-	  }, {
-	    "text": "real live paper magazine? woah haha. flex box is awesome though, could rage quit without it",
-	    "user": "tjholowaychuk2"
-	  }, {
-	    "text": "@tjholowaychuk2 haha yes! Old school stylez!",
-	    "user": "wesbos"
-	  }],
-	  "_KnU7MwceA": [],
-	  "_HMejJQcY5": [{
-	    "text": "👌",
-	    "user": "t_volpe"
-	  }, {
-	    "text": "Nice shot, mister!",
-	    "user": "imagesofthisandthat"
-	  }],
-	  "_Fq2zmwcaz": [{
-	    "text": "😍",
-	    "user": "melsariffodeen"
-	  }, {
-	    "text": "Very cool!",
-	    "user": "ka11away"
-	  }],
-	  "_A2r0aQcfD": [{
-	    "text": "Uhu!",
-	    "user": "lucascaixeta"
-	  }],
-	  "1rhFawccs": [{
-	    "text": "What's your lighting source?",
-	    "user": "seth_mcleod"
-	  }, {
-	    "text": "And what are you using for XLR mix adapter? I found a big price jump between $55 range and $170 range.",
-	    "user": "pmgllc"
-	  }, {
-	    "text": "I still need a desk boom for mine mic. Nice upgrades",
-	    "user": "stolinski"
-	  }],
-	  "pjx-gQcVi": [],
-	  "oTZ0zQcWt": [{
-	    "text": "Love the coat! Where's it from? Lol",
-	    "user": "_lindersss"
-	  }],
-	  "mxKQoQcQh": [],
-	  "hZh6IQcfN": [{
-	    "text": "What do we gotta do to get some :)? @wesbos",
-	    "user": "jonasbad"
-	  }, {
-	    "text": "Might drop by today - real quick. Trade you an illegal pin for these? Lol. @wesbos",
-	    "user": "henrihelvetica"
-	  }, {
-	    "text": "I'm with @jonasbad on this. What we gotta do? :D",
-	    "user": "datamoshr"
-	  }, {
-	    "text": "@jonasbad @datamoshr I'll post them up on my blog soon!",
-	    "user": "wesbos"
-	  }, {
-	    "text": "Want",
-	    "user": "kamuelafranco"
-	  }, {
-	    "text": "want!",
-	    "user": "josemanuelxyz"
-	  }, {
-	    "text": "#Top",
-	    "user": "gabrielvieira.me"
-	  }],
-	  "fasqlQceO": [{
-	    "text": "Where's lux at? 💤?",
-	    "user": "henrihelvetica"
-	  }, {
-	    "text": "Love this house during the holidays! And all other times of the year...",
-	    "user": "danielleplas"
-	  }],
-	  "VBgtGQcSf": [{
-	    "text": "@dogsandbrew",
-	    "user": "likea_bos"
-	  }, {
-	    "text": "Next on my list!",
-	    "user": "tomwalsham"
-	  }, {
-	    "text": "Is that from collective arts ?",
-	    "user": "trevorb_91"
-	  }],
-	  "FpTyHQcau": [{
-	    "text": "@kaitbos  that vest!!! 😍",
-	    "user": "courtneyeveline"
-	  }, {
-	    "text": "I just love her! @kaitbos",
-	    "user": "kalibrix"
-	  }, {
-	    "text": "@courtneyeveline I know! My friend gave it to her and I wanted a matching one but only Lux can pull it off. She's so fancy 😉",
-	    "user": "kaitbos"
-	  }, {
-	    "text": "Char has that vest!!! Super cute!",
-	    "user": "jennlensink"
-	  }, {
-	    "text": "You'll have to meet her soon @kalibrix!!",
-	    "user": "kaitbos"
-	  }, {
-	    "text": "Haha @kaitbos so true, babies these days are sooo stylish. 😎",
-	    "user": "courtneyeveline"
-	  }, {
-	    "text": "JavaScript 😄😆🙋",
-	    "user": "lucascaixeta"
-	  }, {
-	    "text": "That hoodie is amazing! Where did you get it?",
-	    "user": "br11x"
-	  }, {
-	    "text": "@br11x I did a teespring a few months ago - maybe I'll do another one soon",
-	    "user": "wesbos"
-	  }],
-	  "B3eiIwcYV": [{
-	    "text": "If you get in the mood for authentic Italian pizza, check out @backspaceaustin - it's👌🏻",
-	    "user": "dessie.ann"
-	  }, {
-	    "text": "😱 jealous",
-	    "user": "jenngbrewer"
-	  }]
-	};
-
-	exports.default = frameData;
+	// function posts(state = [], action) {
+	//   switch(action.type) {
+	//     case 'INCREMENT_LIKES' :
+	//       console.log("Incrementing Likes!!");
+	//       const i = action.index;
+	//       return [
+	//         ...state.slice(0,i), // before the one we are updating
+	//         {...state[i], likes: state[i].likes + 1},
+	//         ...state.slice(i + 1), // after the one we are updating
+	//       ]
+	//     default:
+	//       return state;
+	//   }
+	// }
 
 /***/ }
 /******/ ]);

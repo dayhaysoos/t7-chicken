@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import frameData from './frameData';
-import characters from './characters';
+import data from './data';
 
-const rootReducer = combineReducers({frameData, characters, routing: routerReducer });
+const rootReducer = combineReducers({data, routing: routerReducer });
 
 export default rootReducer;

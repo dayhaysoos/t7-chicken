@@ -20,6 +20,14 @@ export function removeComment(postId, i) {
 	return {
 		type: 'REMOVE_COMMENT',
 		postId,
-		index
+		i
+	}
+}
+
+//get character data
+export function getData(name) {
+	return {
+		type: 'GET_DATA',
+		name
 	}
 }

@@ -23,7 +23,7 @@ const router = (
 				<Route path="/" component={App}>
 					<IndexRoute component={Home}></IndexRoute>
 						<Route path="/login" component={Login}></Route>
-						<Route path="/frame-data" component={FrameData}></Route>
+						<Route path="/frame-data(/:character)" component={FrameData}></Route>
 						<Route path="/register" component={Register}></Route>
 				</Route>
 			</Router>

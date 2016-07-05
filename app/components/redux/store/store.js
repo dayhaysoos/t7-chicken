@@ -5,14 +5,17 @@ import { browserHistory } from 'react-router';
 //import root reducer
 import rootReducer from '../reducers/index.js';
 
-import characters from '../../data/characters';
-import frameData from '../../data/frameData';
 
 //create object for default data
 
+function requireAll(requireContext) {
+			return requireContext.keys().map(requireContext);
+		}
+
+		let data = requireAll(require.context('../../data/t7', false, /\.json$/));
+
 export const defaultState = {
-	characters,
-	frameData
+	data
 };
 
 const store = createStore(rootReducer, defaultState);
