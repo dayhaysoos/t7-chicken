@@ -1,6 +1,13 @@
 import React from 'react';
 
+
+
 export default class Register extends React.Component {
+
+	componentWillMount() {
+			//this.props.createUser('testUser', 'test@email.com', 'password');
+		}
+
 	render() {
 		return (
 			<div className="register-container container">

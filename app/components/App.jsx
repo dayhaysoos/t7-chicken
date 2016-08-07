@@ -5,8 +5,6 @@ import Main from './Main';
 
 function mapStateToProps(state) {
 	return {
-		characters: state.characters,
-		frameData: state.frameData
 	}
 }
 

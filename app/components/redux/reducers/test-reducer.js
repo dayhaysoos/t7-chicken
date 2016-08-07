@@ -1,4 +1,4 @@
-import { Test } from '../reducers/test-action.js';
+import { Test } from '../actions/actionCreators.js';
 
 export function test(state, action) {
 	switch (action.type) {
