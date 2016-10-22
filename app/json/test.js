@@ -1,4 +1,4 @@
-{
+const fengData = {
 	"moves": [{
 		"notation": "1",
 		"hit_level": "h",
@@ -1330,3 +1330,5 @@
 		"type": "normal"
 	}
 }
+
+export default fengData;

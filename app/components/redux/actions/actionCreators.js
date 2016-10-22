@@ -7,4 +7,5 @@
 
 //Frame Data Types
 export const FRAMEDATA_FETCH = 'FRAMEDATA_FETCH';
+export const FRAMEDATA_FETCH_SUCCESS = 'FRAMEDATA_FETCH_SUCCESS';
 
