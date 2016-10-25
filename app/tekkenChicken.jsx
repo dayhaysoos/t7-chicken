@@ -1,5 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
+import ApolloClient, { createNetworkInterface } from 'apollo-client';
+import { ApolloProvider } from 'react-apollo';
 
 //import css 
 import css from './components/App.scss';
@@ -16,9 +18,13 @@ import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './components/redux/store/store.js';
 
+const client = new ApolloClient({
+  networkInterface: createNetworkInterface('http://my-api.graphql.com')
+});
+
 
 const router = (
-		<Provider store={store}>
+		<ApolloProvider store={store} client={client}>
 			<Router history={browserHistory}>
 				<Route path="/" component={App}>
 					<IndexRoute component={Home}></IndexRoute>
@@ -27,7 +33,7 @@ const router = (
 						<Route path="/register" component={Register}></Route>
 				</Route>
 			</Router>
-		</Provider>
+		</ApolloProvider>
 	)
 
 render(router, document.getElementById('app'));
