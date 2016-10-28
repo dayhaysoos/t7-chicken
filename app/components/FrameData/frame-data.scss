@@ -1,23 +1,10 @@
 .frame-data-container {
-	.category-container {
-		display: flex;
-		justify-content: center;
+	table {
+		margin: 0 auto;
+		th {
+			text-align: center;
+		}
 	}
-	.attack-data {
-		display: flex;
-		justify-content: center;
-	}
-	.move-item {
-
-	}
+	
 }
 
-select {
-	width: 200px;
-    height: 30px;
-    border: #FEFEFE 1px solid;
-    border-radius: 3px;
-    box-shadow: inset 0px 0px 10px 1px #C0C0C0;
-    text-transform: capitalize;
-    text-align-last: center;
-}

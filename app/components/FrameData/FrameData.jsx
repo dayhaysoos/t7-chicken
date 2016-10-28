@@ -1,17 +1,20 @@
 import React from 'react';
+//import {Table, Column, Cell} from 'fixed-data-table';
 
-class Category extends React.Component {
+class FrameDataTableHeader extends React.Component {
 	render() {
 		return (
-			<div className="category-container">
-				<div className="category">Notation</div>
-				<div className="category">Hit Level</div>
-				<div className="category">Damage</div>
-				<div className="category">Speed</div>
-				<div className="category">On Block</div>
-				<div className="category">On Hit</div>
-				<div className="category">On CH</div>
-			</div>
+			<thead className="category-container">
+				<tr>
+					<th className="category">Notation</th>
+					<th className="category">Hit Level</th>
+					<th className="category">Damage</th>
+					<th className="category">Speed</th>
+					<th className="category">On Block</th>
+					<th className="category">On Hit</th>
+					<th className="category">On CH</th>
+				</tr>
+			</thead>
 			)
 	}
 }
@@ -20,15 +23,17 @@ class Category extends React.Component {
 class FrameDataTable extends React.Component {
 	render() {
 		return (
-			<div className="attack-data">
-				<div className="move-item">{this.props.notation}</div>
-				<div className="move-item">{this.props.hitLevel}</div>
-				<div className="move-item">{this.props.damage}</div>
-				<div className="move-item">{this.props.speed}</div>
-				<div className="move-item">{this.props.onBlock}</div>
-				<div className="move-item">{this.props.onHit}</div>
-				<div className="move-item">{this.props.onCh}</div>
-			</div>
+			<tbody>
+				<tr className="attack-data">
+					<td className="move-item">{this.props.notation}</td>
+					<td className="move-item">{this.props.hitLevel}</td>
+					<td className="move-item">{this.props.damage}</td>
+					<td className="move-item">{this.props.speed}</td>
+					<td className="move-item">{this.props.onBlock}</td>
+					<td className="move-item">{this.props.onHit}</td>
+					<td className="move-item">{this.props.onCh}</td>
+				</tr>
+			</tbody>
 			);
 	}
 }
@@ -41,9 +46,11 @@ export default class FrameData extends React.Component {
 		return( 
 			<div className="frame-data-container container text-center">
 			<h2>Frame Data</h2>
-			<Category />
+			<table>
+			<FrameDataTableHeader />
 			{
 				frameData.alisa.moves.map((move, key) => {
+					console.log(move.on_ch);
 					return (
 						<FrameDataTable 
 							key={key}
@@ -58,6 +65,7 @@ export default class FrameData extends React.Component {
 					);
 				})
 			}
+			</table>
 			</div>
 		)
 	}
