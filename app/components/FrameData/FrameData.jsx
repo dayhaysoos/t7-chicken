@@ -31,7 +31,7 @@ class FrameDataTable extends React.Component {
 					<td className="move-item">{this.props.speed}</td>
 					<td className="move-item">{this.props.onBlock}</td>
 					<td className="move-item">{this.props.onHit}</td>
-					<td className="move-item">{this.props.onCh}</td>
+					<td className="move-item">{this.props.onCH}</td>
 				</tr>
 			</tbody>
 			);

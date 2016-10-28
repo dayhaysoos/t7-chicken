@@ -1,8 +1,15 @@
 .frame-data-container {
 	table {
+		thead {
+			border: 1px solid black;
+			th {
+				border: 1px solid black;
+				text-align: center;
+			}
+		}
 		margin: 0 auto;
-		th {
-			text-align: center;
+		td {
+			border: 1px solid black;
 		}
 	}
 	
