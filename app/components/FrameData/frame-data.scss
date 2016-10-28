@@ -1,5 +1,15 @@
-#test {
-	color: purple;
+.frame-data-container {
+	.category-container {
+		display: flex;
+		justify-content: center;
+	}
+	.attack-data {
+		display: flex;
+		justify-content: center;
+	}
+	.move-item {
+
+	}
 }
 
 select {
