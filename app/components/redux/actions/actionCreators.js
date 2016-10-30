@@ -9,3 +9,5 @@
 export const FRAMEDATA_FETCH = 'FRAMEDATA_FETCH';
 export const FRAMEDATA_FETCH_SUCCESS = 'FRAMEDATA_FETCH_SUCCESS';
 
+//Character Selection
+export const SELECT = 'CHARACTER_SELECT';

@@ -40,17 +40,27 @@ class FrameDataTable extends React.Component {
 
 export default class FrameData extends React.Component {
 
+	selectCharacter() {
+		let selectValue = document.getElementById('selector').value;
+		this.setState({characterSelect: selectValue});
+	}
+
 	render() {
 		const { frameData } = this.props;
+		this.state = frameData;
+		
 
 		return( 
 			<div className="frame-data-container container text-center">
 			<h2>Frame Data</h2>
+			<select id="selector" onChange={this.selectCharacter.bind()}>
+				<option>Testing</option>
+				<option>Another</option>
+			</select>
 			<table>
 			<FrameDataTableHeader />
 			{
 				frameData.alisa.moves.map((move, key) => {
-					console.log(move.on_ch);
 					return (
 						<FrameDataTable 
 							key={key}
