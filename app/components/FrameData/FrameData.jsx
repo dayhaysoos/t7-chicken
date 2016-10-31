@@ -28,10 +28,28 @@ export default class FrameData extends React.Component {
 		})
 	}
 
+	renderFrameData(data, selected) {
+		{
+			return data[selected].moves.map((move, key) => {
+				return (
+					<FrameDataTable 
+						key={key}
+						notation={move.notation}
+						hitLevel={move.hit_level}
+						damage={move.damage}
+						speed={move.speed}
+						onBlock={move.on_block}
+						onHit={move.on_hit}
+						onCH={move.on_ch}
+					/>
+				);
+			})
+		}
+	}
+
 	render() {
 		let selected = this.state.selectedCharacter;
 		const { frameData } = this.props;
-
 		return( 
 			<div className="frame-data-container container text-center">
 				<h2>Frame Data</h2>
@@ -41,22 +59,7 @@ export default class FrameData extends React.Component {
 				</select>
 				<table>
 				<FrameDataTableHeader />
-				{
-					frameData[selected].moves.map((move, key) => {
-						return (
-							<FrameDataTable 
-								key={key}
-								notation={move.notation}
-								hitLevel={move.hit_level}
-								damage={move.damage}
-								speed={move.speed}
-								onBlock={move.on_block}
-								onHit={move.on_hit}
-								onCH={move.on_ch}
-							/>
-						);
-					})
-				}
+				{this.renderFrameData(frameData, selected)}
 				</table>
 			</div>
 		)
