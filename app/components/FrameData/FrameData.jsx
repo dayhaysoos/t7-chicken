@@ -1,6 +1,15 @@
 import React from 'react';
 //import {Table, Column, Cell} from 'fixed-data-table';
 
+class CharacterSelect extends React.Component {
+
+	render() {
+		return (
+				<option>{this.props.option}</option>
+			);
+	}
+}
+
 class FrameDataTableHeader extends React.Component {
 	render() {
 		return (
@@ -40,27 +49,41 @@ class FrameDataTable extends React.Component {
 
 export default class FrameData extends React.Component {
 
-	selectCharacter() {
-		let selectValue = document.getElementById('selector').value;
-		this.setState({characterSelect: selectValue});
+	constructor(props) {
+		super(props);
+		this.state = {selectedCharacter: 'alisa'}
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleChange(event) {
+		this.setState({selectedCharacter: event.target.value});
+		console.log(this.state);
 	}
 
 	render() {
+		let selected = this.state.selectedCharacter;
 		const { frameData } = this.props;
-		this.state = frameData;
-		
 
 		return( 
 			<div className="frame-data-container container text-center">
 			<h2>Frame Data</h2>
-			<select id="selector" onChange={this.selectCharacter.bind()}>
-				<option>Testing</option>
-				<option>Another</option>
+			<select onChange={this.handleChange}>
+				<option defaultValue="Select Character">Select Character</option>
+			{
+				Object.keys(frameData).map((name, key) => {
+					return (
+						<CharacterSelect
+							key={key}
+							option={name}
+						/>
+						)
+				})	
+			}
 			</select>
 			<table>
 			<FrameDataTableHeader />
 			{
-				frameData.alisa.moves.map((move, key) => {
+				frameData[selected].moves.map((move, key) => {
 					return (
 						<FrameDataTable 
 							key={key}
