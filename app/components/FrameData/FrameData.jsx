@@ -9,11 +9,23 @@ export default class FrameData extends React.Component {
 		super(props);
 		this.state = {selectedCharacter: 'alisa'}
 		this.handleChange = this.handleChange.bind(this);
+		this.renderOptions = this.renderOptions.bind(this);
 	}
 
 	handleChange(event) {
 		this.setState({selectedCharacter: event.target.value});
 		console.log(this.state);
+	}
+
+	renderOptions(options) {
+		return Object.keys(options).map((name, key) => {
+			return (
+				<CharacterSelect
+					key={key}
+					option={name}
+				/>
+			)
+		})
 	}
 
 	render() {
@@ -22,39 +34,30 @@ export default class FrameData extends React.Component {
 
 		return( 
 			<div className="frame-data-container container text-center">
-			<h2>Frame Data</h2>
-			<select onChange={this.handleChange}>
-				<option defaultValue="Select Character">Select Character</option>
-			{
-				Object.keys(frameData).map((name, key) => {
-					return (
-						<CharacterSelect
-							key={key}
-							option={name}
-						/>
-						)
-				})	
-			}
-			</select>
-			<table>
-			<FrameDataTableHeader />
-			{
-				frameData[selected].moves.map((move, key) => {
-					return (
-						<FrameDataTable 
-							key={key}
-							notation={move.notation}
-							hitLevel={move.hit_level}
-							damage={move.damage}
-							speed={move.speed}
-							onBlock={move.on_block}
-							onHit={move.on_hit}
-							onCH={move.on_ch}
-						/>
-					);
-				})
-			}
-			</table>
+				<h2>Frame Data</h2>
+				<select onChange={this.handleChange}>
+					<option defaultValue="Select Character">Select Character</option>
+					{this.renderOptions(frameData)}
+				</select>
+				<table>
+				<FrameDataTableHeader />
+				{
+					frameData[selected].moves.map((move, key) => {
+						return (
+							<FrameDataTable 
+								key={key}
+								notation={move.notation}
+								hitLevel={move.hit_level}
+								damage={move.damage}
+								speed={move.speed}
+								onBlock={move.on_block}
+								onHit={move.on_hit}
+								onCH={move.on_ch}
+							/>
+						);
+					})
+				}
+				</table>
 			</div>
 		)
 	}
