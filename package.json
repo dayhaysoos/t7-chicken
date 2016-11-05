@@ -46,6 +46,7 @@
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "graphql-tag": "^0.1.15",
+    "fixed-data-table": "^0.6.3",
     "jsonwebtoken": "^6.2.0",
     "mongoose": "^4.4.17",
     "morgan": "^1.7.0",
@@ -57,6 +58,7 @@
     "react-router-redux": "^4.0.4",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
+    "reselect": "^2.5.4",
     "whatwg-fetch": "^1.0.0"
   }
 }

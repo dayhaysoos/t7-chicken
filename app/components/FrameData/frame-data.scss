@@ -1,13 +1,17 @@
-#test {
-	color: purple;
+.frame-data-container {
+	table {
+		thead {
+			border: 1px solid black;
+			th {
+				border: 1px solid black;
+				text-align: center;
+			}
+		}
+		margin: 0 auto;
+		td {
+			border: 1px solid black;
+		}
+	}
+	
 }
 
-select {
-	width: 200px;
-    height: 30px;
-    border: #FEFEFE 1px solid;
-    border-radius: 3px;
-    box-shadow: inset 0px 0px 10px 1px #C0C0C0;
-    text-transform: capitalize;
-    text-align-last: center;
-}
