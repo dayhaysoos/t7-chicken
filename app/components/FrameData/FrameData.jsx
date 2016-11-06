@@ -25,14 +25,14 @@ export default class FrameData extends React.Component {
 	}
 
 	renderFrameData(data, selected) {
-		return 
+		return
 	}
 
 	renderFrameData(data, selected) {
 		{
 			return data[selected].moves.map((move, key) => {
 				return (
-					<FrameDataTable 
+					<FrameDataTable
 						key={key}
 						notation={move.notation}
 						hitLevel={move.hit_level}
@@ -50,17 +50,19 @@ export default class FrameData extends React.Component {
 	render() {
 		let selected = this.state.selectedCharacter;
 		const { frameData } = this.props;
-		return( 
-			<div className="frame-data-container container text-center">
-				<h2>Frame Data</h2>
-				<select onChange={this.handleChange}>
-					<option defaultValue="Select Character">Select Character</option>
-					{this.renderOptions(frameData)}
-				</select>
-				<table>
-				<FrameDataTableHeader />
-				{this.renderFrameData(frameData, selected)}
-				</table>
+		return(
+			<div className="frame-data-container row">
+				<div className='small-8 columns centered'>
+					<h2>Frame Data</h2>
+					<select onChange={this.handleChange}>
+						<option defaultValue="Select Character">Select Character</option>
+						{this.renderOptions(frameData)}
+					</select>
+					<table>
+					<FrameDataTableHeader />
+					{this.renderFrameData(frameData, selected)}
+					</table>
+				</div>
 			</div>
 		)
 	}
