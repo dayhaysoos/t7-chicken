@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-
 export default class Login extends React.Component {
 
 	render() {
 		return (
 		<div className="login-container row">
-			<div className='small-6 centered'>
+			<div className='small-8 columns centered'>
 				<form className="form-signin">
 					<h2 className="form-signin-heading">Please sign in</h2>
 					<label htmlFor="inputEmail" className="sr-only">Email address</label>
