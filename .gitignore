@@ -3,3 +3,5 @@
 node_modules
 *.log
 build/bundle.js
+.idea
+*.iml
