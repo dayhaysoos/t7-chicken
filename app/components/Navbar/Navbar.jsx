@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Login from '../Login/Login';
+import Logout from '../Login/Logout';
+import { loginUser } from '../redux/actions/auth0-login-actions';
+import { logoutUser } from '../redux/actions/auth0-logout-actions';
+
+
 
 export default class Navbar extends React.Component {
 	render(){
+		const { isAuthenticated, errorMessage } = this.props;
 		return(
 			<nav className="navbar">
 				<div className="row">
@@ -15,8 +22,17 @@ export default class Navbar extends React.Component {
 					</div>
 					<div className='small-5 columns'>
 						<ul className="menu align-right">
-							<li><Link to="/login">Login</Link></li>
-							<li><Link to="/register">Register</Link></li>
+						{
+							!isAuthenticated &&
+							<Login
+								errorMessage={errorMessage}
+								onLoginClick={ creds => loginUser(creds) }
+							/>
+						}
+						{
+							isAuthenticated &&
+							<Logout onLogoutClick={() => logoutUser()} />
+						}
 						</ul>
 					</div>
 				</div>
