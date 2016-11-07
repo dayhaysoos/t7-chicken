@@ -16,13 +16,11 @@ import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './components/redux/store/store.js';
 
-
 const router = (
 		<Provider store={store}>
 			<Router history={browserHistory}>
 				<Route path="/" component={App}>
 					<IndexRoute component={Home}></IndexRoute>
-						<Route path="/login" component={Login}></Route>
 						<Route path="/frame-data" component={FrameData}></Route>
 						<Route path="/register" component={Register}></Route>
 				</Route>
