@@ -6,7 +6,10 @@ import Main from './Main';
 function mapStateToProps(state) {
 	return {
 		characters: state.characters,
-		frameData: state.frameData
+		frameData: state.frameData,
+		isAuthenticated: state.auth.isAuthenticated,
+		isFetching: state.auth.isFetching,
+		id_token: state.auth.id_token
 	}
 }
 
