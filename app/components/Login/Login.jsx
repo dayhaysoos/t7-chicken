@@ -1,25 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router';
+import Auth0Lock from 'auth0-lock';
 
-export default class Login extends React.Component {
+export const lock = new Auth0Lock('HkucS31m0XOG4lq2TRueJYPUPsq1hnNA', 'dayhaysoos.auth0.com');
 
-	render() {
-		return (
-		<div className="login-container row">
-			<div className='small-8 columns centered'>
-				<form className="form-signin">
-					<h2 className="form-signin-heading">Please sign in</h2>
-					<label htmlFor="inputEmail" className="sr-only">Email address</label>
-					<input type="email" id="inputEmail" className="form-control" placeholder="Email address" required="" autofocus=""></input>
-					<label htmlFor="inputPassword" className="sr-only">Password</label>
-					<input type="password" id="inputPassword" className="form-control" placeholder="Password" required=""></input>
+lock.on('authenticated', result => { localStorage.token = result.idToken })
 
-		        <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-		      	</form>
-		      	<h2>Or</h2>
-		      	<Link to="/register">Register</Link>
-			</div>
-	  </div>
-		)
-	}
+export default function Login () {
+  return <div><button onClick={() => lock.show()}>Log in with auth0</button></div>
 }
