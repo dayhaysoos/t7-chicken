@@ -5,26 +5,33 @@ import { render } from 'react-dom';
 import css from './components/App.scss';
 
 // import components
-import App from './components/App.jsx';
-import Home from './components/Home/Home.jsx';
-import Login from './components/Login/Login.jsx';
-import FrameData from './components/FrameData/FrameData.jsx';
-import Register from './components/Register/Register.jsx';
+import App from './components/App';
+import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+import FrameData from './components/FrameData/FrameData';
+import Register from './components/Register/Register';
 
 //Router dependencies
-import {Router, Route, browserHistory, IndexRoute} from 'react-router';
+import {Router, Route, browserHistory, IndexRedirect} from 'react-router';
 import { Provider } from 'react-redux';
-import store, { history } from './components/redux/store/store.js';
+import store from './components/redux/store/store.js';
 
+
+// const requireAuth = (nextState, replace) => {
+//   if (!auth.loggedIn()) {
+//     replace({ pathname: '/login' })
+//   }
+// }
 
 const router = (
 		<Provider store={store}>
 			<Router history={browserHistory}>
 				<Route path="/" component={App}>
-					<IndexRoute component={Home}></IndexRoute>
-						<Route path="/login" component={Login}></Route>
-						<Route path="/frame-data" component={FrameData}></Route>
-						<Route path="/register" component={Register}></Route>
+					<IndexRedirect to="/home"></IndexRedirect>
+						<Route path="home" component={Home} />
+						<Route path="/login" component={Login} />
+						<Route path="/frame-data" component={FrameData} />
+						<Route path="/register" component={Register} />
 				</Route>
 			</Router>
 		</Provider>

@@ -1,8 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Login from './../Login/Login'
+import Logout from './../Logout/Logout';
 
 export default class Navbar extends React.Component {
-	render(){
+
+	renderAuthButton() {
+			if(localStorage.token) {
+				return <Logout />
+			} else {
+				return <Login />
+			}
+		}
+
+	render() {
 		return(
 			<nav className="navbar">
 				<div className="row">
@@ -15,8 +26,9 @@ export default class Navbar extends React.Component {
 					</div>
 					<div className='small-5 columns'>
 						<ul className="menu align-right">
-							<li><Link to="/login">Login</Link></li>
-							<li><Link to="/register">Register</Link></li>
+							<li>
+								{this.renderAuthButton()}
+							</li>
 						</ul>
 					</div>
 				</div>
