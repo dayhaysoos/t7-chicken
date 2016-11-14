@@ -6,5 +6,5 @@ export const lock = new Auth0Lock('HkucS31m0XOG4lq2TRueJYPUPsq1hnNA', 'dayhaysoo
 lock.on('authenticated', result => { localStorage.token = result.idToken })
 
 export default function Login () {
-  return <div><button onClick={() => lock.show()}>Log in with auth0</button></div>
+  return <a href="#" onClick={() => lock.show()}>Login</a>
 }

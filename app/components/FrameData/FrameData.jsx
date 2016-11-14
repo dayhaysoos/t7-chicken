@@ -24,9 +24,6 @@ export default class FrameData extends React.Component {
 		})
 	}
 
-	renderFrameData(data, selected) {
-		return
-	}
 
 	renderFrameData(data, selected) {
 		{
