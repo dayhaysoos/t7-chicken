@@ -2,6 +2,7 @@ import React from 'react';
 import CharacterSelect from './CharacterSelect';
 import FrameDataTableHeader from './FrameDataTableHeader';
 import FrameDataTable from './FrameDataTable';
+import SearchBar from './../SearchBar/SearchBar';
 
 export default class FrameData extends React.Component {
 
@@ -43,8 +44,9 @@ export default class FrameData extends React.Component {
 			})
 		}
 	}
-
+		
 	render() {
+		
 		let selected = this.state.selectedCharacter;
 		const { frameData } = this.props;
 		return(
@@ -55,6 +57,7 @@ export default class FrameData extends React.Component {
 						<option defaultValue="Select Character">Select Character</option>
 						{this.renderOptions(frameData)}
 					</select>
+					<SearchBar />
 					<table>
 					<FrameDataTableHeader />
 					{this.renderFrameData(frameData, selected)}

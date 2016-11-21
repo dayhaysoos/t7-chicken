@@ -4,7 +4,6 @@
 // 2. copy of current state
 
 function frameData(state =[], action) {
-	console.log(state, action);
 	return state;
 }
 

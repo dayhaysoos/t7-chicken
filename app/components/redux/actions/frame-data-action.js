@@ -6,6 +6,7 @@ import {
 import fengJSON from '../../json/test.json';
 
 
+
 function dataFetchSuccess(response) {
 	return {
     type: FRAMEDATA_FETCH_SUCCESS,
