@@ -1,5 +1,19 @@
-function characterSelect(state =[], action) {
-	return state
+import  { CHARACTER_SELECT } from './../actions/actionCreators';
+
+const initialState = {
+	selected: 'alisa'
 }
 
-export default characterSelect;
+function selectedCharacterReducer(state = initialState, action) {
+	if (action.type === CHARACTER_SELECT) {
+		console.log(state);
+		return Object.assign({}, state, {
+			selected: action.character
+		})
+	} else {
+		return state
+	}
+}
+
+
+export default selectedCharacterReducer;

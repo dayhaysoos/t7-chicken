@@ -12,7 +12,10 @@ export default class FrameData extends React.Component {
 		this.renderOptions = this.renderOptions.bind(this);
 	}
 
-	handleChange = event => this.setState({ selectedCharacter: event.target.value })
+	handleChange = (event) => {
+		this.props.characterSelect(event.target.value);
+		console.log(this.props);
+	}
 
 	renderOptions(options) {
 		return Object.keys(options).map((name, key) => {
@@ -46,7 +49,6 @@ export default class FrameData extends React.Component {
 	}
 		
 	render() {
-		
 		let selected = this.state.selectedCharacter;
 		const { frameData } = this.props;
 		return(
