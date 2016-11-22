@@ -7,7 +7,8 @@ function mapStateToProps(state) {
 	console.log(state);
 	return {
 		selectedCharacter: state.selectedCharacter,
-		frameData: state.frameData
+		frameData: state.frameData,
+		moves: state.frameData[state.selectedCharacter.selected].moves
 	}
 }
 

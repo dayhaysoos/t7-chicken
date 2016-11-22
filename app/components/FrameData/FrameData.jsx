@@ -14,7 +14,6 @@ export default class FrameData extends React.Component {
 
 	handleChange = (event) => {
 		this.props.characterSelect(event.target.value);
-		console.log(this.props);
 	}
 
 	renderOptions(options) {
@@ -29,9 +28,9 @@ export default class FrameData extends React.Component {
 	}
 
 
-	renderFrameData(data, selected) {
+	renderFrameData() {
 		{
-			return data[selected].moves.map((move, key) => {
+			return this.props.moves.map((move, key) => {
 				return (
 					<FrameDataTable
 						key={key}
@@ -49,9 +48,9 @@ export default class FrameData extends React.Component {
 	}
 		
 	render() {
-		console.log(this.state, 'test');
-		let selected = this.state.selectedCharacter;
-		const { frameData } = this.props;
+		console.log(this.props);
+		const { frameData, selectedCharacter } = this.props;
+		let selected = selectedCharacter.selected;
 		return(
 			<div className="frame-data-container row">
 				<div className='small-8 columns centered'>
@@ -63,7 +62,7 @@ export default class FrameData extends React.Component {
 					<SearchBar />
 					<table>
 					<FrameDataTableHeader />
-					{this.renderFrameData(frameData, selected)}
+					{this.renderFrameData()}
 					</table>
 				</div>
 			</div>

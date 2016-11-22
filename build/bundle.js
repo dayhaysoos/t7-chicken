@@ -21864,7 +21864,8 @@
 		console.log(state);
 		return {
 			selectedCharacter: state.selectedCharacter,
-			frameData: state.frameData
+			frameData: state.frameData,
+			moves: state.frameData[state.selectedCharacter.selected].moves
 		};
 	}
 
@@ -55768,7 +55769,6 @@
 
 			_this.handleChange = function (event) {
 				_this.props.characterSelect(event.target.value);
-				console.log(_this.props);
 			};
 
 			_this.state = { selectedCharacter: 'alisa' };
@@ -55788,9 +55788,9 @@
 			}
 		}, {
 			key: 'renderFrameData',
-			value: function renderFrameData(data, selected) {
+			value: function renderFrameData() {
 				{
-					return data[selected].moves.map(function (move, key) {
+					return this.props.moves.map(function (move, key) {
 						return _react2.default.createElement(_FrameDataTable2.default, {
 							key: key,
 							notation: move.notation,
@@ -55807,10 +55807,12 @@
 		}, {
 			key: 'render',
 			value: function render() {
-				console.log(this.state, 'test');
-				var selected = this.state.selectedCharacter;
-				var frameData = this.props.frameData;
+				console.log(this.props);
+				var _props = this.props;
+				var frameData = _props.frameData;
+				var selectedCharacter = _props.selectedCharacter;
 
+				var selected = selectedCharacter.selected;
 				return _react2.default.createElement(
 					'div',
 					{ className: 'frame-data-container row' },
@@ -55837,7 +55839,7 @@
 							'table',
 							null,
 							_react2.default.createElement(_FrameDataTableHeader2.default, null),
-							this.renderFrameData(frameData, selected)
+							this.renderFrameData()
 						)
 					)
 				);
