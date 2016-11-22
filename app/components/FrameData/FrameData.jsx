@@ -37,7 +37,6 @@ class FrameData extends React.Component {
 		})
 	}
 
-
 	renderFrameData(data = []) {
 		{
 			return data.map((move, key) => {
