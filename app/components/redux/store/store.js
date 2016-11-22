@@ -5,15 +5,15 @@ import { browserHistory } from 'react-router';
 //import root reducer
 import rootReducer from '../reducers/index.js';
 
-import frameData from '../../../json/test.js';
+import frameDataJSON from '../../../json/test.js';
 
 
 //create object for default data
 export const defaultState = {
-	frameData
+	frameData: framaDataJSON
 };
 
-const store = createStore(rootReducer, defaultState);
+const store = createStore(rootReducer);
 
 export const history = syncHistoryWithStore(browserHistory, store);
 

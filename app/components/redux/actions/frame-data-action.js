@@ -1,32 +1,45 @@
 import {
-	FRAMEDATA_FETCH,
-	FRAMEDATA_FETCH_SUCCESS
+	FRAMEDATA_FETCHING,
+  FRAMEDATA_FETCH_SUCCESS,
+	FRAMEDATA_FETCH_ERROR
 } from './actionCreators';
 
-import fengJSON from '../../json/test.json';
+import frameDataJSON from '../../json/test.json';
 
+const FRAMEDATA_API = "";
 
-
-function dataFetchSuccess(response) {
+function dataFetchSuccess(response, character) {
 	return {
     type: FRAMEDATA_FETCH_SUCCESS,
-    payload: response
+    payload: response,
+    character
   }
 }
 
-function dataFetchError() {
-
+function dataFetchError(err, character) {
+  return {
+    type: FRAMEDATA_FETCH_ERROR,
+    error: err,
+    character
+  }
 }
 
-export function frameDataFetch(data) {
-	return {
-		type: FRAMEDATA_FETCH,
-		data
-	}
+function fetchingFrameData() {
+  return {
+    type: FRAMEDATA_FETCHING
+  }
 }
 
-export function fetchList() {
-  return fengJSON()
-    .then(dataFetchSuccess)
-    .catch(dataFetchError);
+export function fetchFrameData(character) {
+  //replace with api call
+  return getFrameDataByCharacter(character)
+    .then( (response) => dataFetchSuccess(response, character) )
+    .catch( (err, character) => dataFetchError(err, character) );
+}
+
+/*
+ *  Remove when api is set
+ */
+function getFrameDataByCharacter(character) {
+  return frameDataJSON[character];
 }

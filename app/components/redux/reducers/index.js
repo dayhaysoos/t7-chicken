@@ -9,6 +9,7 @@ const rootReducer = combineReducers({
 	frameData,
 	selectedCharacter,
 	filter,
-	routing: routerReducer });
+	routing: routerReducer 
+});
 
 export default rootReducer;

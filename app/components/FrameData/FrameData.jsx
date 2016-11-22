@@ -1,10 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+/* component dependencies */
 import CharacterSelect from './CharacterSelect';
 import FrameDataTableHeader from './FrameDataTableHeader';
 import FrameDataTable from './FrameDataTable';
 import SearchBar from './../SearchBar/SearchBar';
 
-export default class FrameData extends React.Component {
+/* dispatch actions */
+//import { frameDataFetch } from 'redux/actions/frameData';
+
+class FrameData extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -49,9 +55,11 @@ export default class FrameData extends React.Component {
 	}
 		
 	render() {
+		console.log(this.props);
 		console.log(this.state, 'test');
 		let selected = this.state.selectedCharacter;
 		const { frameData } = this.props;
+		console.log(frameData);
 		return(
 			<div className="frame-data-container row">
 				<div className='small-8 columns centered'>
@@ -69,4 +77,18 @@ export default class FrameData extends React.Component {
 			</div>
 		)
 	}
- }
+}
+
+const mapStateToProps = function(state) {
+	return {
+		frameData: state.characterData.frameData,
+		character: state.characterData.character
+	}
+}
+
+const mapDispatchToProps = function(dispatch) {
+	return { dispatch };
+}
+
+export default connect( mapStateToProps, mapDispatchToProps )(FrameData);
+
