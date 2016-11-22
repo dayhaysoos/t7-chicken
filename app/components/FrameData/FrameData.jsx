@@ -49,6 +49,7 @@ export default class FrameData extends React.Component {
 	}
 		
 	render() {
+		console.log(this.state, 'test');
 		let selected = this.state.selectedCharacter;
 		const { frameData } = this.props;
 		return(

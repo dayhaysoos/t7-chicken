@@ -21861,10 +21861,10 @@
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 	function mapStateToProps(state) {
+		console.log(state);
 		return {
-			characters: state.characters,
-			frameData: state.frameData,
-			test: state.test
+			selectedCharacter: state.selectedCharacter,
+			frameData: state.frameData
 		};
 	}
 
@@ -55807,6 +55807,7 @@
 		}, {
 			key: 'render',
 			value: function render() {
+				console.log(this.state, 'test');
 				var selected = this.state.selectedCharacter;
 				var frameData = this.props.frameData;
 
@@ -56632,7 +56633,7 @@
 
 	var rootReducer = (0, _redux.combineReducers)({
 		frameData: _frameDataReducer2.default,
-		characterSelect: _characterSelectReducer2.default,
+		selectedCharacter: _characterSelectReducer2.default,
 		filter: _filterReducer2.default,
 		routing: _reactRouterRedux.routerReducer });
 
@@ -56679,12 +56680,11 @@
 		selected: 'alisa'
 	};
 
-	function selectedCharacterReducer() {
+	function selectedCharacter() {
 		var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
 		var action = arguments[1];
 
 		if (action.type === _actionCreators.CHARACTER_SELECT) {
-			console.log(state);
 			return _extends({}, state, {
 				selected: action.character
 			});
@@ -56693,7 +56693,7 @@
 		}
 	}
 
-	exports.default = selectedCharacterReducer;
+	exports.default = selectedCharacter;
 
 /***/ },
 /* 436 */

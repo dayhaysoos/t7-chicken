@@ -4,9 +4,8 @@ const initialState = {
 	selected: 'alisa'
 }
 
-function selectedCharacterReducer(state = initialState, action) {
+function selectedCharacter(state = initialState, action) {
 	if (action.type === CHARACTER_SELECT) {
-		console.log(state);
 		return Object.assign({}, state, {
 			selected: action.character
 		})
@@ -16,4 +15,4 @@ function selectedCharacterReducer(state = initialState, action) {
 }
 
 
-export default selectedCharacterReducer;
+export default selectedCharacter;

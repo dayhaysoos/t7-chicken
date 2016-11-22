@@ -4,10 +4,10 @@ import * as actionCreators from './redux/actions/actionCreators';
 import Main from './Main';
 
 function mapStateToProps(state) {
+	console.log(state);
 	return {
-		characters: state.characters,
-		frameData: state.frameData,
-		test: state.test
+		selectedCharacter: state.selectedCharacter,
+		frameData: state.frameData
 	}
 }
 
