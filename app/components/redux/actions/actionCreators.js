@@ -1,16 +1,7 @@
 //Frame Data Types
-export const FRAMEDATA_FETCH = 'FRAMEDATA_FETCH';
-export const FRAMEDATA_FETCH_SUCCESS = 'FRAMEDATA_FETCH_SUCCESS';
-
-//Character Selection
-export const CHARACTER_SELECT = 'CHARACTER_SELECT';
-
-export function characterSelect(character) {
-	return {
-		type: CHARACTER_SELECT,
-		character
-	}
-}
+export const CHARDATA_FETCHING = 'CHARDATA_FETCHING';
+export const CHARDATA_FETCH_SUCCESS = 'CHARDATA_FETCH_SUCCESS';
+export const CHARDATA_FETCH_ERROR = 'CHARDATA_FETCH_ERROR';
 
 //Filter
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';

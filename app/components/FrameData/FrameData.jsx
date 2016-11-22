@@ -8,23 +8,26 @@ import FrameDataTable from './FrameDataTable';
 import SearchBar from './../SearchBar/SearchBar';
 
 /* dispatch actions */
-//import { frameDataFetch } from 'redux/actions/frameData';
+import { fetchCharacterData } from '../redux/actions/character-data-action';
+
+/* json list of characters (MOVE TO AN API CALL IN FUTURE)*/
+import selectOptions from '../../json/characters';
 
 class FrameData extends React.Component {
 
 	constructor(props) {
 		super(props);
 		this.state = {selectedCharacter: 'alisa'}
-		this.renderOptions = this.renderOptions.bind(this);
+		//this.renderOptions = this.renderOptions.bind(this);
 	}
 
 	handleChange = (event) => {
-		this.props.characterSelect(event.target.value);
-		console.log(this.props);
+		const character = event.target.value;
+		this.props.dispatch( fetchCharacterData(event.target.value) );
 	}
 
-	renderOptions(options) {
-		return Object.keys(options).map((name, key) => {
+	renderCharacterSelectOptions(options = []) {
+		return options.map((name, key) => {
 			return (
 				<CharacterSelect
 					key={key}
@@ -35,9 +38,9 @@ class FrameData extends React.Component {
 	}
 
 
-	renderFrameData(data, selected) {
+	renderFrameData(data = []) {
 		{
-			return data[selected].moves.map((move, key) => {
+			return data.map((move, key) => {
 				return (
 					<FrameDataTable
 						key={key}
@@ -55,23 +58,21 @@ class FrameData extends React.Component {
 	}
 		
 	render() {
-		console.log(this.props);
-		console.log(this.state, 'test');
 		let selected = this.state.selectedCharacter;
 		const { frameData } = this.props;
-		console.log(frameData);
+
 		return(
 			<div className="frame-data-container row">
 				<div className='small-8 columns centered'>
 					<h2>Frame Data</h2>
-					<select onChange={this.handleChange}>
+					<select onChange={(event) => this.handleChange(event)}>
 						<option defaultValue="Select Character">Select Character</option>
-						{this.renderOptions(frameData)}
+						{this.renderCharacterSelectOptions(selectOptions.characters)}
 					</select>
 					<SearchBar />
 					<table>
 					<FrameDataTableHeader />
-					{this.renderFrameData(frameData, selected)}
+						{this.renderFrameData(frameData)}
 					</table>
 				</div>
 			</div>
