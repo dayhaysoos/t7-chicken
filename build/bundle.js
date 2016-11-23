@@ -22077,11 +22077,7 @@
 
 	function mapStateToProps(state) {
 		console.log(state);
-		return {
-			selectedCharacter: state.selectedCharacter,
-			frameData: state.frameData,
-			moves: state.frameData[state.selectedCharacter.selected].moves
-		};
+		return {};
 	}
 
 	function mapDispatchToProps(dispatch) {
@@ -57514,12 +57510,8 @@
 			var _this = _possibleConstructorReturn(this, (FrameData.__proto__ || Object.getPrototypeOf(FrameData)).call(this, props));
 
 			_this.handleChange = function (event) {
-<<<<<<< HEAD
 				var character = event.target.value;
 				_this.props.dispatch((0, _characterDataAction.fetchCharacterData)(event.target.value));
-=======
-				_this.props.characterSelect(event.target.value);
->>>>>>> 515f1ac8ca332d8942f3f68898dcc9b8fbaa38c5
 			};
 
 			_this.state = { selectedCharacter: 'alisa' };
@@ -57542,15 +57534,10 @@
 		}, {
 			key: 'renderFrameData',
 			value: function renderFrameData() {
-<<<<<<< HEAD
 				var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
 				{
 					return data.map(function (move, key) {
-=======
-				{
-					return this.props.moves.map(function (move, key) {
->>>>>>> 515f1ac8ca332d8942f3f68898dcc9b8fbaa38c5
 						return _react2.default.createElement(_FrameDataTable2.default, {
 							key: key,
 							notation: move.notation,
@@ -57567,21 +57554,11 @@
 		}, {
 			key: 'render',
 			value: function render() {
-<<<<<<< HEAD
 				var _this2 = this;
 
-				var selected = this.state.selectedCharacter;
 				var frameData = this.props.frameData;
 
 
-=======
-				console.log(this.props);
-				var _props = this.props;
-				var frameData = _props.frameData;
-				var selectedCharacter = _props.selectedCharacter;
-
-				var selected = selectedCharacter.selected;
->>>>>>> 515f1ac8ca332d8942f3f68898dcc9b8fbaa38c5
 				return _react2.default.createElement(
 					'div',
 					{ className: 'frame-data-container row' },
@@ -57610,11 +57587,7 @@
 							'table',
 							null,
 							_react2.default.createElement(_FrameDataTableHeader2.default, null),
-<<<<<<< HEAD
 							this.renderFrameData(frameData)
-=======
-							this.renderFrameData()
->>>>>>> 515f1ac8ca332d8942f3f68898dcc9b8fbaa38c5
 						)
 					)
 				);

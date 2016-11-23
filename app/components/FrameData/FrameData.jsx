@@ -57,7 +57,6 @@ class FrameData extends React.Component {
 	}
 		
 	render() {
-		let selected = this.state.selectedCharacter;
 		const { frameData } = this.props;
 
 		return(
