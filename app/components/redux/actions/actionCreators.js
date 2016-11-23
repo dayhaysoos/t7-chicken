@@ -1,13 +1,9 @@
-//action types - This is just for reference
-/*export const UserTypes = {
-  CREATE_USER: 'CREATE_USER',
-  CREATE_USER_SUCCESS: 'CREATE_USER_SUCCESS',
-  CREATE_USER_FAIL: 'CREATE_USER_FAIL'
-}/*/
-
 //Frame Data Types
-export const FRAMEDATA_FETCH = 'FRAMEDATA_FETCH';
-export const FRAMEDATA_FETCH_SUCCESS = 'FRAMEDATA_FETCH_SUCCESS';
+export const CHARDATA_FETCHING = 'CHARDATA_FETCHING';
+export const CHARDATA_FETCH_SUCCESS = 'CHARDATA_FETCH_SUCCESS';
+export const CHARDATA_FETCH_ERROR = 'CHARDATA_FETCH_ERROR';
 
-//Character Selection
-//export const SELECT = 'CHARACTER_SELECT';
+//Filter
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
+
+export const TEST = 'TEST';

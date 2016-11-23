@@ -1,7 +1,10 @@
-export const TestTypes = {
-	TEST_ACTION: 'TEST_ACTION'
-}
+import {
+	TEST
+} from './actionCreators';
 
-export function setTest(test) {
-	return { type: TEST_ACTION, test }
+export function test(test) {
+	return {
+		type: TEST,
+		test
+	}
 }

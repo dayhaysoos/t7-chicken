@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-import frameData from './frame-data-reducer';
-import characterSelect from './character-select-reducer';
+import characterData from './character-data-reducer';
+import filter from './filter-reducer';
 
 const rootReducer = combineReducers({
-	frameData,
-	characterSelect,
-	routing: routerReducer });
+	characterData,
+	filter,
+	routing: routerReducer 
+});
 
 export default rootReducer;
