@@ -2,13 +2,12 @@
   "name": "t7-chicken",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "server": "node server/index.js",
-    "development": "webpack-dev-server --hot --config webpack.config.js --watch",
-    "lint": "eslint . --ext .js --ext .jsx --cache || true",
-    "start": "npm run server",
-    "postinstall": "npm run build"
+    "start": "webpack-dev-server",
+    "lint": "eslint . --ext .js --ext .jsx --cache || true"
   },
   "keywords": [],
   "author": "",
