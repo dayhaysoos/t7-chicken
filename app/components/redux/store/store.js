@@ -1,19 +1,38 @@
-import { createStore, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import createLogger from 'redux-logger';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 
 //import root reducer
 import rootReducer from '../reducers/index.js';
 
-import frameData from '../../../json/test.js';
+import frameDataJSON from '../../../json/test.js';
 
+const loggerMiddleware = createLogger();
 
 //create object for default data
 export const defaultState = {
-	frameData
+	frameData: frameDataJSON
 };
 
-const store = createStore(rootReducer, defaultState);
+/**
+  DATA DIAGRAM
+  ------------
+
+  {
+    characterData: {
+      frameData: (array)[],
+      metaData: (object){},
+      characterName: (string)""
+    }
+  }
+  
+**/
+
+
+
+const store = createStore(rootReducer, applyMiddleware(thunk, loggerMiddleware));
 
 export const history = syncHistoryWithStore(browserHistory, store);
 

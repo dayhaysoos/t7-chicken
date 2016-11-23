@@ -6,9 +6,6 @@ import Main from './Main';
 function mapStateToProps(state) {
 	console.log(state);
 	return {
-		selectedCharacter: state.selectedCharacter,
-		frameData: state.frameData,
-		moves: state.frameData[state.selectedCharacter.selected].moves
 	}
 }
 
