@@ -17,8 +17,15 @@ class FrameData extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {selectedCharacter: 'alisa'}
-		//this.renderOptions = this.renderOptions.bind(this);
+		this.state = {	
+			hitLevelCheckbox: true,
+			damageCheckbox: true,
+			speedCheckbox: true,
+			onBlockCheckbox: true,
+			onHitCheckbox: true,
+			onCHcheckbox: true,
+			columnHide: null
+		}
 	}
 
 	handleChange = (event) => {
@@ -55,6 +62,11 @@ class FrameData extends React.Component {
 			})
 		}
 	}
+
+	hideColumnToggle(event) {
+		let checkboxName = event.target.name;
+		this.setState({[checkboxName]: this.state[checkboxName] ? false : true});
+	}
 		
 	render() {
 		const { frameData } = this.props;
@@ -67,7 +79,14 @@ class FrameData extends React.Component {
 						<option defaultValue="Select Character">Select Character</option>
 						{this.renderCharacterSelectOptions(selectOptions.characters)}
 					</select>
-					<SearchBar />
+					<SearchBar />					
+					Hit Level <input name="hitLevelCheckbox" checked={this.state.hitLevelCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
+					Damage <input name="damageCheckbox" checked={this.state.damageCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
+					Speed <input name="speedCheckbox" checked={this.state.speedCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
+					On Block <input name="onBlockCheckbox" checked={this.state.onBlockCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
+					On Hit <input name="onHitCheckbox" checked={this.state.onHitCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
+					On CH <input name="onCHcheckbox" checked={this.state.onCHcheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
+
 					<table>
 					<FrameDataTableHeader />
 						{this.renderFrameData(frameData)}
