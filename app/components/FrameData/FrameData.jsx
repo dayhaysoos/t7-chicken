@@ -23,8 +23,7 @@ class FrameData extends React.Component {
 			speedCheckbox: true,
 			onBlockCheckbox: true,
 			onHitCheckbox: true,
-			onCHcheckbox: true,
-			columnHide: null
+			onCHcheckbox: true
 		}
 	}
 
@@ -57,6 +56,7 @@ class FrameData extends React.Component {
 						onBlock={move.on_block}
 						onHit={move.on_hit}
 						onCH={move.on_ch}
+						checkBoxStates={this.state}
 					/>
 				);
 			})
@@ -88,7 +88,7 @@ class FrameData extends React.Component {
 					On CH <input name="onCHcheckbox" checked={this.state.onCHcheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
 
 					<table>
-					<FrameDataTableHeader />
+					<FrameDataTableHeader checkBoxStates={this.state} />
 						{this.renderFrameData(frameData)}
 					</table>
 				</div>
