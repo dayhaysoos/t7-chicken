@@ -44,7 +44,6 @@ export default class FrameDataTableHeader extends React.Component {
 	}
 
 	render() {
-		console.log(this.props.checkBoxStates);
 		return (
 			<thead className="category-container">
 				<tr>
