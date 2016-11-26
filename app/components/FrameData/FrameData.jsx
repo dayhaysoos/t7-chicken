@@ -6,12 +6,24 @@ import CharacterSelect from './CharacterSelect';
 import FrameDataTableHeader from './FrameDataTableHeader';
 import FrameDataTable from './FrameDataTable';
 import SearchBar from './../SearchBar/SearchBar';
+import SearchInput, {createFilter} from 'react-search-input';
 
 /* dispatch actions */
 import { fetchCharacterData } from '../redux/actions/character-data-action';
 
 /* json list of characters (MOVE TO AN API CALL IN FUTURE)*/
 import selectOptions from '../../json/characters';
+
+const KEYS_TO_FILTERS = [
+	'notation',
+	'hit_level',
+	'damage',
+	'speed',
+	'on_block',
+	'on_hit',
+	'on_ch'
+	];
+
 
 class FrameData extends React.Component {
 
@@ -23,7 +35,8 @@ class FrameData extends React.Component {
 			speedCheckbox: true,
 			onBlockCheckbox: true,
 			onHitCheckbox: true,
-			onCHcheckbox: true
+			onCHcheckbox: true,
+			searchTerm: ''
 		}
 	}
 
@@ -67,10 +80,14 @@ class FrameData extends React.Component {
 		let checkboxName = event.target.name;
 		this.setState({[checkboxName]: this.state[checkboxName] ? false : true});
 	}
-		
+
+	searchUpdated(move) {
+		this.setState({searchTerm: move})
+	}
+
 	render() {
 		const { frameData } = this.props;
-
+		const filteredMoves = frameData.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS));
 		return(
 			<div className="frame-data-container row">
 				<div className='small-8 columns centered'>
@@ -79,7 +96,7 @@ class FrameData extends React.Component {
 						<option defaultValue="Select Character">Select Character</option>
 						{this.renderCharacterSelectOptions(selectOptions.characters)}
 					</select>
-					<SearchBar />
+					<SearchInput className="search-input" onChange={(move) => this.searchUpdated(move)} />
 					<div className="checkbox-container">				
 						Hit Level <input name="hitLevelCheckbox" checked={this.state.hitLevelCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
 						Damage <input name="damageCheckbox" checked={this.state.damageCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
@@ -88,10 +105,9 @@ class FrameData extends React.Component {
 						On Hit <input name="onHitCheckbox" checked={this.state.onHitCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
 						On CH <input name="onCHcheckbox" checked={this.state.onCHcheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
 					</div>
-
 					<table>
+					{this.renderFrameData(filteredMoves)}
 					<FrameDataTableHeader checkBoxStates={this.state} />
-						{this.renderFrameData(frameData)}
 					</table>
 				</div>
 			</div>
