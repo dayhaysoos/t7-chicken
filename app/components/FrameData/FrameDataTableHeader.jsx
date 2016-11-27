@@ -37,8 +37,7 @@ export default class FrameDataTableHeader extends React.Component {
 	}
 
 	onCHStateCheck() {
-		if(this.props.checkBoxStates.onCHCheckbox == false) {
-			console.log('wtf');
+		if(this.props.checkBoxStates.onCHcheckbox == false) {
 			return this.hider()
 		}
 	}
