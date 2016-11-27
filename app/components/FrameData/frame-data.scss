@@ -1,4 +1,11 @@
 .frame-data-container {
+	.input-container {
+		text-align: center;
+	}
+	.table-container {
+		overflow: auto;
+		height: 300px;
+	}
 	table {
 		thead {
 			border: 1px solid black;

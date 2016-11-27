@@ -43,7 +43,6 @@ export default class FrameDataTable extends React.Component {
 	}
 	render() {
 		return (
-			<tbody>
 				<tr className="attack-data">
 					<td>{this.props.notation}</td>
 					<td className={this.hitLevelStateCheck()}>{this.props.hitLevel}</td>
@@ -53,7 +52,6 @@ export default class FrameDataTable extends React.Component {
 					<td className={this.onHitStateCheck()}>{this.props.onHit}</td>
 					<td className={this.onCHStateCheck()}>{this.props.onCH}</td>
 				</tr>
-			</tbody>
 			);
 	}
 }

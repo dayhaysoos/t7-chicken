@@ -89,14 +89,15 @@ class FrameData extends React.Component {
 		const { frameData } = this.props;
 		const filteredMoves = frameData.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS));
 		return(
-			<div className="frame-data-container row">
-				<div className='small-8 columns centered'>
+			<div className="frame-data-container">
+					<div className="input-container">
 					<h2>Frame Data</h2>
-					<select onChange={(event) => this.handleChange(event)}>
-						<option defaultValue="Select Character">Select Character</option>
-						{this.renderCharacterSelectOptions(selectOptions.characters)}
-					</select>
-					<SearchInput className="search-input" onChange={(move) => this.searchUpdated(move)} />
+						<select onChange={(event) => this.handleChange(event)}>
+							<option defaultValue="Select Character">Select Character</option>
+							{this.renderCharacterSelectOptions(selectOptions.characters)}
+						</select>
+						<SearchInput className="search-input" onChange={(move) => this.searchUpdated(move)} />
+					</div>
 					<div className="checkbox-container">				
 						Hit Level <input name="hitLevelCheckbox" checked={this.state.hitLevelCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
 						Damage <input name="damageCheckbox" checked={this.state.damageCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
@@ -105,11 +106,14 @@ class FrameData extends React.Component {
 						On Hit <input name="onHitCheckbox" checked={this.state.onHitCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
 						On CH <input name="onCHcheckbox" checked={this.state.onCHcheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
 					</div>
-					<table>
-					{this.renderFrameData(filteredMoves)}
-					<FrameDataTableHeader checkBoxStates={this.state} />
-					</table>
-				</div>
+					<div className="table-container">
+						<table cellSpacing="0" cellPadding="1">
+							<tbody>
+								{this.renderFrameData(filteredMoves)}
+							</tbody>
+						<FrameDataTableHeader checkBoxStates={this.state} />
+						</table>
+					</div>
 			</div>
 		)
 	}
