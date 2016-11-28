@@ -7,6 +7,7 @@ import FrameDataTableHeader from './FrameDataTableHeader';
 import FrameDataTable from './FrameDataTable';
 import SearchBar from './../SearchBar/SearchBar';
 import SearchInput, {createFilter} from 'react-search-input';
+import PracticalAttacks from './PracticalAttacks';
 
 /* dispatch actions */
 import { fetchCharacterData } from '../redux/actions/character-data-action';
@@ -90,8 +91,8 @@ class FrameData extends React.Component {
 		const filteredMoves = frameData.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS));
 		return(
 			<div className="frame-data-container">
-					<div className="input-container">
 					<h2>Frame Data</h2>
+					<div className="input-container">
 						<select onChange={(event) => this.handleChange(event)}>
 							<option defaultValue="Select Character">Select Character</option>
 							{this.renderCharacterSelectOptions(selectOptions.characters)}
@@ -114,6 +115,7 @@ class FrameData extends React.Component {
 						<FrameDataTableHeader checkBoxStates={this.state} />
 						</table>
 					</div>
+					<PracticalAttacks />
 			</div>
 		)
 	}

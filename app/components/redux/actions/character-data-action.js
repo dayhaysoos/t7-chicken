@@ -6,7 +6,7 @@ import {
 
 import frameData from '../../../json/test.js';
 
-const CHARDATA_API = "";
+const CHARDATA_API = "http://chicken.seattletekken.com/api.php";
 
 function dataFetchSuccess(response, character) {
   console.log("success", response);
