@@ -4,8 +4,8 @@ import {
 	CHARDATA_FETCH_ERROR
 } from './actionCreators';
 
-
-import frameData from '../../../json/test.js';
+//Keeping this here just in case
+//import frameData from '../../../json/test.js';
 
 
 const CHARDATA_API = "http://chicken.seattletekken.com/api.php";
