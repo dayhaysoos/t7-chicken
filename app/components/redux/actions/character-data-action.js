@@ -34,19 +34,6 @@ function fetchingCharacterData() {
   }
 }
 
-function testGet() {
-  fetch(CHARDATA_API)
-  .then(function(response) {
-    console.log(response, 'response');
-    return response.json()
-  }).then(function(json) {
-    console.log('parsed json', json)
-
-  }).catch(function(ex) {
-    console.log('parsing failed', ex)
-  })
-}
-
 /*
  * FETCHES DATA FOR SPECIFIC CHARACTER
  */
