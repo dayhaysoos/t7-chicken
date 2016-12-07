@@ -4,9 +4,12 @@ import {
 	CHARDATA_FETCH_ERROR
 } from './actionCreators';
 
+
 import frameData from '../../../json/test.js';
 
+
 const CHARDATA_API = "http://chicken.seattletekken.com/api.php";
+
 
 function dataFetchSuccess(response, character) {
   console.log("success", response);
@@ -31,24 +34,36 @@ function fetchingCharacterData() {
   }
 }
 
+function testGet() {
+  fetch(CHARDATA_API)
+  .then(function(response) {
+    console.log(response, 'response');
+    return response.json()
+  }).then(function(json) {
+    console.log('parsed json', json)
+
+  }).catch(function(ex) {
+    console.log('parsing failed', ex)
+  })
+}
+
 /*
  * FETCHES DATA FOR SPECIFIC CHARACTER
  */
 export function fetchCharacterData(character) {
-  console.log("call fetch", character);
+  console.log('call fetch', character);
   return dispatch => {
     // set loading state;
     dispatch( fetchingCharacterData() );
-    // replace with api call
-    return new Promise( (resolve, reject) => resolve(getDataByCharacter(character)) )
-      .then( (response) => dispatch( dataFetchSuccess(response, character) ) )
-      .catch( (err, character) => dispatch( dataFetchError(err, character) ) );
+    // api call
+    fetch(CHARDATA_API)
+    .then((response) => {
+      console.log(response);
+      return response.json()
+    }).then((response) => {
+      dispatch( dataFetchSuccess(response[character], character) )
+    }).catch(function(err) {
+      console.log('this got rekt', err)
+    })
   };
-}
-
-/*
- *  Remove when api is set
- */
-function getDataByCharacter(character) {
-  return frameData[character];
 }
