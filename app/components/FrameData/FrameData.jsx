@@ -30,7 +30,7 @@ class FrameData extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {	
+		this.state = {
 			hitLevelCheckbox: true,
 			damageCheckbox: true,
 			speedCheckbox: true,
@@ -99,7 +99,7 @@ class FrameData extends React.Component {
 						</select>
 						<SearchInput className="search-input" onChange={(move) => this.searchUpdated(move)} />
 					</div>
-					<div className="checkbox-container">				
+					<div className="checkbox-container">
 						Hit Level <input name="hitLevelCheckbox" checked={this.state.hitLevelCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
 						Damage <input name="damageCheckbox" checked={this.state.damageCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
 						Speed <input name="speedCheckbox" checked={this.state.speedCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
@@ -133,4 +133,3 @@ const mapDispatchToProps = function(dispatch) {
 }
 
 export default connect( mapStateToProps, mapDispatchToProps )(FrameData);
-

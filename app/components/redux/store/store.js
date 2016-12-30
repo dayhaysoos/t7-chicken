@@ -7,14 +7,9 @@ import { browserHistory } from 'react-router';
 //import root reducer
 import rootReducer from '../reducers/index.js';
 
-import frameDataJSON from '../../../json/test.js';
-
 const loggerMiddleware = createLogger();
 
 //create object for default data
-export const defaultState = {
-	frameData: frameDataJSON
-};
 
 /**
   DATA DIAGRAM
@@ -27,7 +22,7 @@ export const defaultState = {
       characterName: (string)""
     }
   }
-  
+
 **/
 
 

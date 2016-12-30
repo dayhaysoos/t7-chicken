@@ -72,7 +72,7 @@
 
 	var _FrameData2 = _interopRequireDefault(_FrameData);
 
-	var _Register = __webpack_require__(444);
+	var _Register = __webpack_require__(432);
 
 	var _Register2 = _interopRequireDefault(_Register);
 
@@ -80,7 +80,7 @@
 
 	var _reactRedux = __webpack_require__(192);
 
-	var _store = __webpack_require__(445);
+	var _store = __webpack_require__(433);
 
 	var _store2 = _interopRequireDefault(_store);
 
@@ -21521,7 +21521,7 @@
 
 
 	// module
-	exports.push([module.id, "/**\n * Foundation for Sites by ZURB\n * Version 6.2.4\n * foundation.zurb.com\n * Licensed under MIT Open Source\n */\n.row {\n  max-width: 75rem;\n  margin-left: auto;\n  margin-right: auto; }\n  .row::before, .row::after {\n    content: ' ';\n    display: table; }\n  .row::after {\n    clear: both; }\n  .row.collapse > .column, .row.collapse > .columns {\n    padding-left: 0;\n    padding-right: 0; }\n  .row .row {\n    margin-left: -0.625rem;\n    margin-right: -0.625rem; }\n    @media screen and (min-width: 40em) {\n      .row .row {\n        margin-left: -0.9375rem;\n        margin-right: -0.9375rem; } }\n    .row .row.collapse {\n      margin-left: 0;\n      margin-right: 0; }\n  .row.expanded {\n    max-width: none; }\n    .row.expanded .row {\n      margin-left: auto;\n      margin-right: auto; }\n\n.column, .columns {\n  width: 100%;\n  float: left;\n  padding-left: 0.625rem;\n  padding-right: 0.625rem; }\n  @media screen and (min-width: 40em) {\n    .column, .columns {\n      padding-left: 0.9375rem;\n      padding-right: 0.9375rem; } }\n  .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {\n    float: right; }\n  .column.end:last-child:last-child, .end.columns:last-child:last-child {\n    float: left; }\n\n.column.row.row, .row.row.columns {\n  float: none; }\n\n.row .column.row.row, .row .row.row.columns {\n  padding-left: 0;\n  padding-right: 0;\n  margin-left: 0;\n  margin-right: 0; }\n\n.small-1 {\n  width: 8.33333%; }\n\n.small-push-1 {\n  position: relative;\n  left: 8.33333%; }\n\n.small-pull-1 {\n  position: relative;\n  left: -8.33333%; }\n\n.small-offset-0 {\n  margin-left: 0%; }\n\n.small-2 {\n  width: 16.66667%; }\n\n.small-push-2 {\n  position: relative;\n  left: 16.66667%; }\n\n.small-pull-2 {\n  position: relative;\n  left: -16.66667%; }\n\n.small-offset-1 {\n  margin-left: 8.33333%; }\n\n.small-3 {\n  width: 25%; }\n\n.small-push-3 {\n  position: relative;\n  left: 25%; }\n\n.small-pull-3 {\n  position: relative;\n  left: -25%; }\n\n.small-offset-2 {\n  margin-left: 16.66667%; }\n\n.small-4 {\n  width: 33.33333%; }\n\n.small-push-4 {\n  position: relative;\n  left: 33.33333%; }\n\n.small-pull-4 {\n  position: relative;\n  left: -33.33333%; }\n\n.small-offset-3 {\n  margin-left: 25%; }\n\n.small-5 {\n  width: 41.66667%; }\n\n.small-push-5 {\n  position: relative;\n  left: 41.66667%; }\n\n.small-pull-5 {\n  position: relative;\n  left: -41.66667%; }\n\n.small-offset-4 {\n  margin-left: 33.33333%; }\n\n.small-6 {\n  width: 50%; }\n\n.small-push-6 {\n  position: relative;\n  left: 50%; }\n\n.small-pull-6 {\n  position: relative;\n  left: -50%; }\n\n.small-offset-5 {\n  margin-left: 41.66667%; }\n\n.small-7 {\n  width: 58.33333%; }\n\n.small-push-7 {\n  position: relative;\n  left: 58.33333%; }\n\n.small-pull-7 {\n  position: relative;\n  left: -58.33333%; }\n\n.small-offset-6 {\n  margin-left: 50%; }\n\n.small-8 {\n  width: 66.66667%; }\n\n.small-push-8 {\n  position: relative;\n  left: 66.66667%; }\n\n.small-pull-8 {\n  position: relative;\n  left: -66.66667%; }\n\n.small-offset-7 {\n  margin-left: 58.33333%; }\n\n.small-9 {\n  width: 75%; }\n\n.small-push-9 {\n  position: relative;\n  left: 75%; }\n\n.small-pull-9 {\n  position: relative;\n  left: -75%; }\n\n.small-offset-8 {\n  margin-left: 66.66667%; }\n\n.small-10 {\n  width: 83.33333%; }\n\n.small-push-10 {\n  position: relative;\n  left: 83.33333%; }\n\n.small-pull-10 {\n  position: relative;\n  left: -83.33333%; }\n\n.small-offset-9 {\n  margin-left: 75%; }\n\n.small-11 {\n  width: 91.66667%; }\n\n.small-push-11 {\n  position: relative;\n  left: 91.66667%; }\n\n.small-pull-11 {\n  position: relative;\n  left: -91.66667%; }\n\n.small-offset-10 {\n  margin-left: 83.33333%; }\n\n.small-12 {\n  width: 100%; }\n\n.small-offset-11 {\n  margin-left: 91.66667%; }\n\n.small-up-1 > .column, .small-up-1 > .columns {\n  width: 100%;\n  float: left; }\n  .small-up-1 > .column:nth-of-type(1n), .small-up-1 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-1 > .column:nth-of-type(1n+1), .small-up-1 > .columns:nth-of-type(1n+1) {\n    clear: both; }\n  .small-up-1 > .column:last-child, .small-up-1 > .columns:last-child {\n    float: left; }\n\n.small-up-2 > .column, .small-up-2 > .columns {\n  width: 50%;\n  float: left; }\n  .small-up-2 > .column:nth-of-type(1n), .small-up-2 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-2 > .column:nth-of-type(2n+1), .small-up-2 > .columns:nth-of-type(2n+1) {\n    clear: both; }\n  .small-up-2 > .column:last-child, .small-up-2 > .columns:last-child {\n    float: left; }\n\n.small-up-3 > .column, .small-up-3 > .columns {\n  width: 33.33333%;\n  float: left; }\n  .small-up-3 > .column:nth-of-type(1n), .small-up-3 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-3 > .column:nth-of-type(3n+1), .small-up-3 > .columns:nth-of-type(3n+1) {\n    clear: both; }\n  .small-up-3 > .column:last-child, .small-up-3 > .columns:last-child {\n    float: left; }\n\n.small-up-4 > .column, .small-up-4 > .columns {\n  width: 25%;\n  float: left; }\n  .small-up-4 > .column:nth-of-type(1n), .small-up-4 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-4 > .column:nth-of-type(4n+1), .small-up-4 > .columns:nth-of-type(4n+1) {\n    clear: both; }\n  .small-up-4 > .column:last-child, .small-up-4 > .columns:last-child {\n    float: left; }\n\n.small-up-5 > .column, .small-up-5 > .columns {\n  width: 20%;\n  float: left; }\n  .small-up-5 > .column:nth-of-type(1n), .small-up-5 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-5 > .column:nth-of-type(5n+1), .small-up-5 > .columns:nth-of-type(5n+1) {\n    clear: both; }\n  .small-up-5 > .column:last-child, .small-up-5 > .columns:last-child {\n    float: left; }\n\n.small-up-6 > .column, .small-up-6 > .columns {\n  width: 16.66667%;\n  float: left; }\n  .small-up-6 > .column:nth-of-type(1n), .small-up-6 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-6 > .column:nth-of-type(6n+1), .small-up-6 > .columns:nth-of-type(6n+1) {\n    clear: both; }\n  .small-up-6 > .column:last-child, .small-up-6 > .columns:last-child {\n    float: left; }\n\n.small-up-7 > .column, .small-up-7 > .columns {\n  width: 14.28571%;\n  float: left; }\n  .small-up-7 > .column:nth-of-type(1n), .small-up-7 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-7 > .column:nth-of-type(7n+1), .small-up-7 > .columns:nth-of-type(7n+1) {\n    clear: both; }\n  .small-up-7 > .column:last-child, .small-up-7 > .columns:last-child {\n    float: left; }\n\n.small-up-8 > .column, .small-up-8 > .columns {\n  width: 12.5%;\n  float: left; }\n  .small-up-8 > .column:nth-of-type(1n), .small-up-8 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-8 > .column:nth-of-type(8n+1), .small-up-8 > .columns:nth-of-type(8n+1) {\n    clear: both; }\n  .small-up-8 > .column:last-child, .small-up-8 > .columns:last-child {\n    float: left; }\n\n.small-collapse > .column, .small-collapse > .columns {\n  padding-left: 0;\n  padding-right: 0; }\n\n.small-collapse .row {\n  margin-left: 0;\n  margin-right: 0; }\n\n.expanded.row .small-collapse.row {\n  margin-left: 0;\n  margin-right: 0; }\n\n.small-uncollapse > .column, .small-uncollapse > .columns {\n  padding-left: 0.625rem;\n  padding-right: 0.625rem; }\n\n.small-centered {\n  margin-left: auto;\n  margin-right: auto; }\n  .small-centered, .small-centered:last-child:not(:first-child) {\n    float: none;\n    clear: both; }\n\n.small-uncentered,\n.small-push-0,\n.small-pull-0 {\n  position: static;\n  margin-left: 0;\n  margin-right: 0;\n  float: left; }\n\n@media screen and (min-width: 40em) {\n  .medium-1 {\n    width: 8.33333%; }\n  .medium-push-1 {\n    position: relative;\n    left: 8.33333%; }\n  .medium-pull-1 {\n    position: relative;\n    left: -8.33333%; }\n  .medium-offset-0 {\n    margin-left: 0%; }\n  .medium-2 {\n    width: 16.66667%; }\n  .medium-push-2 {\n    position: relative;\n    left: 16.66667%; }\n  .medium-pull-2 {\n    position: relative;\n    left: -16.66667%; }\n  .medium-offset-1 {\n    margin-left: 8.33333%; }\n  .medium-3 {\n    width: 25%; }\n  .medium-push-3 {\n    position: relative;\n    left: 25%; }\n  .medium-pull-3 {\n    position: relative;\n    left: -25%; }\n  .medium-offset-2 {\n    margin-left: 16.66667%; }\n  .medium-4 {\n    width: 33.33333%; }\n  .medium-push-4 {\n    position: relative;\n    left: 33.33333%; }\n  .medium-pull-4 {\n    position: relative;\n    left: -33.33333%; }\n  .medium-offset-3 {\n    margin-left: 25%; }\n  .medium-5 {\n    width: 41.66667%; }\n  .medium-push-5 {\n    position: relative;\n    left: 41.66667%; }\n  .medium-pull-5 {\n    position: relative;\n    left: -41.66667%; }\n  .medium-offset-4 {\n    margin-left: 33.33333%; }\n  .medium-6 {\n    width: 50%; }\n  .medium-push-6 {\n    position: relative;\n    left: 50%; }\n  .medium-pull-6 {\n    position: relative;\n    left: -50%; }\n  .medium-offset-5 {\n    margin-left: 41.66667%; }\n  .medium-7 {\n    width: 58.33333%; }\n  .medium-push-7 {\n    position: relative;\n    left: 58.33333%; }\n  .medium-pull-7 {\n    position: relative;\n    left: -58.33333%; }\n  .medium-offset-6 {\n    margin-left: 50%; }\n  .medium-8 {\n    width: 66.66667%; }\n  .medium-push-8 {\n    position: relative;\n    left: 66.66667%; }\n  .medium-pull-8 {\n    position: relative;\n    left: -66.66667%; }\n  .medium-offset-7 {\n    margin-left: 58.33333%; }\n  .medium-9 {\n    width: 75%; }\n  .medium-push-9 {\n    position: relative;\n    left: 75%; }\n  .medium-pull-9 {\n    position: relative;\n    left: -75%; }\n  .medium-offset-8 {\n    margin-left: 66.66667%; }\n  .medium-10 {\n    width: 83.33333%; }\n  .medium-push-10 {\n    position: relative;\n    left: 83.33333%; }\n  .medium-pull-10 {\n    position: relative;\n    left: -83.33333%; }\n  .medium-offset-9 {\n    margin-left: 75%; }\n  .medium-11 {\n    width: 91.66667%; }\n  .medium-push-11 {\n    position: relative;\n    left: 91.66667%; }\n  .medium-pull-11 {\n    position: relative;\n    left: -91.66667%; }\n  .medium-offset-10 {\n    margin-left: 83.33333%; }\n  .medium-12 {\n    width: 100%; }\n  .medium-offset-11 {\n    margin-left: 91.66667%; }\n  .medium-up-1 > .column, .medium-up-1 > .columns {\n    width: 100%;\n    float: left; }\n    .medium-up-1 > .column:nth-of-type(1n), .medium-up-1 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-1 > .column:nth-of-type(1n+1), .medium-up-1 > .columns:nth-of-type(1n+1) {\n      clear: both; }\n    .medium-up-1 > .column:last-child, .medium-up-1 > .columns:last-child {\n      float: left; }\n  .medium-up-2 > .column, .medium-up-2 > .columns {\n    width: 50%;\n    float: left; }\n    .medium-up-2 > .column:nth-of-type(1n), .medium-up-2 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-2 > .column:nth-of-type(2n+1), .medium-up-2 > .columns:nth-of-type(2n+1) {\n      clear: both; }\n    .medium-up-2 > .column:last-child, .medium-up-2 > .columns:last-child {\n      float: left; }\n  .medium-up-3 > .column, .medium-up-3 > .columns {\n    width: 33.33333%;\n    float: left; }\n    .medium-up-3 > .column:nth-of-type(1n), .medium-up-3 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-3 > .column:nth-of-type(3n+1), .medium-up-3 > .columns:nth-of-type(3n+1) {\n      clear: both; }\n    .medium-up-3 > .column:last-child, .medium-up-3 > .columns:last-child {\n      float: left; }\n  .medium-up-4 > .column, .medium-up-4 > .columns {\n    width: 25%;\n    float: left; }\n    .medium-up-4 > .column:nth-of-type(1n), .medium-up-4 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-4 > .column:nth-of-type(4n+1), .medium-up-4 > .columns:nth-of-type(4n+1) {\n      clear: both; }\n    .medium-up-4 > .column:last-child, .medium-up-4 > .columns:last-child {\n      float: left; }\n  .medium-up-5 > .column, .medium-up-5 > .columns {\n    width: 20%;\n    float: left; }\n    .medium-up-5 > .column:nth-of-type(1n), .medium-up-5 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-5 > .column:nth-of-type(5n+1), .medium-up-5 > .columns:nth-of-type(5n+1) {\n      clear: both; }\n    .medium-up-5 > .column:last-child, .medium-up-5 > .columns:last-child {\n      float: left; }\n  .medium-up-6 > .column, .medium-up-6 > .columns {\n    width: 16.66667%;\n    float: left; }\n    .medium-up-6 > .column:nth-of-type(1n), .medium-up-6 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-6 > .column:nth-of-type(6n+1), .medium-up-6 > .columns:nth-of-type(6n+1) {\n      clear: both; }\n    .medium-up-6 > .column:last-child, .medium-up-6 > .columns:last-child {\n      float: left; }\n  .medium-up-7 > .column, .medium-up-7 > .columns {\n    width: 14.28571%;\n    float: left; }\n    .medium-up-7 > .column:nth-of-type(1n), .medium-up-7 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-7 > .column:nth-of-type(7n+1), .medium-up-7 > .columns:nth-of-type(7n+1) {\n      clear: both; }\n    .medium-up-7 > .column:last-child, .medium-up-7 > .columns:last-child {\n      float: left; }\n  .medium-up-8 > .column, .medium-up-8 > .columns {\n    width: 12.5%;\n    float: left; }\n    .medium-up-8 > .column:nth-of-type(1n), .medium-up-8 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-8 > .column:nth-of-type(8n+1), .medium-up-8 > .columns:nth-of-type(8n+1) {\n      clear: both; }\n    .medium-up-8 > .column:last-child, .medium-up-8 > .columns:last-child {\n      float: left; }\n  .medium-collapse > .column, .medium-collapse > .columns {\n    padding-left: 0;\n    padding-right: 0; }\n  .medium-collapse .row {\n    margin-left: 0;\n    margin-right: 0; }\n  .expanded.row .medium-collapse.row {\n    margin-left: 0;\n    margin-right: 0; }\n  .medium-uncollapse > .column, .medium-uncollapse > .columns {\n    padding-left: 0.9375rem;\n    padding-right: 0.9375rem; }\n  .medium-centered {\n    margin-left: auto;\n    margin-right: auto; }\n    .medium-centered, .medium-centered:last-child:not(:first-child) {\n      float: none;\n      clear: both; }\n  .medium-uncentered,\n  .medium-push-0,\n  .medium-pull-0 {\n    position: static;\n    margin-left: 0;\n    margin-right: 0;\n    float: left; } }\n\n@media screen and (min-width: 64em) {\n  .large-1 {\n    width: 8.33333%; }\n  .large-push-1 {\n    position: relative;\n    left: 8.33333%; }\n  .large-pull-1 {\n    position: relative;\n    left: -8.33333%; }\n  .large-offset-0 {\n    margin-left: 0%; }\n  .large-2 {\n    width: 16.66667%; }\n  .large-push-2 {\n    position: relative;\n    left: 16.66667%; }\n  .large-pull-2 {\n    position: relative;\n    left: -16.66667%; }\n  .large-offset-1 {\n    margin-left: 8.33333%; }\n  .large-3 {\n    width: 25%; }\n  .large-push-3 {\n    position: relative;\n    left: 25%; }\n  .large-pull-3 {\n    position: relative;\n    left: -25%; }\n  .large-offset-2 {\n    margin-left: 16.66667%; }\n  .large-4 {\n    width: 33.33333%; }\n  .large-push-4 {\n    position: relative;\n    left: 33.33333%; }\n  .large-pull-4 {\n    position: relative;\n    left: -33.33333%; }\n  .large-offset-3 {\n    margin-left: 25%; }\n  .large-5 {\n    width: 41.66667%; }\n  .large-push-5 {\n    position: relative;\n    left: 41.66667%; }\n  .large-pull-5 {\n    position: relative;\n    left: -41.66667%; }\n  .large-offset-4 {\n    margin-left: 33.33333%; }\n  .large-6 {\n    width: 50%; }\n  .large-push-6 {\n    position: relative;\n    left: 50%; }\n  .large-pull-6 {\n    position: relative;\n    left: -50%; }\n  .large-offset-5 {\n    margin-left: 41.66667%; }\n  .large-7 {\n    width: 58.33333%; }\n  .large-push-7 {\n    position: relative;\n    left: 58.33333%; }\n  .large-pull-7 {\n    position: relative;\n    left: -58.33333%; }\n  .large-offset-6 {\n    margin-left: 50%; }\n  .large-8 {\n    width: 66.66667%; }\n  .large-push-8 {\n    position: relative;\n    left: 66.66667%; }\n  .large-pull-8 {\n    position: relative;\n    left: -66.66667%; }\n  .large-offset-7 {\n    margin-left: 58.33333%; }\n  .large-9 {\n    width: 75%; }\n  .large-push-9 {\n    position: relative;\n    left: 75%; }\n  .large-pull-9 {\n    position: relative;\n    left: -75%; }\n  .large-offset-8 {\n    margin-left: 66.66667%; }\n  .large-10 {\n    width: 83.33333%; }\n  .large-push-10 {\n    position: relative;\n    left: 83.33333%; }\n  .large-pull-10 {\n    position: relative;\n    left: -83.33333%; }\n  .large-offset-9 {\n    margin-left: 75%; }\n  .large-11 {\n    width: 91.66667%; }\n  .large-push-11 {\n    position: relative;\n    left: 91.66667%; }\n  .large-pull-11 {\n    position: relative;\n    left: -91.66667%; }\n  .large-offset-10 {\n    margin-left: 83.33333%; }\n  .large-12 {\n    width: 100%; }\n  .large-offset-11 {\n    margin-left: 91.66667%; }\n  .large-up-1 > .column, .large-up-1 > .columns {\n    width: 100%;\n    float: left; }\n    .large-up-1 > .column:nth-of-type(1n), .large-up-1 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-1 > .column:nth-of-type(1n+1), .large-up-1 > .columns:nth-of-type(1n+1) {\n      clear: both; }\n    .large-up-1 > .column:last-child, .large-up-1 > .columns:last-child {\n      float: left; }\n  .large-up-2 > .column, .large-up-2 > .columns {\n    width: 50%;\n    float: left; }\n    .large-up-2 > .column:nth-of-type(1n), .large-up-2 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-2 > .column:nth-of-type(2n+1), .large-up-2 > .columns:nth-of-type(2n+1) {\n      clear: both; }\n    .large-up-2 > .column:last-child, .large-up-2 > .columns:last-child {\n      float: left; }\n  .large-up-3 > .column, .large-up-3 > .columns {\n    width: 33.33333%;\n    float: left; }\n    .large-up-3 > .column:nth-of-type(1n), .large-up-3 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-3 > .column:nth-of-type(3n+1), .large-up-3 > .columns:nth-of-type(3n+1) {\n      clear: both; }\n    .large-up-3 > .column:last-child, .large-up-3 > .columns:last-child {\n      float: left; }\n  .large-up-4 > .column, .large-up-4 > .columns {\n    width: 25%;\n    float: left; }\n    .large-up-4 > .column:nth-of-type(1n), .large-up-4 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-4 > .column:nth-of-type(4n+1), .large-up-4 > .columns:nth-of-type(4n+1) {\n      clear: both; }\n    .large-up-4 > .column:last-child, .large-up-4 > .columns:last-child {\n      float: left; }\n  .large-up-5 > .column, .large-up-5 > .columns {\n    width: 20%;\n    float: left; }\n    .large-up-5 > .column:nth-of-type(1n), .large-up-5 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-5 > .column:nth-of-type(5n+1), .large-up-5 > .columns:nth-of-type(5n+1) {\n      clear: both; }\n    .large-up-5 > .column:last-child, .large-up-5 > .columns:last-child {\n      float: left; }\n  .large-up-6 > .column, .large-up-6 > .columns {\n    width: 16.66667%;\n    float: left; }\n    .large-up-6 > .column:nth-of-type(1n), .large-up-6 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-6 > .column:nth-of-type(6n+1), .large-up-6 > .columns:nth-of-type(6n+1) {\n      clear: both; }\n    .large-up-6 > .column:last-child, .large-up-6 > .columns:last-child {\n      float: left; }\n  .large-up-7 > .column, .large-up-7 > .columns {\n    width: 14.28571%;\n    float: left; }\n    .large-up-7 > .column:nth-of-type(1n), .large-up-7 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-7 > .column:nth-of-type(7n+1), .large-up-7 > .columns:nth-of-type(7n+1) {\n      clear: both; }\n    .large-up-7 > .column:last-child, .large-up-7 > .columns:last-child {\n      float: left; }\n  .large-up-8 > .column, .large-up-8 > .columns {\n    width: 12.5%;\n    float: left; }\n    .large-up-8 > .column:nth-of-type(1n), .large-up-8 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-8 > .column:nth-of-type(8n+1), .large-up-8 > .columns:nth-of-type(8n+1) {\n      clear: both; }\n    .large-up-8 > .column:last-child, .large-up-8 > .columns:last-child {\n      float: left; }\n  .large-collapse > .column, .large-collapse > .columns {\n    padding-left: 0;\n    padding-right: 0; }\n  .large-collapse .row {\n    margin-left: 0;\n    margin-right: 0; }\n  .expanded.row .large-collapse.row {\n    margin-left: 0;\n    margin-right: 0; }\n  .large-uncollapse > .column, .large-uncollapse > .columns {\n    padding-left: 0.9375rem;\n    padding-right: 0.9375rem; }\n  .large-centered {\n    margin-left: auto;\n    margin-right: auto; }\n    .large-centered, .large-centered:last-child:not(:first-child) {\n      float: none;\n      clear: both; }\n  .large-uncentered,\n  .large-push-0,\n  .large-pull-0 {\n    position: static;\n    margin-left: 0;\n    margin-right: 0;\n    float: left; } }\n\n.menu {\n  margin: 0;\n  list-style-type: none; }\n  .menu > li {\n    display: table-cell;\n    vertical-align: middle; }\n    [data-whatinput='mouse'] .menu > li {\n      outline: 0; }\n  .menu > li > a {\n    display: block;\n    padding: 0.7rem 1rem;\n    line-height: 1; }\n  .menu input,\n  .menu a,\n  .menu button {\n    margin-bottom: 0; }\n  .menu > li > a img,\n  .menu > li > a i,\n  .menu > li > a svg {\n    vertical-align: middle; }\n    .menu > li > a img + span,\n    .menu > li > a i + span,\n    .menu > li > a svg + span {\n      vertical-align: middle; }\n  .menu > li > a img,\n  .menu > li > a i,\n  .menu > li > a svg {\n    margin-right: 0.25rem;\n    display: inline-block; }\n  .menu > li {\n    display: table-cell; }\n  .menu.vertical > li {\n    display: block; }\n  @media screen and (min-width: 40em) {\n    .menu.medium-horizontal > li {\n      display: table-cell; }\n    .menu.medium-vertical > li {\n      display: block; } }\n  @media screen and (min-width: 64em) {\n    .menu.large-horizontal > li {\n      display: table-cell; }\n    .menu.large-vertical > li {\n      display: block; } }\n  .menu.simple li {\n    line-height: 1;\n    display: inline-block;\n    margin-right: 1rem; }\n  .menu.simple a {\n    padding: 0; }\n  .menu.align-right::before, .menu.align-right::after {\n    content: ' ';\n    display: table; }\n  .menu.align-right::after {\n    clear: both; }\n  .menu.align-right > li {\n    float: right; }\n  .menu.expanded {\n    width: 100%;\n    display: table;\n    table-layout: fixed; }\n    .menu.expanded > li:first-child:last-child {\n      width: 100%; }\n  .menu.icon-top > li > a {\n    text-align: center; }\n    .menu.icon-top > li > a img,\n    .menu.icon-top > li > a i,\n    .menu.icon-top > li > a svg {\n      display: block;\n      margin: 0 auto 0.25rem; }\n  .menu.nested {\n    margin-left: 1rem; }\n  .menu .active > a {\n    color: #fefefe;\n    background: #2199e8; }\n\n.menu-text {\n  font-weight: bold;\n  color: inherit;\n  line-height: 1;\n  padding-top: 0;\n  padding-bottom: 0;\n  padding: 0.7rem 1rem; }\n\n.menu-centered {\n  text-align: center; }\n  .menu-centered > .menu {\n    display: inline-block; }\n\n.no-js [data-responsive-menu] ul {\n  display: none; }\n\n.frame-data-container table {\n  margin: 0 auto; }\n  .frame-data-container table thead {\n    border: 1px solid black; }\n    .frame-data-container table thead th {\n      border: 1px solid black;\n      text-align: center; }\n  .frame-data-container table td {\n    border: 1px solid black; }\n\n.register-container .form-signin {\n  margin: 0 auto;\n  max-width: 330px; }\n\n.login-container .form-signin {\n  margin: 0 auto;\n  max-width: 330px; }\n", ""]);
+	exports.push([module.id, "/**\n * Foundation for Sites by ZURB\n * Version 6.2.4\n * foundation.zurb.com\n * Licensed under MIT Open Source\n */\n.row {\n  max-width: 75rem;\n  margin-left: auto;\n  margin-right: auto; }\n  .row::before, .row::after {\n    content: ' ';\n    display: table; }\n  .row::after {\n    clear: both; }\n  .row.collapse > .column, .row.collapse > .columns {\n    padding-left: 0;\n    padding-right: 0; }\n  .row .row {\n    margin-left: -0.625rem;\n    margin-right: -0.625rem; }\n    @media screen and (min-width: 40em) {\n      .row .row {\n        margin-left: -0.9375rem;\n        margin-right: -0.9375rem; } }\n    .row .row.collapse {\n      margin-left: 0;\n      margin-right: 0; }\n  .row.expanded {\n    max-width: none; }\n    .row.expanded .row {\n      margin-left: auto;\n      margin-right: auto; }\n\n.column, .columns {\n  width: 100%;\n  float: left;\n  padding-left: 0.625rem;\n  padding-right: 0.625rem; }\n  @media screen and (min-width: 40em) {\n    .column, .columns {\n      padding-left: 0.9375rem;\n      padding-right: 0.9375rem; } }\n  .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {\n    float: right; }\n  .column.end:last-child:last-child, .end.columns:last-child:last-child {\n    float: left; }\n\n.column.row.row, .row.row.columns {\n  float: none; }\n\n.row .column.row.row, .row .row.row.columns {\n  padding-left: 0;\n  padding-right: 0;\n  margin-left: 0;\n  margin-right: 0; }\n\n.small-1 {\n  width: 8.33333%; }\n\n.small-push-1 {\n  position: relative;\n  left: 8.33333%; }\n\n.small-pull-1 {\n  position: relative;\n  left: -8.33333%; }\n\n.small-offset-0 {\n  margin-left: 0%; }\n\n.small-2 {\n  width: 16.66667%; }\n\n.small-push-2 {\n  position: relative;\n  left: 16.66667%; }\n\n.small-pull-2 {\n  position: relative;\n  left: -16.66667%; }\n\n.small-offset-1 {\n  margin-left: 8.33333%; }\n\n.small-3 {\n  width: 25%; }\n\n.small-push-3 {\n  position: relative;\n  left: 25%; }\n\n.small-pull-3 {\n  position: relative;\n  left: -25%; }\n\n.small-offset-2 {\n  margin-left: 16.66667%; }\n\n.small-4 {\n  width: 33.33333%; }\n\n.small-push-4 {\n  position: relative;\n  left: 33.33333%; }\n\n.small-pull-4 {\n  position: relative;\n  left: -33.33333%; }\n\n.small-offset-3 {\n  margin-left: 25%; }\n\n.small-5 {\n  width: 41.66667%; }\n\n.small-push-5 {\n  position: relative;\n  left: 41.66667%; }\n\n.small-pull-5 {\n  position: relative;\n  left: -41.66667%; }\n\n.small-offset-4 {\n  margin-left: 33.33333%; }\n\n.small-6 {\n  width: 50%; }\n\n.small-push-6 {\n  position: relative;\n  left: 50%; }\n\n.small-pull-6 {\n  position: relative;\n  left: -50%; }\n\n.small-offset-5 {\n  margin-left: 41.66667%; }\n\n.small-7 {\n  width: 58.33333%; }\n\n.small-push-7 {\n  position: relative;\n  left: 58.33333%; }\n\n.small-pull-7 {\n  position: relative;\n  left: -58.33333%; }\n\n.small-offset-6 {\n  margin-left: 50%; }\n\n.small-8 {\n  width: 66.66667%; }\n\n.small-push-8 {\n  position: relative;\n  left: 66.66667%; }\n\n.small-pull-8 {\n  position: relative;\n  left: -66.66667%; }\n\n.small-offset-7 {\n  margin-left: 58.33333%; }\n\n.small-9 {\n  width: 75%; }\n\n.small-push-9 {\n  position: relative;\n  left: 75%; }\n\n.small-pull-9 {\n  position: relative;\n  left: -75%; }\n\n.small-offset-8 {\n  margin-left: 66.66667%; }\n\n.small-10 {\n  width: 83.33333%; }\n\n.small-push-10 {\n  position: relative;\n  left: 83.33333%; }\n\n.small-pull-10 {\n  position: relative;\n  left: -83.33333%; }\n\n.small-offset-9 {\n  margin-left: 75%; }\n\n.small-11 {\n  width: 91.66667%; }\n\n.small-push-11 {\n  position: relative;\n  left: 91.66667%; }\n\n.small-pull-11 {\n  position: relative;\n  left: -91.66667%; }\n\n.small-offset-10 {\n  margin-left: 83.33333%; }\n\n.small-12 {\n  width: 100%; }\n\n.small-offset-11 {\n  margin-left: 91.66667%; }\n\n.small-up-1 > .column, .small-up-1 > .columns {\n  width: 100%;\n  float: left; }\n  .small-up-1 > .column:nth-of-type(1n), .small-up-1 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-1 > .column:nth-of-type(1n+1), .small-up-1 > .columns:nth-of-type(1n+1) {\n    clear: both; }\n  .small-up-1 > .column:last-child, .small-up-1 > .columns:last-child {\n    float: left; }\n\n.small-up-2 > .column, .small-up-2 > .columns {\n  width: 50%;\n  float: left; }\n  .small-up-2 > .column:nth-of-type(1n), .small-up-2 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-2 > .column:nth-of-type(2n+1), .small-up-2 > .columns:nth-of-type(2n+1) {\n    clear: both; }\n  .small-up-2 > .column:last-child, .small-up-2 > .columns:last-child {\n    float: left; }\n\n.small-up-3 > .column, .small-up-3 > .columns {\n  width: 33.33333%;\n  float: left; }\n  .small-up-3 > .column:nth-of-type(1n), .small-up-3 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-3 > .column:nth-of-type(3n+1), .small-up-3 > .columns:nth-of-type(3n+1) {\n    clear: both; }\n  .small-up-3 > .column:last-child, .small-up-3 > .columns:last-child {\n    float: left; }\n\n.small-up-4 > .column, .small-up-4 > .columns {\n  width: 25%;\n  float: left; }\n  .small-up-4 > .column:nth-of-type(1n), .small-up-4 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-4 > .column:nth-of-type(4n+1), .small-up-4 > .columns:nth-of-type(4n+1) {\n    clear: both; }\n  .small-up-4 > .column:last-child, .small-up-4 > .columns:last-child {\n    float: left; }\n\n.small-up-5 > .column, .small-up-5 > .columns {\n  width: 20%;\n  float: left; }\n  .small-up-5 > .column:nth-of-type(1n), .small-up-5 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-5 > .column:nth-of-type(5n+1), .small-up-5 > .columns:nth-of-type(5n+1) {\n    clear: both; }\n  .small-up-5 > .column:last-child, .small-up-5 > .columns:last-child {\n    float: left; }\n\n.small-up-6 > .column, .small-up-6 > .columns {\n  width: 16.66667%;\n  float: left; }\n  .small-up-6 > .column:nth-of-type(1n), .small-up-6 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-6 > .column:nth-of-type(6n+1), .small-up-6 > .columns:nth-of-type(6n+1) {\n    clear: both; }\n  .small-up-6 > .column:last-child, .small-up-6 > .columns:last-child {\n    float: left; }\n\n.small-up-7 > .column, .small-up-7 > .columns {\n  width: 14.28571%;\n  float: left; }\n  .small-up-7 > .column:nth-of-type(1n), .small-up-7 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-7 > .column:nth-of-type(7n+1), .small-up-7 > .columns:nth-of-type(7n+1) {\n    clear: both; }\n  .small-up-7 > .column:last-child, .small-up-7 > .columns:last-child {\n    float: left; }\n\n.small-up-8 > .column, .small-up-8 > .columns {\n  width: 12.5%;\n  float: left; }\n  .small-up-8 > .column:nth-of-type(1n), .small-up-8 > .columns:nth-of-type(1n) {\n    clear: none; }\n  .small-up-8 > .column:nth-of-type(8n+1), .small-up-8 > .columns:nth-of-type(8n+1) {\n    clear: both; }\n  .small-up-8 > .column:last-child, .small-up-8 > .columns:last-child {\n    float: left; }\n\n.small-collapse > .column, .small-collapse > .columns {\n  padding-left: 0;\n  padding-right: 0; }\n\n.small-collapse .row {\n  margin-left: 0;\n  margin-right: 0; }\n\n.expanded.row .small-collapse.row {\n  margin-left: 0;\n  margin-right: 0; }\n\n.small-uncollapse > .column, .small-uncollapse > .columns {\n  padding-left: 0.625rem;\n  padding-right: 0.625rem; }\n\n.small-centered {\n  margin-left: auto;\n  margin-right: auto; }\n  .small-centered, .small-centered:last-child:not(:first-child) {\n    float: none;\n    clear: both; }\n\n.small-uncentered,\n.small-push-0,\n.small-pull-0 {\n  position: static;\n  margin-left: 0;\n  margin-right: 0;\n  float: left; }\n\n@media screen and (min-width: 40em) {\n  .medium-1 {\n    width: 8.33333%; }\n  .medium-push-1 {\n    position: relative;\n    left: 8.33333%; }\n  .medium-pull-1 {\n    position: relative;\n    left: -8.33333%; }\n  .medium-offset-0 {\n    margin-left: 0%; }\n  .medium-2 {\n    width: 16.66667%; }\n  .medium-push-2 {\n    position: relative;\n    left: 16.66667%; }\n  .medium-pull-2 {\n    position: relative;\n    left: -16.66667%; }\n  .medium-offset-1 {\n    margin-left: 8.33333%; }\n  .medium-3 {\n    width: 25%; }\n  .medium-push-3 {\n    position: relative;\n    left: 25%; }\n  .medium-pull-3 {\n    position: relative;\n    left: -25%; }\n  .medium-offset-2 {\n    margin-left: 16.66667%; }\n  .medium-4 {\n    width: 33.33333%; }\n  .medium-push-4 {\n    position: relative;\n    left: 33.33333%; }\n  .medium-pull-4 {\n    position: relative;\n    left: -33.33333%; }\n  .medium-offset-3 {\n    margin-left: 25%; }\n  .medium-5 {\n    width: 41.66667%; }\n  .medium-push-5 {\n    position: relative;\n    left: 41.66667%; }\n  .medium-pull-5 {\n    position: relative;\n    left: -41.66667%; }\n  .medium-offset-4 {\n    margin-left: 33.33333%; }\n  .medium-6 {\n    width: 50%; }\n  .medium-push-6 {\n    position: relative;\n    left: 50%; }\n  .medium-pull-6 {\n    position: relative;\n    left: -50%; }\n  .medium-offset-5 {\n    margin-left: 41.66667%; }\n  .medium-7 {\n    width: 58.33333%; }\n  .medium-push-7 {\n    position: relative;\n    left: 58.33333%; }\n  .medium-pull-7 {\n    position: relative;\n    left: -58.33333%; }\n  .medium-offset-6 {\n    margin-left: 50%; }\n  .medium-8 {\n    width: 66.66667%; }\n  .medium-push-8 {\n    position: relative;\n    left: 66.66667%; }\n  .medium-pull-8 {\n    position: relative;\n    left: -66.66667%; }\n  .medium-offset-7 {\n    margin-left: 58.33333%; }\n  .medium-9 {\n    width: 75%; }\n  .medium-push-9 {\n    position: relative;\n    left: 75%; }\n  .medium-pull-9 {\n    position: relative;\n    left: -75%; }\n  .medium-offset-8 {\n    margin-left: 66.66667%; }\n  .medium-10 {\n    width: 83.33333%; }\n  .medium-push-10 {\n    position: relative;\n    left: 83.33333%; }\n  .medium-pull-10 {\n    position: relative;\n    left: -83.33333%; }\n  .medium-offset-9 {\n    margin-left: 75%; }\n  .medium-11 {\n    width: 91.66667%; }\n  .medium-push-11 {\n    position: relative;\n    left: 91.66667%; }\n  .medium-pull-11 {\n    position: relative;\n    left: -91.66667%; }\n  .medium-offset-10 {\n    margin-left: 83.33333%; }\n  .medium-12 {\n    width: 100%; }\n  .medium-offset-11 {\n    margin-left: 91.66667%; }\n  .medium-up-1 > .column, .medium-up-1 > .columns {\n    width: 100%;\n    float: left; }\n    .medium-up-1 > .column:nth-of-type(1n), .medium-up-1 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-1 > .column:nth-of-type(1n+1), .medium-up-1 > .columns:nth-of-type(1n+1) {\n      clear: both; }\n    .medium-up-1 > .column:last-child, .medium-up-1 > .columns:last-child {\n      float: left; }\n  .medium-up-2 > .column, .medium-up-2 > .columns {\n    width: 50%;\n    float: left; }\n    .medium-up-2 > .column:nth-of-type(1n), .medium-up-2 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-2 > .column:nth-of-type(2n+1), .medium-up-2 > .columns:nth-of-type(2n+1) {\n      clear: both; }\n    .medium-up-2 > .column:last-child, .medium-up-2 > .columns:last-child {\n      float: left; }\n  .medium-up-3 > .column, .medium-up-3 > .columns {\n    width: 33.33333%;\n    float: left; }\n    .medium-up-3 > .column:nth-of-type(1n), .medium-up-3 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-3 > .column:nth-of-type(3n+1), .medium-up-3 > .columns:nth-of-type(3n+1) {\n      clear: both; }\n    .medium-up-3 > .column:last-child, .medium-up-3 > .columns:last-child {\n      float: left; }\n  .medium-up-4 > .column, .medium-up-4 > .columns {\n    width: 25%;\n    float: left; }\n    .medium-up-4 > .column:nth-of-type(1n), .medium-up-4 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-4 > .column:nth-of-type(4n+1), .medium-up-4 > .columns:nth-of-type(4n+1) {\n      clear: both; }\n    .medium-up-4 > .column:last-child, .medium-up-4 > .columns:last-child {\n      float: left; }\n  .medium-up-5 > .column, .medium-up-5 > .columns {\n    width: 20%;\n    float: left; }\n    .medium-up-5 > .column:nth-of-type(1n), .medium-up-5 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-5 > .column:nth-of-type(5n+1), .medium-up-5 > .columns:nth-of-type(5n+1) {\n      clear: both; }\n    .medium-up-5 > .column:last-child, .medium-up-5 > .columns:last-child {\n      float: left; }\n  .medium-up-6 > .column, .medium-up-6 > .columns {\n    width: 16.66667%;\n    float: left; }\n    .medium-up-6 > .column:nth-of-type(1n), .medium-up-6 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-6 > .column:nth-of-type(6n+1), .medium-up-6 > .columns:nth-of-type(6n+1) {\n      clear: both; }\n    .medium-up-6 > .column:last-child, .medium-up-6 > .columns:last-child {\n      float: left; }\n  .medium-up-7 > .column, .medium-up-7 > .columns {\n    width: 14.28571%;\n    float: left; }\n    .medium-up-7 > .column:nth-of-type(1n), .medium-up-7 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-7 > .column:nth-of-type(7n+1), .medium-up-7 > .columns:nth-of-type(7n+1) {\n      clear: both; }\n    .medium-up-7 > .column:last-child, .medium-up-7 > .columns:last-child {\n      float: left; }\n  .medium-up-8 > .column, .medium-up-8 > .columns {\n    width: 12.5%;\n    float: left; }\n    .medium-up-8 > .column:nth-of-type(1n), .medium-up-8 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .medium-up-8 > .column:nth-of-type(8n+1), .medium-up-8 > .columns:nth-of-type(8n+1) {\n      clear: both; }\n    .medium-up-8 > .column:last-child, .medium-up-8 > .columns:last-child {\n      float: left; }\n  .medium-collapse > .column, .medium-collapse > .columns {\n    padding-left: 0;\n    padding-right: 0; }\n  .medium-collapse .row {\n    margin-left: 0;\n    margin-right: 0; }\n  .expanded.row .medium-collapse.row {\n    margin-left: 0;\n    margin-right: 0; }\n  .medium-uncollapse > .column, .medium-uncollapse > .columns {\n    padding-left: 0.9375rem;\n    padding-right: 0.9375rem; }\n  .medium-centered {\n    margin-left: auto;\n    margin-right: auto; }\n    .medium-centered, .medium-centered:last-child:not(:first-child) {\n      float: none;\n      clear: both; }\n  .medium-uncentered,\n  .medium-push-0,\n  .medium-pull-0 {\n    position: static;\n    margin-left: 0;\n    margin-right: 0;\n    float: left; } }\n\n@media screen and (min-width: 64em) {\n  .large-1 {\n    width: 8.33333%; }\n  .large-push-1 {\n    position: relative;\n    left: 8.33333%; }\n  .large-pull-1 {\n    position: relative;\n    left: -8.33333%; }\n  .large-offset-0 {\n    margin-left: 0%; }\n  .large-2 {\n    width: 16.66667%; }\n  .large-push-2 {\n    position: relative;\n    left: 16.66667%; }\n  .large-pull-2 {\n    position: relative;\n    left: -16.66667%; }\n  .large-offset-1 {\n    margin-left: 8.33333%; }\n  .large-3 {\n    width: 25%; }\n  .large-push-3 {\n    position: relative;\n    left: 25%; }\n  .large-pull-3 {\n    position: relative;\n    left: -25%; }\n  .large-offset-2 {\n    margin-left: 16.66667%; }\n  .large-4 {\n    width: 33.33333%; }\n  .large-push-4 {\n    position: relative;\n    left: 33.33333%; }\n  .large-pull-4 {\n    position: relative;\n    left: -33.33333%; }\n  .large-offset-3 {\n    margin-left: 25%; }\n  .large-5 {\n    width: 41.66667%; }\n  .large-push-5 {\n    position: relative;\n    left: 41.66667%; }\n  .large-pull-5 {\n    position: relative;\n    left: -41.66667%; }\n  .large-offset-4 {\n    margin-left: 33.33333%; }\n  .large-6 {\n    width: 50%; }\n  .large-push-6 {\n    position: relative;\n    left: 50%; }\n  .large-pull-6 {\n    position: relative;\n    left: -50%; }\n  .large-offset-5 {\n    margin-left: 41.66667%; }\n  .large-7 {\n    width: 58.33333%; }\n  .large-push-7 {\n    position: relative;\n    left: 58.33333%; }\n  .large-pull-7 {\n    position: relative;\n    left: -58.33333%; }\n  .large-offset-6 {\n    margin-left: 50%; }\n  .large-8 {\n    width: 66.66667%; }\n  .large-push-8 {\n    position: relative;\n    left: 66.66667%; }\n  .large-pull-8 {\n    position: relative;\n    left: -66.66667%; }\n  .large-offset-7 {\n    margin-left: 58.33333%; }\n  .large-9 {\n    width: 75%; }\n  .large-push-9 {\n    position: relative;\n    left: 75%; }\n  .large-pull-9 {\n    position: relative;\n    left: -75%; }\n  .large-offset-8 {\n    margin-left: 66.66667%; }\n  .large-10 {\n    width: 83.33333%; }\n  .large-push-10 {\n    position: relative;\n    left: 83.33333%; }\n  .large-pull-10 {\n    position: relative;\n    left: -83.33333%; }\n  .large-offset-9 {\n    margin-left: 75%; }\n  .large-11 {\n    width: 91.66667%; }\n  .large-push-11 {\n    position: relative;\n    left: 91.66667%; }\n  .large-pull-11 {\n    position: relative;\n    left: -91.66667%; }\n  .large-offset-10 {\n    margin-left: 83.33333%; }\n  .large-12 {\n    width: 100%; }\n  .large-offset-11 {\n    margin-left: 91.66667%; }\n  .large-up-1 > .column, .large-up-1 > .columns {\n    width: 100%;\n    float: left; }\n    .large-up-1 > .column:nth-of-type(1n), .large-up-1 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-1 > .column:nth-of-type(1n+1), .large-up-1 > .columns:nth-of-type(1n+1) {\n      clear: both; }\n    .large-up-1 > .column:last-child, .large-up-1 > .columns:last-child {\n      float: left; }\n  .large-up-2 > .column, .large-up-2 > .columns {\n    width: 50%;\n    float: left; }\n    .large-up-2 > .column:nth-of-type(1n), .large-up-2 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-2 > .column:nth-of-type(2n+1), .large-up-2 > .columns:nth-of-type(2n+1) {\n      clear: both; }\n    .large-up-2 > .column:last-child, .large-up-2 > .columns:last-child {\n      float: left; }\n  .large-up-3 > .column, .large-up-3 > .columns {\n    width: 33.33333%;\n    float: left; }\n    .large-up-3 > .column:nth-of-type(1n), .large-up-3 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-3 > .column:nth-of-type(3n+1), .large-up-3 > .columns:nth-of-type(3n+1) {\n      clear: both; }\n    .large-up-3 > .column:last-child, .large-up-3 > .columns:last-child {\n      float: left; }\n  .large-up-4 > .column, .large-up-4 > .columns {\n    width: 25%;\n    float: left; }\n    .large-up-4 > .column:nth-of-type(1n), .large-up-4 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-4 > .column:nth-of-type(4n+1), .large-up-4 > .columns:nth-of-type(4n+1) {\n      clear: both; }\n    .large-up-4 > .column:last-child, .large-up-4 > .columns:last-child {\n      float: left; }\n  .large-up-5 > .column, .large-up-5 > .columns {\n    width: 20%;\n    float: left; }\n    .large-up-5 > .column:nth-of-type(1n), .large-up-5 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-5 > .column:nth-of-type(5n+1), .large-up-5 > .columns:nth-of-type(5n+1) {\n      clear: both; }\n    .large-up-5 > .column:last-child, .large-up-5 > .columns:last-child {\n      float: left; }\n  .large-up-6 > .column, .large-up-6 > .columns {\n    width: 16.66667%;\n    float: left; }\n    .large-up-6 > .column:nth-of-type(1n), .large-up-6 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-6 > .column:nth-of-type(6n+1), .large-up-6 > .columns:nth-of-type(6n+1) {\n      clear: both; }\n    .large-up-6 > .column:last-child, .large-up-6 > .columns:last-child {\n      float: left; }\n  .large-up-7 > .column, .large-up-7 > .columns {\n    width: 14.28571%;\n    float: left; }\n    .large-up-7 > .column:nth-of-type(1n), .large-up-7 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-7 > .column:nth-of-type(7n+1), .large-up-7 > .columns:nth-of-type(7n+1) {\n      clear: both; }\n    .large-up-7 > .column:last-child, .large-up-7 > .columns:last-child {\n      float: left; }\n  .large-up-8 > .column, .large-up-8 > .columns {\n    width: 12.5%;\n    float: left; }\n    .large-up-8 > .column:nth-of-type(1n), .large-up-8 > .columns:nth-of-type(1n) {\n      clear: none; }\n    .large-up-8 > .column:nth-of-type(8n+1), .large-up-8 > .columns:nth-of-type(8n+1) {\n      clear: both; }\n    .large-up-8 > .column:last-child, .large-up-8 > .columns:last-child {\n      float: left; }\n  .large-collapse > .column, .large-collapse > .columns {\n    padding-left: 0;\n    padding-right: 0; }\n  .large-collapse .row {\n    margin-left: 0;\n    margin-right: 0; }\n  .expanded.row .large-collapse.row {\n    margin-left: 0;\n    margin-right: 0; }\n  .large-uncollapse > .column, .large-uncollapse > .columns {\n    padding-left: 0.9375rem;\n    padding-right: 0.9375rem; }\n  .large-centered {\n    margin-left: auto;\n    margin-right: auto; }\n    .large-centered, .large-centered:last-child:not(:first-child) {\n      float: none;\n      clear: both; }\n  .large-uncentered,\n  .large-push-0,\n  .large-pull-0 {\n    position: static;\n    margin-left: 0;\n    margin-right: 0;\n    float: left; } }\n\n.menu {\n  margin: 0;\n  list-style-type: none; }\n  .menu > li {\n    display: table-cell;\n    vertical-align: middle; }\n    [data-whatinput='mouse'] .menu > li {\n      outline: 0; }\n  .menu > li > a {\n    display: block;\n    padding: 0.7rem 1rem;\n    line-height: 1; }\n  .menu input,\n  .menu a,\n  .menu button {\n    margin-bottom: 0; }\n  .menu > li > a img,\n  .menu > li > a i,\n  .menu > li > a svg {\n    vertical-align: middle; }\n    .menu > li > a img + span,\n    .menu > li > a i + span,\n    .menu > li > a svg + span {\n      vertical-align: middle; }\n  .menu > li > a img,\n  .menu > li > a i,\n  .menu > li > a svg {\n    margin-right: 0.25rem;\n    display: inline-block; }\n  .menu > li {\n    display: table-cell; }\n  .menu.vertical > li {\n    display: block; }\n  @media screen and (min-width: 40em) {\n    .menu.medium-horizontal > li {\n      display: table-cell; }\n    .menu.medium-vertical > li {\n      display: block; } }\n  @media screen and (min-width: 64em) {\n    .menu.large-horizontal > li {\n      display: table-cell; }\n    .menu.large-vertical > li {\n      display: block; } }\n  .menu.simple li {\n    line-height: 1;\n    display: inline-block;\n    margin-right: 1rem; }\n  .menu.simple a {\n    padding: 0; }\n  .menu.align-right::before, .menu.align-right::after {\n    content: ' ';\n    display: table; }\n  .menu.align-right::after {\n    clear: both; }\n  .menu.align-right > li {\n    float: right; }\n  .menu.expanded {\n    width: 100%;\n    display: table;\n    table-layout: fixed; }\n    .menu.expanded > li:first-child:last-child {\n      width: 100%; }\n  .menu.icon-top > li > a {\n    text-align: center; }\n    .menu.icon-top > li > a img,\n    .menu.icon-top > li > a i,\n    .menu.icon-top > li > a svg {\n      display: block;\n      margin: 0 auto 0.25rem; }\n  .menu.nested {\n    margin-left: 1rem; }\n  .menu .active > a {\n    color: #fefefe;\n    background: #2199e8; }\n\n.menu-text {\n  font-weight: bold;\n  color: inherit;\n  line-height: 1;\n  padding-top: 0;\n  padding-bottom: 0;\n  padding: 0.7rem 1rem; }\n\n.menu-centered {\n  text-align: center; }\n  .menu-centered > .menu {\n    display: inline-block; }\n\n.no-js [data-responsive-menu] ul {\n  display: none; }\n\n.frame-data-container {\n  text-align: center; }\n  .frame-data-container .input-container {\n    text-align: center; }\n  .frame-data-container .table-container {\n    overflow: auto;\n    height: 300px; }\n  .frame-data-container table {\n    margin: 0 auto; }\n    .frame-data-container table thead {\n      border: 1px solid black; }\n      .frame-data-container table thead th {\n        border: 1px solid black;\n        text-align: center; }\n    .frame-data-container table td {\n      border: 1px solid black; }\n  .frame-data-container .column-hide {\n    display: none; }\n  .frame-data-container .checkbox-container {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    line-height: 16px;\n    margin: 20px 0; }\n    .frame-data-container .checkbox-container input {\n      margin-right: 15px; }\n\n.register-container .form-signin {\n  margin: 0 auto;\n  max-width: 330px; }\n\n.login-container .form-signin {\n  margin: 0 auto;\n  max-width: 330px; }\n", ""]);
 
 	// exports
 
@@ -55738,13 +55738,23 @@
 
 	var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
-	var _characterDataAction = __webpack_require__(426);
+	var _reactSearchInput = __webpack_require__(426);
 
-	var _characters = __webpack_require__(443);
+	var _reactSearchInput2 = _interopRequireDefault(_reactSearchInput);
+
+	var _PracticalAttacks = __webpack_require__(429);
+
+	var _PracticalAttacks2 = _interopRequireDefault(_PracticalAttacks);
+
+	var _characterDataAction = __webpack_require__(430);
+
+	var _characters = __webpack_require__(431);
 
 	var _characters2 = _interopRequireDefault(_characters);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -55761,6 +55771,8 @@
 	/* json list of characters (MOVE TO AN API CALL IN FUTURE)*/
 
 
+	var KEYS_TO_FILTERS = ['notation', 'hit_level', 'damage', 'speed', 'on_block', 'on_hit', 'on_ch'];
+
 	var FrameData = function (_React$Component) {
 		_inherits(FrameData, _React$Component);
 
@@ -55774,8 +55786,15 @@
 				_this.props.dispatch((0, _characterDataAction.fetchCharacterData)(event.target.value));
 			};
 
-			_this.state = { selectedCharacter: 'alisa' };
-			//this.renderOptions = this.renderOptions.bind(this);
+			_this.state = {
+				hitLevelCheckbox: true,
+				damageCheckbox: true,
+				speedCheckbox: true,
+				onBlockCheckbox: true,
+				onHitCheckbox: true,
+				onCHcheckbox: true,
+				searchTerm: ''
+			};
 			return _this;
 		}
 
@@ -55794,6 +55813,8 @@
 		}, {
 			key: 'renderFrameData',
 			value: function renderFrameData() {
+				var _this2 = this;
+
 				var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
 				{
@@ -55806,34 +55827,46 @@
 							speed: move.speed,
 							onBlock: move.on_block,
 							onHit: move.on_hit,
-							onCH: move.on_ch
+							onCH: move.on_ch,
+							checkBoxStates: _this2.state
 						});
 					});
 				}
 			}
 		}, {
+			key: 'hideColumnToggle',
+			value: function hideColumnToggle(event) {
+				var checkboxName = event.target.name;
+				this.setState(_defineProperty({}, checkboxName, this.state[checkboxName] ? false : true));
+			}
+		}, {
+			key: 'searchUpdated',
+			value: function searchUpdated(move) {
+				this.setState({ searchTerm: move });
+			}
+		}, {
 			key: 'render',
 			value: function render() {
-				var _this2 = this;
+				var _this3 = this;
 
 				var frameData = this.props.frameData;
 
-
+				var filteredMoves = frameData.filter((0, _reactSearchInput.createFilter)(this.state.searchTerm, KEYS_TO_FILTERS));
 				return _react2.default.createElement(
 					'div',
-					{ className: 'frame-data-container row' },
+					{ className: 'frame-data-container' },
+					_react2.default.createElement(
+						'h2',
+						null,
+						'Frame Data'
+					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'small-8 columns centered' },
-						_react2.default.createElement(
-							'h2',
-							null,
-							'Frame Data'
-						),
+						{ className: 'input-container' },
 						_react2.default.createElement(
 							'select',
 							{ onChange: function onChange(event) {
-									return _this2.handleChange(event);
+									return _this3.handleChange(event);
 								} },
 							_react2.default.createElement(
 								'option',
@@ -55842,14 +55875,53 @@
 							),
 							this.renderCharacterSelectOptions(_characters2.default.characters)
 						),
-						_react2.default.createElement(_SearchBar2.default, null),
+						_react2.default.createElement(_reactSearchInput2.default, { className: 'search-input', onChange: function onChange(move) {
+								return _this3.searchUpdated(move);
+							} })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'checkbox-container' },
+						'Hit Level ',
+						_react2.default.createElement('input', { name: 'hitLevelCheckbox', checked: this.state.hitLevelCheckbox, onChange: function onChange(event) {
+								return _this3.hideColumnToggle(event);
+							}, type: 'checkbox' }),
+						'Damage ',
+						_react2.default.createElement('input', { name: 'damageCheckbox', checked: this.state.damageCheckbox, onChange: function onChange(event) {
+								return _this3.hideColumnToggle(event);
+							}, type: 'checkbox' }),
+						'Speed ',
+						_react2.default.createElement('input', { name: 'speedCheckbox', checked: this.state.speedCheckbox, onChange: function onChange(event) {
+								return _this3.hideColumnToggle(event);
+							}, type: 'checkbox' }),
+						'On Block ',
+						_react2.default.createElement('input', { name: 'onBlockCheckbox', checked: this.state.onBlockCheckbox, onChange: function onChange(event) {
+								return _this3.hideColumnToggle(event);
+							}, type: 'checkbox' }),
+						'On Hit ',
+						_react2.default.createElement('input', { name: 'onHitCheckbox', checked: this.state.onHitCheckbox, onChange: function onChange(event) {
+								return _this3.hideColumnToggle(event);
+							}, type: 'checkbox' }),
+						'On CH ',
+						_react2.default.createElement('input', { name: 'onCHcheckbox', checked: this.state.onCHcheckbox, onChange: function onChange(event) {
+								return _this3.hideColumnToggle(event);
+							}, type: 'checkbox' })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'table-container' },
 						_react2.default.createElement(
 							'table',
-							null,
-							_react2.default.createElement(_FrameDataTableHeader2.default, null),
-							this.renderFrameData(frameData)
+							{ cellSpacing: '0', cellPadding: '1' },
+							_react2.default.createElement(
+								'tbody',
+								null,
+								this.renderFrameData(filteredMoves)
+							),
+							_react2.default.createElement(_FrameDataTableHeader2.default, { checkBoxStates: this.state })
 						)
-					)
+					),
+					_react2.default.createElement(_PracticalAttacks2.default, null)
 				);
 			}
 		}]);
@@ -55924,7 +55996,7 @@
 /* 423 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -55955,48 +56027,95 @@
 		}
 
 		_createClass(FrameDataTableHeader, [{
-			key: "render",
+			key: 'hider',
+			value: function hider() {
+				return 'column-hide';
+			}
+		}, {
+			key: 'hitLevelStateCheck',
+			value: function hitLevelStateCheck() {
+				if (this.props.checkBoxStates.hitLevelCheckbox == false) {
+					return this.hider();
+				}
+			}
+		}, {
+			key: 'damageStateCheck',
+			value: function damageStateCheck() {
+				if (this.props.checkBoxStates.damageCheckbox == false) {
+					return this.hider();
+				}
+			}
+		}, {
+			key: 'speedStateCheck',
+			value: function speedStateCheck() {
+				if (this.props.checkBoxStates.speedCheckbox == false) {
+					return this.hider();
+				}
+			}
+		}, {
+			key: 'onBlockStateCheck',
+			value: function onBlockStateCheck() {
+				if (this.props.checkBoxStates.onBlockCheckbox == false) {
+					return this.hider();
+				}
+			}
+		}, {
+			key: 'onHitStateCheck',
+			value: function onHitStateCheck() {
+				if (this.props.checkBoxStates.onHitCheckbox == false) {
+					return this.hider();
+				}
+			}
+		}, {
+			key: 'onCHStateCheck',
+			value: function onCHStateCheck() {
+				if (this.props.checkBoxStates.onCHcheckbox == false) {
+					return this.hider();
+				}
+			}
+		}, {
+			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
-					"thead",
-					{ className: "category-container" },
+					'thead',
+					{ className: 'category-container' },
 					_react2.default.createElement(
-						"tr",
+						'tr',
 						null,
 						_react2.default.createElement(
-							"th",
-							{ className: "category" },
-							"Notation"
+							'th',
+							null,
+							'Notation'
 						),
 						_react2.default.createElement(
-							"th",
-							{ className: "category" },
-							"Hit Level"
+							'th',
+							{ className: this.hitLevelStateCheck() },
+							'Hit Level'
 						),
 						_react2.default.createElement(
-							"th",
-							{ className: "category" },
-							"Damage"
+							'th',
+							{ className: this.damageStateCheck() },
+							'Damage'
 						),
 						_react2.default.createElement(
-							"th",
-							{ className: "category" },
-							"Speed"
+							'th',
+							{ className: this.speedStateCheck() },
+							'Speed'
 						),
 						_react2.default.createElement(
-							"th",
-							{ className: "category" },
-							"On Block"
+							'th',
+							{ className: this.onBlockStateCheck() },
+							'On Block'
 						),
 						_react2.default.createElement(
-							"th",
-							{ className: "category" },
-							"On Hit"
+							'th',
+							{ className: this.onHitStateCheck() },
+							'On Hit'
 						),
 						_react2.default.createElement(
-							"th",
-							{ className: "category" },
-							"On CH"
+							'th',
+							{ className: this.onCHStateCheck() },
+							'On CH'
 						)
 					)
 				);
@@ -56012,7 +56131,7 @@
 /* 424 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -56043,49 +56162,92 @@
 		}
 
 		_createClass(FrameDataTable, [{
-			key: "render",
+			key: 'hider',
+			value: function hider() {
+				return 'column-hide';
+			}
+		}, {
+			key: 'hitLevelStateCheck',
+			value: function hitLevelStateCheck() {
+				if (this.props.checkBoxStates.hitLevelCheckbox == false) {
+					return this.hider();
+				}
+			}
+		}, {
+			key: 'damageStateCheck',
+			value: function damageStateCheck() {
+				if (this.props.checkBoxStates.damageCheckbox == false) {
+					return this.hider();
+				}
+			}
+		}, {
+			key: 'speedStateCheck',
+			value: function speedStateCheck() {
+				if (this.props.checkBoxStates.speedCheckbox == false) {
+					return this.hider();
+				}
+			}
+		}, {
+			key: 'onBlockStateCheck',
+			value: function onBlockStateCheck() {
+				if (this.props.checkBoxStates.onBlockCheckbox == false) {
+					return this.hider();
+				}
+			}
+		}, {
+			key: 'onHitStateCheck',
+			value: function onHitStateCheck() {
+				if (this.props.checkBoxStates.onHitCheckbox == false) {
+					return this.hider();
+				}
+			}
+		}, {
+			key: 'onCHStateCheck',
+			value: function onCHStateCheck() {
+				if (this.props.checkBoxStates.onCHcheckbox == false) {
+					return this.hider();
+				}
+			}
+		}, {
+			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
-					"tbody",
-					null,
+					'tr',
+					{ className: 'attack-data' },
 					_react2.default.createElement(
-						"tr",
-						{ className: "attack-data" },
-						_react2.default.createElement(
-							"td",
-							{ className: "move-item" },
-							this.props.notation
-						),
-						_react2.default.createElement(
-							"td",
-							{ className: "move-item" },
-							this.props.hitLevel
-						),
-						_react2.default.createElement(
-							"td",
-							{ className: "move-item" },
-							this.props.damage
-						),
-						_react2.default.createElement(
-							"td",
-							{ className: "move-item" },
-							this.props.speed
-						),
-						_react2.default.createElement(
-							"td",
-							{ className: "move-item" },
-							this.props.onBlock
-						),
-						_react2.default.createElement(
-							"td",
-							{ className: "move-item" },
-							this.props.onHit
-						),
-						_react2.default.createElement(
-							"td",
-							{ className: "move-item" },
-							this.props.onCH
-						)
+						'td',
+						null,
+						this.props.notation
+					),
+					_react2.default.createElement(
+						'td',
+						{ className: this.hitLevelStateCheck() },
+						this.props.hitLevel
+					),
+					_react2.default.createElement(
+						'td',
+						{ className: this.damageStateCheck() },
+						this.props.damage
+					),
+					_react2.default.createElement(
+						'td',
+						{ className: this.speedStateCheck() },
+						this.props.speed
+					),
+					_react2.default.createElement(
+						'td',
+						{ className: this.onBlockStateCheck() },
+						this.props.onBlock
+					),
+					_react2.default.createElement(
+						'td',
+						{ className: this.onHitStateCheck() },
+						this.props.onHit
+					),
+					_react2.default.createElement(
+						'td',
+						{ className: this.onCHStateCheck() },
+						this.props.onCH
 					)
 				);
 			}
@@ -56155,17 +56317,1107 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.createFilter = undefined;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _util = __webpack_require__(427);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+	var Search = _react2.default.createClass({
+	  displayName: 'Search',
+
+	  propTypes: {
+	    className: _react2.default.PropTypes.string,
+	    inputClassName: _react2.default.PropTypes.string,
+	    onChange: _react2.default.PropTypes.func,
+	    caseSensitive: _react2.default.PropTypes.bool,
+	    fuzzy: _react2.default.PropTypes.bool,
+	    throttle: _react2.default.PropTypes.number,
+	    filterKeys: _react2.default.PropTypes.oneOf([_react2.default.PropTypes.string, _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.string)]),
+	    value: _react2.default.PropTypes.string
+	  },
+
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      className: '',
+	      onChange: function onChange() {},
+
+	      caseSensitive: false,
+	      fuzzy: false,
+	      throttle: 200
+	    };
+	  },
+	  getInitialState: function getInitialState() {
+	    return {
+	      searchTerm: this.props.value || ''
+	    };
+	  },
+	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    if (typeof nextProps.value !== 'undefined' && nextProps.value !== this.props.value) {
+	      var e = {
+	        target: {
+	          value: nextProps.value
+	        }
+	      };
+	      this.updateSearch(e);
+	    }
+	  },
+	  render: function render() {
+	    var _props = this.props;
+	    var className = _props.className;
+	    var onChange = _props.onChange;
+	    var caseSensitive = _props.caseSensitive;
+	    var throttle = _props.throttle;
+	    var filterKeys = _props.filterKeys;
+	    var value = _props.value;
+	    var fuzzy = _props.fuzzy;
+	    var inputClassName = _props.inputClassName;
+
+	    var inputProps = _objectWithoutProperties(_props, ['className', 'onChange', 'caseSensitive', 'throttle', 'filterKeys', 'value', 'fuzzy', 'inputClassName']);
+
+	    inputProps.type = inputProps.type || 'search';
+	    inputProps.value = this.state.searchTerm;
+	    inputProps.onChange = this.updateSearch;
+	    inputProps.className = inputClassName;
+	    inputProps.placeholder = inputProps.placeholder || 'Search';
+	    return _react2.default.createElement(
+	      'div',
+	      { className: className },
+	      _react2.default.createElement('input', inputProps)
+	    );
+	  },
+	  updateSearch: function updateSearch(e) {
+	    var _this = this;
+
+	    var searchTerm = e.target.value;
+	    this.setState({
+	      searchTerm: searchTerm
+	    }, function () {
+	      if (_this._throttleTimeout) {
+	        clearTimeout(_this._throttleTimeout);
+	      }
+
+	      _this._throttleTimeout = setTimeout(function () {
+	        return _this.props.onChange(searchTerm);
+	      }, _this.props.throttle);
+	    });
+	  },
+	  filter: function filter(keys) {
+	    return (0, _util.createFilter)(this.state.searchTerm, keys || this.props.filterKeys, this.props.caseSensitive, this.props.fuzzy);
+	  }
+	});
+
+	exports.default = Search;
+	exports.createFilter = _util.createFilter;
+
+/***/ },
+/* 427 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getValuesForKey = getValuesForKey;
+	exports.searchStrings = searchStrings;
+	exports.createFilter = createFilter;
+
+	var _fuse = __webpack_require__(428);
+
+	var _fuse2 = _interopRequireDefault(_fuse);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getValuesForKey(key, item) {
+	  var keys = key.split('.');
+	  var results = [item];
+	  keys.forEach(function (_key) {
+	    var tmp = [];
+	    results.forEach(function (result) {
+	      if (result) {
+	        if (result instanceof Array) {
+	          var index = parseInt(_key, 10);
+	          if (!isNaN(index)) {
+	            return tmp.push(result[index]);
+	          }
+	          result.forEach(function (res) {
+	            tmp.push(res[_key]);
+	          });
+	        } else if (result && typeof result.get === 'function') {
+	          tmp.push(result.get(_key));
+	        } else {
+	          tmp.push(result[_key]);
+	        }
+	      }
+	    });
+
+	    results = tmp;
+	  });
+
+	  return results.filter(function (r) {
+	    return typeof r === 'string' || typeof r === 'number';
+	  });
+	}
+
+	function searchStrings(strings, term, caseSensitive, fuzzy) {
+	  strings = strings.map(function (e) {
+	    return e.toString();
+	  });
+
+	  try {
+	    if (fuzzy) {
+	      if (typeof strings.toJS === 'function') {
+	        strings = strings.toJS();
+	      }
+	      var fuse = new _fuse2.default(strings.map(function (s) {
+	        return { id: s };
+	      }), { keys: ['id'], id: 'id', caseSensitive: caseSensitive });
+	      return fuse.search(term).length;
+	    }
+	    return strings.some(function (value) {
+	      try {
+	        if (!caseSensitive) {
+	          value = value.toLowerCase();
+	        }
+	        if (value && value.search(term) !== -1) {
+	          return true;
+	        }
+	        return false;
+	      } catch (e) {
+	        return false;
+	      }
+	    });
+	  } catch (e) {
+	    return false;
+	  }
+	}
+
+	function createFilter(term, keys, caseSensitive, fuzzy) {
+	  return function (item) {
+	    if (term === '') {
+	      return true;
+	    }
+
+	    if (!caseSensitive) {
+	      term = term.toLowerCase();
+	    }
+
+	    var terms = term.split(' ');
+
+	    if (!keys) {
+	      return terms.every(function (term) {
+	        return searchStrings([item], term, caseSensitive, fuzzy);
+	      });
+	    }
+
+	    if (typeof keys === 'string') {
+	      keys = [keys];
+	    }
+
+	    return terms.every(function (term) {
+	      // allow search in specific fields with the syntax `field:search`
+	      var currentKeys = void 0;
+	      if (term.indexOf(':') > -1) {
+	        (function () {
+	          var searchedField = term.split(':')[0];
+	          term = term.split(':')[1];
+	          currentKeys = keys.filter(function (key) {
+	            return key.toLowerCase().indexOf(searchedField) > -1;
+	          });
+	        })();
+	      } else {
+	        currentKeys = keys;
+	      }
+
+	      return currentKeys.find(function (key) {
+	        var values = getValuesForKey(key, item);
+	        return searchStrings(values, term, caseSensitive, fuzzy);
+	      });
+	    });
+	  };
+	}
+
+/***/ },
+/* 428 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Fuse - Lightweight fuzzy-search
+	 *
+	 * Copyright (c) 2012-2016 Kirollos Risk <kirollos@gmail.com>.
+	 * All Rights Reserved. Apache Software License 2.0
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License")
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 * http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 */
+	;(function (global) {
+	  'use strict'
+
+	  function log () {
+	    console.log.apply(console, arguments)
+	  }
+
+	  var defaultOptions = {
+	    // The name of the identifier property. If specified, the returned result will be a list
+	    // of the items' dentifiers, otherwise it will be a list of the items.
+	    id: null,
+
+	    // Indicates whether comparisons should be case sensitive.
+
+	    caseSensitive: false,
+
+	    // An array of values that should be included from the searcher's output. When this array
+	    // contains elements, each result in the list will be of the form `{ item: ..., include1: ..., include2: ... }`.
+	    // Values you can include are `score`, `matchedLocations`
+	    include: [],
+
+	    // Whether to sort the result list, by score
+	    shouldSort: true,
+
+	    // The search function to use
+	    // Note that the default search function ([[Function]]) must conform to the following API:
+	    //
+	    //  @param pattern The pattern string to search
+	    //  @param options The search option
+	    //  [[Function]].constructor = function(pattern, options)
+	    //
+	    //  @param text: the string to search in for the pattern
+	    //  @return Object in the form of:
+	    //    - isMatch: boolean
+	    //    - score: Int
+	    //  [[Function]].prototype.search = function(text)
+	    searchFn: BitapSearcher,
+
+	    // Default sort function
+	    sortFn: function (a, b) {
+	      return a.score - b.score
+	    },
+
+	    // The get function to use when fetching an object's properties.
+	    // The default will search nested paths *ie foo.bar.baz*
+	    getFn: deepValue,
+
+	    // List of properties that will be searched. This also supports nested properties.
+	    keys: [],
+
+	    // Will print to the console. Useful for debugging.
+	    verbose: false,
+
+	    // When true, the search algorithm will search individual words **and** the full string,
+	    // computing the final score as a function of both. Note that when `tokenize` is `true`,
+	    // the `threshold`, `distance`, and `location` are inconsequential for individual tokens.
+	    tokenize: false,
+
+	    // When true, the result set will only include records that match all tokens. Will only work
+	    // if `tokenize` is also true.
+	    matchAllTokens: false,
+
+	    // Regex used to separate words when searching. Only applicable when `tokenize` is `true`.
+	    tokenSeparator: / +/g
+	  }
+
+	  function Fuse (list, options) {
+	    var i
+	    var len
+	    var key
+	    var keys
+
+	    this.list = list
+	    this.options = options = options || {}
+
+	    // Add boolean type options
+	    for (i = 0, keys = ['sort', 'shouldSort', 'verbose', 'tokenize'], len = keys.length; i < len; i++) {
+	      key = keys[i]
+	      this.options[key] = key in options ? options[key] : defaultOptions[key]
+	    }
+	    // Add all other options
+	    for (i = 0, keys = ['searchFn', 'sortFn', 'keys', 'getFn', 'include', 'tokenSeparator'], len = keys.length; i < len; i++) {
+	      key = keys[i]
+	      this.options[key] = options[key] || defaultOptions[key]
+	    }
+	  }
+
+	  Fuse.VERSION = '2.5.0'
+
+	  /**
+	   * Sets a new list for Fuse to match against.
+	   * @param {Array} list
+	   * @return {Array} The newly set list
+	   * @public
+	   */
+	  Fuse.prototype.set = function (list) {
+	    this.list = list
+	    return list
+	  }
+
+	  Fuse.prototype.search = function (pattern) {
+	    if (this.options.verbose) log('\nSearch term:', pattern, '\n')
+
+	    this.pattern = pattern
+	    this.results = []
+	    this.resultMap = {}
+	    this._keyMap = null
+
+	    this._prepareSearchers()
+	    this._startSearch()
+	    this._computeScore()
+	    this._sort()
+
+	    var output = this._format()
+	    return output
+	  }
+
+	  Fuse.prototype._prepareSearchers = function () {
+	    var options = this.options
+	    var pattern = this.pattern
+	    var searchFn = options.searchFn
+	    var tokens = pattern.split(options.tokenSeparator)
+	    var i = 0
+	    var len = tokens.length
+
+	    if (this.options.tokenize) {
+	      this.tokenSearchers = []
+	      for (; i < len; i++) {
+	        this.tokenSearchers.push(new searchFn(tokens[i], options))
+	      }
+	    }
+	    this.fullSeacher = new searchFn(pattern, options)
+	  }
+
+	  Fuse.prototype._startSearch = function () {
+	    var options = this.options
+	    var getFn = options.getFn
+	    var list = this.list
+	    var listLen = list.length
+	    var keys = this.options.keys
+	    var keysLen = keys.length
+	    var key
+	    var weight
+	    var item = null
+	    var i
+	    var j
+
+	    // Check the first item in the list, if it's a string, then we assume
+	    // that every item in the list is also a string, and thus it's a flattened array.
+	    if (typeof list[0] === 'string') {
+	      // Iterate over every item
+	      for (i = 0; i < listLen; i++) {
+	        this._analyze('', list[i], i, i)
+	      }
+	    } else {
+	      this._keyMap = {}
+	      // Otherwise, the first item is an Object (hopefully), and thus the searching
+	      // is done on the values of the keys of each item.
+	      // Iterate over every item
+	      for (i = 0; i < listLen; i++) {
+	        item = list[i]
+	        // Iterate over every key
+	        for (j = 0; j < keysLen; j++) {
+	          key = keys[j]
+	          if (typeof key !== 'string') {
+	            weight = (1 - key.weight) || 1
+	            this._keyMap[key.name] = {
+	              weight: weight
+	            }
+	            if (key.weight <= 0 || key.weight > 1) {
+	              throw new Error('Key weight has to be > 0 and <= 1')
+	            }
+	            key = key.name
+	          } else {
+	            this._keyMap[key] = {
+	              weight: 1
+	            }
+	          }
+	          this._analyze(key, getFn(item, key, []), item, i)
+	        }
+	      }
+	    }
+	  }
+
+	  Fuse.prototype._analyze = function (key, text, entity, index) {
+	    var options = this.options
+	    var words
+	    var scores
+	    var exists = false
+	    var existingResult
+	    var averageScore
+	    var finalScore
+	    var scoresLen
+	    var mainSearchResult
+	    var tokenSearcher
+	    var termScores
+	    var word
+	    var tokenSearchResult
+	    var hasMatchInText
+	    var checkTextMatches
+	    var i
+	    var j
+
+	    // Check if the text can be searched
+	    if (text === undefined || text === null) {
+	      return
+	    }
+
+	    scores = []
+
+	    var numTextMatches = 0
+
+	    if (typeof text === 'string') {
+	      words = text.split(options.tokenSeparator)
+
+	      if (options.verbose) log('---------\nKey:', key)
+
+	      if (this.options.tokenize) {
+	        for (i = 0; i < this.tokenSearchers.length; i++) {
+	          tokenSearcher = this.tokenSearchers[i]
+
+	          if (options.verbose) log('Pattern:', tokenSearcher.pattern)
+
+	          termScores = []
+	          hasMatchInText = false
+
+	          for (j = 0; j < words.length; j++) {
+	            word = words[j]
+	            tokenSearchResult = tokenSearcher.search(word)
+	            var obj = {}
+	            if (tokenSearchResult.isMatch) {
+	              obj[word] = tokenSearchResult.score
+	              exists = true
+	              hasMatchInText = true
+	              scores.push(tokenSearchResult.score)
+	            } else {
+	              obj[word] = 1
+	              if (!this.options.matchAllTokens) {
+	                scores.push(1)
+	              }
+	            }
+	            termScores.push(obj)
+	          }
+
+	          if (hasMatchInText) {
+	            numTextMatches++
+	          }
+
+	          if (options.verbose) log('Token scores:', termScores)
+	        }
+
+	        averageScore = scores[0]
+	        scoresLen = scores.length
+	        for (i = 1; i < scoresLen; i++) {
+	          averageScore += scores[i]
+	        }
+	        averageScore = averageScore / scoresLen
+
+	        if (options.verbose) log('Token score average:', averageScore)
+	      }
+
+	      mainSearchResult = this.fullSeacher.search(text)
+	      if (options.verbose) log('Full text score:', mainSearchResult.score)
+
+	      finalScore = mainSearchResult.score
+	      if (averageScore !== undefined) {
+	        finalScore = (finalScore + averageScore) / 2
+	      }
+
+	      if (options.verbose) log('Score average:', finalScore)
+
+	      checkTextMatches = (this.options.tokenize && this.options.matchAllTokens) ? numTextMatches >= this.tokenSearchers.length : true
+
+	      if (options.verbose) log('Check Matches', checkTextMatches)
+
+	      // If a match is found, add the item to <rawResults>, including its score
+	      if ((exists || mainSearchResult.isMatch) && checkTextMatches) {
+	        // Check if the item already exists in our results
+	        existingResult = this.resultMap[index]
+
+	        if (existingResult) {
+	          // Use the lowest score
+	          // existingResult.score, bitapResult.score
+	          existingResult.output.push({
+	            key: key,
+	            score: finalScore,
+	            matchedIndices: mainSearchResult.matchedIndices
+	          })
+	        } else {
+	          // Add it to the raw result list
+	          this.resultMap[index] = {
+	            item: entity,
+	            output: [{
+	              key: key,
+	              score: finalScore,
+	              matchedIndices: mainSearchResult.matchedIndices
+	            }]
+	          }
+
+	          this.results.push(this.resultMap[index])
+	        }
+	      }
+	    } else if (isArray(text)) {
+	      for (i = 0; i < text.length; i++) {
+	        this._analyze(key, text[i], entity, index)
+	      }
+	    }
+	  }
+
+	  Fuse.prototype._computeScore = function () {
+	    var i
+	    var j
+	    var keyMap = this._keyMap
+	    var totalScore
+	    var output
+	    var scoreLen
+	    var score
+	    var weight
+	    var results = this.results
+	    var bestScore
+	    var nScore
+
+	    if (this.options.verbose) log('\n\nComputing score:\n')
+
+	    for (i = 0; i < results.length; i++) {
+	      totalScore = 0
+	      output = results[i].output
+	      scoreLen = output.length
+
+	      bestScore = 1
+
+	      for (j = 0; j < scoreLen; j++) {
+	        score = output[j].score
+	        weight = keyMap ? keyMap[output[j].key].weight : 1
+
+	        nScore = score * weight
+
+	        if (weight !== 1) {
+	          bestScore = Math.min(bestScore, nScore)
+	        } else {
+	          totalScore += nScore
+	          output[j].nScore = nScore
+	        }
+	      }
+
+	      if (bestScore === 1) {
+	        results[i].score = totalScore / scoreLen
+	      } else {
+	        results[i].score = bestScore
+	      }
+
+	      if (this.options.verbose) log(results[i])
+	    }
+	  }
+
+	  Fuse.prototype._sort = function () {
+	    var options = this.options
+	    if (options.shouldSort) {
+	      if (options.verbose) log('\n\nSorting....')
+	      this.results.sort(options.sortFn)
+	    }
+	  }
+
+	  Fuse.prototype._format = function () {
+	    var options = this.options
+	    var getFn = options.getFn
+	    var finalOutput = []
+	    var item
+	    var i
+	    var len
+	    var results = this.results
+	    var replaceValue
+	    var getItemAtIndex
+	    var include = options.include
+
+	    if (options.verbose) log('\n\nOutput:\n\n', results)
+
+	    // Helper function, here for speed-up, which replaces the item with its value,
+	    // if the options specifies it,
+	    replaceValue = options.id ? function (index) {
+	      results[index].item = getFn(results[index].item, options.id, [])[0]
+	    } : function () {}
+
+	    getItemAtIndex = function (index) {
+	      var record = results[index]
+	      var data
+	      var j
+	      var output
+	      var _item
+	      var _result
+
+	      // If `include` has values, put the item in the result
+	      if (include.length > 0) {
+	        data = {
+	          item: record.item
+	        }
+	        if (include.indexOf('matches') !== -1) {
+	          output = record.output
+	          data.matches = []
+	          for (j = 0; j < output.length; j++) {
+	            _item = output[j]
+	            _result = {
+	              indices: _item.matchedIndices
+	            }
+	            if (_item.key) {
+	              _result.key = _item.key
+	            }
+	            data.matches.push(_result)
+	          }
+	        }
+
+	        if (include.indexOf('score') !== -1) {
+	          data.score = results[index].score
+	        }
+
+	      } else {
+	        data = record.item
+	      }
+
+	      return data
+	    }
+
+	    // From the results, push into a new array only the item identifier (if specified)
+	    // of the entire item.  This is because we don't want to return the <results>,
+	    // since it contains other metadata
+	    for (i = 0, len = results.length; i < len; i++) {
+	      replaceValue(i)
+	      item = getItemAtIndex(i)
+	      finalOutput.push(item)
+	    }
+
+	    return finalOutput
+	  }
+
+	  // Helpers
+
+	  function deepValue (obj, path, list) {
+	    var firstSegment
+	    var remaining
+	    var dotIndex
+	    var value
+	    var i
+	    var len
+
+	    if (!path) {
+	      // If there's no path left, we've gotten to the object we care about.
+	      list.push(obj)
+	    } else {
+	      dotIndex = path.indexOf('.')
+
+	      if (dotIndex !== -1) {
+	        firstSegment = path.slice(0, dotIndex)
+	        remaining = path.slice(dotIndex + 1)
+	      } else {
+	        firstSegment = path
+	      }
+
+	      value = obj[firstSegment]
+	      if (value !== null && value !== undefined) {
+	        if (!remaining && (typeof value === 'string' || typeof value === 'number')) {
+	          list.push(value)
+	        } else if (isArray(value)) {
+	          // Search each item in the array.
+	          for (i = 0, len = value.length; i < len; i++) {
+	            deepValue(value[i], remaining, list)
+	          }
+	        } else if (remaining) {
+	          // An object. Recurse further.
+	          deepValue(value, remaining, list)
+	        }
+	      }
+	    }
+
+	    return list
+	  }
+
+	  function isArray (obj) {
+	    return Object.prototype.toString.call(obj) === '[object Array]'
+	  }
+
+	  /**
+	   * Adapted from "Diff, Match and Patch", by Google
+	   *
+	   *   http://code.google.com/p/google-diff-match-patch/
+	   *
+	   * Modified by: Kirollos Risk <kirollos@gmail.com>
+	   * -----------------------------------------------
+	   * Details: the algorithm and structure was modified to allow the creation of
+	   * <Searcher> instances with a <search> method which does the actual
+	   * bitap search. The <pattern> (the string that is searched for) is only defined
+	   * once per instance and thus it eliminates redundant re-creation when searching
+	   * over a list of strings.
+	   *
+	   * Licensed under the Apache License, Version 2.0 (the "License")
+	   * you may not use this file except in compliance with the License.
+	   */
+	  function BitapSearcher (pattern, options) {
+	    options = options || {}
+	    this.options = options
+	    this.options.location = options.location || BitapSearcher.defaultOptions.location
+	    this.options.distance = 'distance' in options ? options.distance : BitapSearcher.defaultOptions.distance
+	    this.options.threshold = 'threshold' in options ? options.threshold : BitapSearcher.defaultOptions.threshold
+	    this.options.maxPatternLength = options.maxPatternLength || BitapSearcher.defaultOptions.maxPatternLength
+
+	    this.pattern = options.caseSensitive ? pattern : pattern.toLowerCase()
+	    this.patternLen = pattern.length
+
+	    if (this.patternLen <= this.options.maxPatternLength) {
+	      this.matchmask = 1 << (this.patternLen - 1)
+	      this.patternAlphabet = this._calculatePatternAlphabet()
+	    }
+	  }
+
+	  BitapSearcher.defaultOptions = {
+	    // Approximately where in the text is the pattern expected to be found?
+	    location: 0,
+
+	    // Determines how close the match must be to the fuzzy location (specified above).
+	    // An exact letter match which is 'distance' characters away from the fuzzy location
+	    // would score as a complete mismatch. A distance of '0' requires the match be at
+	    // the exact location specified, a threshold of '1000' would require a perfect match
+	    // to be within 800 characters of the fuzzy location to be found using a 0.8 threshold.
+	    distance: 100,
+
+	    // At what point does the match algorithm give up. A threshold of '0.0' requires a perfect match
+	    // (of both letters and location), a threshold of '1.0' would match anything.
+	    threshold: 0.6,
+
+	    // Machine word size
+	    maxPatternLength: 32
+	  }
+
+	  /**
+	   * Initialize the alphabet for the Bitap algorithm.
+	   * @return {Object} Hash of character locations.
+	   * @private
+	   */
+	  BitapSearcher.prototype._calculatePatternAlphabet = function () {
+	    var mask = {},
+	      i = 0
+
+	    for (i = 0; i < this.patternLen; i++) {
+	      mask[this.pattern.charAt(i)] = 0
+	    }
+
+	    for (i = 0; i < this.patternLen; i++) {
+	      mask[this.pattern.charAt(i)] |= 1 << (this.pattern.length - i - 1)
+	    }
+
+	    return mask
+	  }
+
+	  /**
+	   * Compute and return the score for a match with `e` errors and `x` location.
+	   * @param {number} errors Number of errors in match.
+	   * @param {number} location Location of match.
+	   * @return {number} Overall score for match (0.0 = good, 1.0 = bad).
+	   * @private
+	   */
+	  BitapSearcher.prototype._bitapScore = function (errors, location) {
+	    var accuracy = errors / this.patternLen,
+	      proximity = Math.abs(this.options.location - location)
+
+	    if (!this.options.distance) {
+	      // Dodge divide by zero error.
+	      return proximity ? 1.0 : accuracy
+	    }
+	    return accuracy + (proximity / this.options.distance)
+	  }
+
+	  /**
+	   * Compute and return the result of the search
+	   * @param {String} text The text to search in
+	   * @return {Object} Literal containing:
+	   *                          {Boolean} isMatch Whether the text is a match or not
+	   *                          {Decimal} score Overall score for the match
+	   * @public
+	   */
+	  BitapSearcher.prototype.search = function (text) {
+	    var options = this.options
+	    var i
+	    var j
+	    var textLen
+	    var location
+	    var threshold
+	    var bestLoc
+	    var binMin
+	    var binMid
+	    var binMax
+	    var start, finish
+	    var bitArr
+	    var lastBitArr
+	    var charMatch
+	    var score
+	    var locations
+	    var matches
+	    var isMatched
+	    var matchMask
+	    var matchedIndices
+	    var matchesLen
+	    var match
+
+	    text = options.caseSensitive ? text : text.toLowerCase()
+
+	    if (this.pattern === text) {
+	      // Exact match
+	      return {
+	        isMatch: true,
+	        score: 0,
+	        matchedIndices: [[0, text.length - 1]]
+	      }
+	    }
+
+	    // When pattern length is greater than the machine word length, just do a a regex comparison
+	    if (this.patternLen > options.maxPatternLength) {
+	      matches = text.match(new RegExp(this.pattern.replace(options.tokenSeparator, '|')))
+	      isMatched = !!matches
+
+	      if (isMatched) {
+	        matchedIndices = []
+	        for (i = 0, matchesLen = matches.length; i < matchesLen; i++) {
+	          match = matches[i]
+	          matchedIndices.push([text.indexOf(match), match.length - 1])
+	        }
+	      }
+
+	      return {
+	        isMatch: isMatched,
+	        // TODO: revisit this score
+	        score: isMatched ? 0.5 : 1,
+	        matchedIndices: matchedIndices
+	      }
+	    }
+
+	    location = options.location
+	    // Set starting location at beginning text and initialize the alphabet.
+	    textLen = text.length
+	    // Highest score beyond which we give up.
+	    threshold = options.threshold
+	    // Is there a nearby exact match? (speedup)
+	    bestLoc = text.indexOf(this.pattern, location)
+
+	    // a mask of the matches
+	    matchMask = []
+	    for (i = 0; i < textLen; i++) {
+	      matchMask[i] = 0
+	    }
+
+	    if (bestLoc != -1) {
+	      threshold = Math.min(this._bitapScore(0, bestLoc), threshold)
+	      // What about in the other direction? (speed up)
+	      bestLoc = text.lastIndexOf(this.pattern, location + this.patternLen)
+
+	      if (bestLoc != -1) {
+	        threshold = Math.min(this._bitapScore(0, bestLoc), threshold)
+	      }
+	    }
+
+	    bestLoc = -1
+	    score = 1
+	    locations = []
+	    binMax = this.patternLen + textLen
+
+	    for (i = 0; i < this.patternLen; i++) {
+	      // Scan for the best match; each iteration allows for one more error.
+	      // Run a binary search to determine how far from the match location we can stray
+	      // at this error level.
+	      binMin = 0
+	      binMid = binMax
+	      while (binMin < binMid) {
+	        if (this._bitapScore(i, location + binMid) <= threshold) {
+	          binMin = binMid
+	        } else {
+	          binMax = binMid
+	        }
+	        binMid = Math.floor((binMax - binMin) / 2 + binMin)
+	      }
+
+	      // Use the result from this iteration as the maximum for the next.
+	      binMax = binMid
+	      start = Math.max(1, location - binMid + 1)
+	      finish = Math.min(location + binMid, textLen) + this.patternLen
+
+	      // Initialize the bit array
+	      bitArr = Array(finish + 2)
+
+	      bitArr[finish + 1] = (1 << i) - 1
+
+	      for (j = finish; j >= start; j--) {
+	        charMatch = this.patternAlphabet[text.charAt(j - 1)]
+
+	        if (charMatch) {
+	          matchMask[j - 1] = 1
+	        }
+
+	        if (i === 0) {
+	          // First pass: exact match.
+	          bitArr[j] = ((bitArr[j + 1] << 1) | 1) & charMatch
+	        } else {
+	          // Subsequent passes: fuzzy match.
+	          bitArr[j] = ((bitArr[j + 1] << 1) | 1) & charMatch | (((lastBitArr[j + 1] | lastBitArr[j]) << 1) | 1) | lastBitArr[j + 1]
+	        }
+	        if (bitArr[j] & this.matchmask) {
+	          score = this._bitapScore(i, j - 1)
+
+	          // This match will almost certainly be better than any existing match.
+	          // But check anyway.
+	          if (score <= threshold) {
+	            // Indeed it is
+	            threshold = score
+	            bestLoc = j - 1
+	            locations.push(bestLoc)
+
+	            if (bestLoc > location) {
+	              // When passing loc, don't exceed our current distance from loc.
+	              start = Math.max(1, 2 * location - bestLoc)
+	            } else {
+	              // Already passed loc, downhill from here on in.
+	              break
+	            }
+	          }
+	        }
+	      }
+
+	      // No hope for a (better) match at greater error levels.
+	      if (this._bitapScore(i + 1, location) > threshold) {
+	        break
+	      }
+	      lastBitArr = bitArr
+	    }
+
+	    matchedIndices = this._getMatchedIndices(matchMask)
+
+	    // Count exact matches (those with a score of 0) to be "almost" exact
+	    return {
+	      isMatch: bestLoc >= 0,
+	      score: score === 0 ? 0.001 : score,
+	      matchedIndices: matchedIndices
+	    }
+	  }
+
+	  BitapSearcher.prototype._getMatchedIndices = function (matchMask) {
+	    var matchedIndices = []
+	    var start = -1
+	    var end = -1
+	    var i = 0
+	    var match
+	    var len = matchMask.length
+	    for (; i < len; i++) {
+	      match = matchMask[i]
+	      if (match && start === -1) {
+	        start = i
+	      } else if (!match && start !== -1) {
+	        end = i - 1
+	        matchedIndices.push([start, end])
+	        start = -1
+	      }
+	    }
+	    if (matchMask[i - 1]) {
+	      matchedIndices.push([start, i - 1])
+	    }
+	    return matchedIndices
+	  }
+
+	  // Export to Common JS Loader
+	  if (true) {
+	    // Node. Does not work with strict CommonJS, but
+	    // only CommonJS-like environments that support module.exports,
+	    // like Node.
+	    module.exports = Fuse
+	  } else if (typeof define === 'function' && define.amd) {
+	    // AMD. Register as an anonymous module.
+	    define(function () {
+	      return Fuse
+	    })
+	  } else {
+	    // Browser globals (root is window)
+	    global.Fuse = Fuse
+	  }
+
+	})(this)
+
+
+/***/ },
+/* 429 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PracticalAttacks = function (_React$Component) {
+		_inherits(PracticalAttacks, _React$Component);
+
+		function PracticalAttacks() {
+			_classCallCheck(this, PracticalAttacks);
+
+			return _possibleConstructorReturn(this, (PracticalAttacks.__proto__ || Object.getPrototypeOf(PracticalAttacks)).apply(this, arguments));
+		}
+
+		_createClass(PracticalAttacks, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'h2',
+					null,
+					'Practical Attacks'
+				);
+			}
+		}]);
+
+		return PracticalAttacks;
+	}(_react2.default.Component);
+
+	exports.default = PracticalAttacks;
+
+/***/ },
+/* 430 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	exports.fetchCharacterData = fetchCharacterData;
 
 	var _actionCreators = __webpack_require__(201);
 
-	var _test = __webpack_require__(427);
+	//Keeping this here just in case
+	//import frameData from '../../../json/test.js';
 
-	var _test2 = _interopRequireDefault(_test);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var CHARDATA_API = "";
+	var CHARDATA_API = "http://chicken.seattletekken.com/api.php";
 
 	function dataFetchSuccess(response, character) {
 	  console.log("success", response);
@@ -56194,30 +57446,1424 @@
 	 * FETCHES DATA FOR SPECIFIC CHARACTER
 	 */
 	function fetchCharacterData(character) {
-	  console.log("call fetch", character);
+	  console.log('call fetch', character);
 	  return function (dispatch) {
 	    // set loading state;
 	    dispatch(fetchingCharacterData());
-	    // replace with api call
-	    return new Promise(function (resolve, reject) {
-	      return resolve(getDataByCharacter(character));
+	    // api call
+	    fetch(CHARDATA_API).then(function (response) {
+	      console.log(response);
+	      return response.json();
 	    }).then(function (response) {
-	      return dispatch(dataFetchSuccess(response, character));
-	    }).catch(function (err, character) {
-	      return dispatch(dataFetchError(err, character));
+	      dispatch(dataFetchSuccess(response[character], character));
+	    }).catch(function (err) {
+	      console.log('this got rekt', err);
 	    });
 	  };
 	}
 
-	/*
-	 *  Remove when api is set
+/***/ },
+/* 431 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var characters = ['alisa', 'asuka', 'bryan', 'claudio', 'dragunov', 'feng', 'heihachi', 'hwoarang', 'katarina', 'kazuya', 'king', 'lars', 'leo', 'paul', 'shaheen'];
+
+	exports.default = { characters: characters };
+
+/***/ },
+/* 432 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Register = function (_React$Component) {
+		_inherits(Register, _React$Component);
+
+		function Register() {
+			_classCallCheck(this, Register);
+
+			return _possibleConstructorReturn(this, (Register.__proto__ || Object.getPrototypeOf(Register)).apply(this, arguments));
+		}
+
+		_createClass(Register, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'register-container row' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'small-8 columns centered' },
+						_react2.default.createElement(
+							'form',
+							{ className: 'form-signin', method: 'POST' },
+							_react2.default.createElement(
+								'h2',
+								{ className: 'form-signin-header text-center' },
+								'Register'
+							),
+							_react2.default.createElement('label', { className: 'form-label', htmlFor: 'register-email' }),
+							_react2.default.createElement('input', { className: 'form-input form-control', name: 'register-email', type: 'text', placeholder: 'email', required: '' }),
+							_react2.default.createElement('label', { className: 'form-label', htmlFor: 'register-username' }),
+							_react2.default.createElement('input', { className: 'form-input form-control', name: 'register-username', type: 'text', placeholder: 'username', required: '' }),
+							_react2.default.createElement('label', { className: 'form-label', htmlFor: 'register-password' }),
+							_react2.default.createElement('input', { className: 'form-input form-control', name: 'register-password', type: 'text', placeholder: 'password', required: '' }),
+							_react2.default.createElement('label', { className: 'form-label', htmlFor: 'confirm-password' }),
+							_react2.default.createElement('input', { className: 'form-input form-control', name: 'confirm-password', type: 'text', placeholder: 'confirm password', required: '' }),
+							_react2.default.createElement(
+								'button',
+								{ className: 'btn btn-lg btn-primary btn-block', type: 'submit' },
+								'Create Account'
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return Register;
+	}(_react2.default.Component);
+
+	exports.default = Register;
+
+/***/ },
+/* 433 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.history = exports.defaultState = undefined;
+
+	var _redux = __webpack_require__(177);
+
+	var _reduxThunk = __webpack_require__(434);
+
+	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
+
+	var _reduxLogger = __webpack_require__(435);
+
+	var _reduxLogger2 = _interopRequireDefault(_reduxLogger);
+
+	var _reactRouterRedux = __webpack_require__(441);
+
+	var _reactRouter = __webpack_require__(204);
+
+	var _index = __webpack_require__(446);
+
+	var _index2 = _interopRequireDefault(_index);
+
+	var _test = __webpack_require__(449);
+
+	var _test2 = _interopRequireDefault(_test);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	//import root reducer
+	var loggerMiddleware = (0, _reduxLogger2.default)();
+
+	//create object for default data
+	var defaultState = exports.defaultState = {
+	  frameData: _test2.default
+	};
+
+	/**
+	  DATA DIAGRAM
+	  ------------
+
+	  {
+	    characterData: {
+	      frameData: (array)[],
+	      metaData: (object){},
+	      characterName: (string)""
+	    }
+	  }
+	  
+	**/
+
+	var store = (0, _redux.createStore)(_index2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default, loggerMiddleware));
+
+	var history = exports.history = (0, _reactRouterRedux.syncHistoryWithStore)(_reactRouter.browserHistory, store);
+
+	exports.default = store;
+
+/***/ },
+/* 434 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	exports.__esModule = true;
+	function createThunkMiddleware(extraArgument) {
+	  return function (_ref) {
+	    var dispatch = _ref.dispatch;
+	    var getState = _ref.getState;
+	    return function (next) {
+	      return function (action) {
+	        if (typeof action === 'function') {
+	          return action(dispatch, getState, extraArgument);
+	        }
+
+	        return next(action);
+	      };
+	    };
+	  };
+	}
+
+	var thunk = createThunkMiddleware();
+	thunk.withExtraArgument = createThunkMiddleware;
+
+	exports['default'] = thunk;
+
+/***/ },
+/* 435 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _core = __webpack_require__(436);
+
+	var _helpers = __webpack_require__(437);
+
+	var _defaults = __webpack_require__(440);
+
+	var _defaults2 = _interopRequireDefault(_defaults);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * Creates logger with following options
+	 *
+	 * @namespace
+	 * @param {object} options - options for logger
+	 * @param {string | function | object} options.level - console[level]
+	 * @param {boolean} options.duration - print duration of each action?
+	 * @param {boolean} options.timestamp - print timestamp with each action?
+	 * @param {object} options.colors - custom colors
+	 * @param {object} options.logger - implementation of the `console` API
+	 * @param {boolean} options.logErrors - should errors in action execution be caught, logged, and re-thrown?
+	 * @param {boolean} options.collapsed - is group collapsed?
+	 * @param {boolean} options.predicate - condition which resolves logger behavior
+	 * @param {function} options.stateTransformer - transform state before print
+	 * @param {function} options.actionTransformer - transform action before print
+	 * @param {function} options.errorTransformer - transform error before print
+	 *
+	 * @returns {function} logger middleware
 	 */
-	function getDataByCharacter(character) {
-	  return _test2.default[character];
+	function createLogger() {
+	  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+	  var loggerOptions = _extends({}, _defaults2.default, options);
+
+	  var logger = loggerOptions.logger;
+	  var transformer = loggerOptions.transformer;
+	  var stateTransformer = loggerOptions.stateTransformer;
+	  var errorTransformer = loggerOptions.errorTransformer;
+	  var predicate = loggerOptions.predicate;
+	  var logErrors = loggerOptions.logErrors;
+	  var diffPredicate = loggerOptions.diffPredicate;
+
+	  // Return if 'console' object is not defined
+
+	  if (typeof logger === 'undefined') {
+	    return function () {
+	      return function (next) {
+	        return function (action) {
+	          return next(action);
+	        };
+	      };
+	    };
+	  }
+
+	  if (transformer) {
+	    console.error('Option \'transformer\' is deprecated, use \'stateTransformer\' instead!'); // eslint-disable-line no-console
+	  }
+
+	  var logBuffer = [];
+
+	  return function (_ref) {
+	    var getState = _ref.getState;
+	    return function (next) {
+	      return function (action) {
+	        // Exit early if predicate function returns 'false'
+	        if (typeof predicate === 'function' && !predicate(getState, action)) {
+	          return next(action);
+	        }
+
+	        var logEntry = {};
+	        logBuffer.push(logEntry);
+
+	        logEntry.started = _helpers.timer.now();
+	        logEntry.startedTime = new Date();
+	        logEntry.prevState = stateTransformer(getState());
+	        logEntry.action = action;
+
+	        var returnedValue = undefined;
+	        if (logErrors) {
+	          try {
+	            returnedValue = next(action);
+	          } catch (e) {
+	            logEntry.error = errorTransformer(e);
+	          }
+	        } else {
+	          returnedValue = next(action);
+	        }
+
+	        logEntry.took = _helpers.timer.now() - logEntry.started;
+	        logEntry.nextState = stateTransformer(getState());
+
+	        var diff = loggerOptions.diff && typeof diffPredicate === 'function' ? diffPredicate(getState, action) : loggerOptions.diff;
+
+	        (0, _core.printBuffer)(logBuffer, _extends({}, loggerOptions, { diff: diff }));
+	        logBuffer.length = 0;
+
+	        if (logEntry.error) throw logEntry.error;
+	        return returnedValue;
+	      };
+	    };
+	  };
+	}
+
+	exports.default = createLogger;
+	module.exports = exports['default'];
+
+/***/ },
+/* 436 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.printBuffer = printBuffer;
+
+	var _helpers = __webpack_require__(437);
+
+	var _diff = __webpack_require__(438);
+
+	var _diff2 = _interopRequireDefault(_diff);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
+
+	/**
+	 * Get log level string based on supplied params
+	 *
+	 * @param {string | function | object} level - console[level]
+	 * @param {object} action - selected action
+	 * @param {array} payload - selected payload
+	 * @param {string} type - log entry type
+	 *
+	 * @returns {string} level
+	 */
+	function getLogLevel(level, action, payload, type) {
+	  switch (typeof level === 'undefined' ? 'undefined' : _typeof(level)) {
+	    case 'object':
+	      return typeof level[type] === 'function' ? level[type].apply(level, _toConsumableArray(payload)) : level[type];
+	    case 'function':
+	      return level(action);
+	    default:
+	      return level;
+	  }
+	}
+
+	function defaultTitleFormatter(options) {
+	  var timestamp = options.timestamp;
+	  var duration = options.duration;
+
+	  return function (action, time, took) {
+	    var parts = ['action'];
+	    if (timestamp) {
+	      parts.push('@ ' + time);
+	    }
+	    parts.push(action.type);
+	    if (duration) {
+	      parts.push('(in ' + took.toFixed(2) + ' ms)');
+	    }
+	    return parts.join(' ');
+	  };
+	}
+
+	function printBuffer(buffer, options) {
+	  var logger = options.logger;
+	  var actionTransformer = options.actionTransformer;
+	  var _options$titleFormatt = options.titleFormatter;
+	  var titleFormatter = _options$titleFormatt === undefined ? defaultTitleFormatter(options) : _options$titleFormatt;
+	  var collapsed = options.collapsed;
+	  var colors = options.colors;
+	  var level = options.level;
+	  var diff = options.diff;
+
+	  buffer.forEach(function (logEntry, key) {
+	    var started = logEntry.started;
+	    var startedTime = logEntry.startedTime;
+	    var action = logEntry.action;
+	    var prevState = logEntry.prevState;
+	    var error = logEntry.error;
+	    var took = logEntry.took;
+	    var nextState = logEntry.nextState;
+
+	    var nextEntry = buffer[key + 1];
+
+	    if (nextEntry) {
+	      nextState = nextEntry.prevState;
+	      took = nextEntry.started - started;
+	    }
+
+	    // Message
+	    var formattedAction = actionTransformer(action);
+	    var isCollapsed = typeof collapsed === 'function' ? collapsed(function () {
+	      return nextState;
+	    }, action) : collapsed;
+
+	    var formattedTime = (0, _helpers.formatTime)(startedTime);
+	    var titleCSS = colors.title ? 'color: ' + colors.title(formattedAction) + ';' : null;
+	    var title = titleFormatter(formattedAction, formattedTime, took);
+
+	    // Render
+	    try {
+	      if (isCollapsed) {
+	        if (colors.title) logger.groupCollapsed('%c ' + title, titleCSS);else logger.groupCollapsed(title);
+	      } else {
+	        if (colors.title) logger.group('%c ' + title, titleCSS);else logger.group(title);
+	      }
+	    } catch (e) {
+	      logger.log(title);
+	    }
+
+	    var prevStateLevel = getLogLevel(level, formattedAction, [prevState], 'prevState');
+	    var actionLevel = getLogLevel(level, formattedAction, [formattedAction], 'action');
+	    var errorLevel = getLogLevel(level, formattedAction, [error, prevState], 'error');
+	    var nextStateLevel = getLogLevel(level, formattedAction, [nextState], 'nextState');
+
+	    if (prevStateLevel) {
+	      if (colors.prevState) logger[prevStateLevel]('%c prev state', 'color: ' + colors.prevState(prevState) + '; font-weight: bold', prevState);else logger[prevStateLevel]('prev state', prevState);
+	    }
+
+	    if (actionLevel) {
+	      if (colors.action) logger[actionLevel]('%c action', 'color: ' + colors.action(formattedAction) + '; font-weight: bold', formattedAction);else logger[actionLevel]('action', formattedAction);
+	    }
+
+	    if (error && errorLevel) {
+	      if (colors.error) logger[errorLevel]('%c error', 'color: ' + colors.error(error, prevState) + '; font-weight: bold', error);else logger[errorLevel]('error', error);
+	    }
+
+	    if (nextStateLevel) {
+	      if (colors.nextState) logger[nextStateLevel]('%c next state', 'color: ' + colors.nextState(nextState) + '; font-weight: bold', nextState);else logger[nextStateLevel]('next state', nextState);
+	    }
+
+	    if (diff) {
+	      (0, _diff2.default)(prevState, nextState, logger, isCollapsed);
+	    }
+
+	    try {
+	      logger.groupEnd();
+	    } catch (e) {
+	      logger.log('—— log end ——');
+	    }
+	  });
 	}
 
 /***/ },
-/* 427 */
+/* 437 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var repeat = exports.repeat = function repeat(str, times) {
+	  return new Array(times + 1).join(str);
+	};
+
+	var pad = exports.pad = function pad(num, maxLength) {
+	  return repeat("0", maxLength - num.toString().length) + num;
+	};
+
+	var formatTime = exports.formatTime = function formatTime(time) {
+	  return pad(time.getHours(), 2) + ":" + pad(time.getMinutes(), 2) + ":" + pad(time.getSeconds(), 2) + "." + pad(time.getMilliseconds(), 3);
+	};
+
+	// Use performance API if it's available in order to get better precision
+	var timer = exports.timer = typeof performance !== "undefined" && performance !== null && typeof performance.now === "function" ? performance : Date;
+
+/***/ },
+/* 438 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = diffLogger;
+
+	var _deepDiff = __webpack_require__(439);
+
+	var _deepDiff2 = _interopRequireDefault(_deepDiff);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// https://github.com/flitbit/diff#differences
+	var dictionary = {
+	  'E': {
+	    color: '#2196F3',
+	    text: 'CHANGED:'
+	  },
+	  'N': {
+	    color: '#4CAF50',
+	    text: 'ADDED:'
+	  },
+	  'D': {
+	    color: '#F44336',
+	    text: 'DELETED:'
+	  },
+	  'A': {
+	    color: '#2196F3',
+	    text: 'ARRAY:'
+	  }
+	};
+
+	function style(kind) {
+	  return 'color: ' + dictionary[kind].color + '; font-weight: bold';
+	}
+
+	function render(diff) {
+	  var kind = diff.kind;
+	  var path = diff.path;
+	  var lhs = diff.lhs;
+	  var rhs = diff.rhs;
+	  var index = diff.index;
+	  var item = diff.item;
+
+	  switch (kind) {
+	    case 'E':
+	      return path.join('.') + ' ' + lhs + ' → ' + rhs;
+	    case 'N':
+	      return path.join('.') + ' ' + rhs;
+	    case 'D':
+	      return '' + path.join('.');
+	    case 'A':
+	      return [path.join('.') + '[' + index + ']', item];
+	    default:
+	      return null;
+	  }
+	}
+
+	function diffLogger(prevState, newState, logger, isCollapsed) {
+	  var diff = (0, _deepDiff2.default)(prevState, newState);
+
+	  try {
+	    if (isCollapsed) {
+	      logger.groupCollapsed('diff');
+	    } else {
+	      logger.group('diff');
+	    }
+	  } catch (e) {
+	    logger.log('diff');
+	  }
+
+	  if (diff) {
+	    diff.forEach(function (elem) {
+	      var kind = elem.kind;
+
+	      var output = render(elem);
+
+	      logger.log('%c ' + dictionary[kind].text, style(kind), output);
+	    });
+	  } else {
+	    logger.log('—— no diff ——');
+	  }
+
+	  try {
+	    logger.groupEnd();
+	  } catch (e) {
+	    logger.log('—— diff end —— ');
+	  }
+	}
+	module.exports = exports['default'];
+
+/***/ },
+/* 439 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {/*!
+	 * deep-diff.
+	 * Licensed under the MIT License.
+	 */
+	;(function(root, factory) {
+	  'use strict';
+	  if (true) {
+	    // AMD. Register as an anonymous module.
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+	      return factory();
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if (typeof exports === 'object') {
+	    // Node. Does not work with strict CommonJS, but
+	    // only CommonJS-like environments that support module.exports,
+	    // like Node.
+	    module.exports = factory();
+	  } else {
+	    // Browser globals (root is window)
+	    root.DeepDiff = factory();
+	  }
+	}(this, function(undefined) {
+	  'use strict';
+
+	  var $scope, conflict, conflictResolution = [];
+	  if (typeof global === 'object' && global) {
+	    $scope = global;
+	  } else if (typeof window !== 'undefined') {
+	    $scope = window;
+	  } else {
+	    $scope = {};
+	  }
+	  conflict = $scope.DeepDiff;
+	  if (conflict) {
+	    conflictResolution.push(
+	      function() {
+	        if ('undefined' !== typeof conflict && $scope.DeepDiff === accumulateDiff) {
+	          $scope.DeepDiff = conflict;
+	          conflict = undefined;
+	        }
+	      });
+	  }
+
+	  // nodejs compatible on server side and in the browser.
+	  function inherits(ctor, superCtor) {
+	    ctor.super_ = superCtor;
+	    ctor.prototype = Object.create(superCtor.prototype, {
+	      constructor: {
+	        value: ctor,
+	        enumerable: false,
+	        writable: true,
+	        configurable: true
+	      }
+	    });
+	  }
+
+	  function Diff(kind, path) {
+	    Object.defineProperty(this, 'kind', {
+	      value: kind,
+	      enumerable: true
+	    });
+	    if (path && path.length) {
+	      Object.defineProperty(this, 'path', {
+	        value: path,
+	        enumerable: true
+	      });
+	    }
+	  }
+
+	  function DiffEdit(path, origin, value) {
+	    DiffEdit.super_.call(this, 'E', path);
+	    Object.defineProperty(this, 'lhs', {
+	      value: origin,
+	      enumerable: true
+	    });
+	    Object.defineProperty(this, 'rhs', {
+	      value: value,
+	      enumerable: true
+	    });
+	  }
+	  inherits(DiffEdit, Diff);
+
+	  function DiffNew(path, value) {
+	    DiffNew.super_.call(this, 'N', path);
+	    Object.defineProperty(this, 'rhs', {
+	      value: value,
+	      enumerable: true
+	    });
+	  }
+	  inherits(DiffNew, Diff);
+
+	  function DiffDeleted(path, value) {
+	    DiffDeleted.super_.call(this, 'D', path);
+	    Object.defineProperty(this, 'lhs', {
+	      value: value,
+	      enumerable: true
+	    });
+	  }
+	  inherits(DiffDeleted, Diff);
+
+	  function DiffArray(path, index, item) {
+	    DiffArray.super_.call(this, 'A', path);
+	    Object.defineProperty(this, 'index', {
+	      value: index,
+	      enumerable: true
+	    });
+	    Object.defineProperty(this, 'item', {
+	      value: item,
+	      enumerable: true
+	    });
+	  }
+	  inherits(DiffArray, Diff);
+
+	  function arrayRemove(arr, from, to) {
+	    var rest = arr.slice((to || from) + 1 || arr.length);
+	    arr.length = from < 0 ? arr.length + from : from;
+	    arr.push.apply(arr, rest);
+	    return arr;
+	  }
+
+	  function realTypeOf(subject) {
+	    var type = typeof subject;
+	    if (type !== 'object') {
+	      return type;
+	    }
+
+	    if (subject === Math) {
+	      return 'math';
+	    } else if (subject === null) {
+	      return 'null';
+	    } else if (Array.isArray(subject)) {
+	      return 'array';
+	    } else if (Object.prototype.toString.call(subject) === '[object Date]') {
+	      return 'date';
+	    } else if (typeof subject.toString !== 'undefined' && /^\/.*\//.test(subject.toString())) {
+	      return 'regexp';
+	    }
+	    return 'object';
+	  }
+
+	  function deepDiff(lhs, rhs, changes, prefilter, path, key, stack) {
+	    path = path || [];
+	    var currentPath = path.slice(0);
+	    if (typeof key !== 'undefined') {
+	      if (prefilter) {
+	        if (typeof(prefilter) === 'function' && prefilter(currentPath, key)) { return; }
+	        else if (typeof(prefilter) === 'object') {
+	          if (prefilter.prefilter && prefilter.prefilter(currentPath, key)) { return; }
+	          if (prefilter.normalize) {
+	            var alt = prefilter.normalize(currentPath, key, lhs, rhs);
+	            if (alt) {
+	              lhs = alt[0];
+	              rhs = alt[1];
+	            }
+	          }
+	        }
+	      }
+	      currentPath.push(key);
+	    }
+
+	    // Use string comparison for regexes
+	    if (realTypeOf(lhs) === 'regexp' && realTypeOf(rhs) === 'regexp') {
+	      lhs = lhs.toString();
+	      rhs = rhs.toString();
+	    }
+
+	    var ltype = typeof lhs;
+	    var rtype = typeof rhs;
+	    if (ltype === 'undefined') {
+	      if (rtype !== 'undefined') {
+	        changes(new DiffNew(currentPath, rhs));
+	      }
+	    } else if (rtype === 'undefined') {
+	      changes(new DiffDeleted(currentPath, lhs));
+	    } else if (realTypeOf(lhs) !== realTypeOf(rhs)) {
+	      changes(new DiffEdit(currentPath, lhs, rhs));
+	    } else if (Object.prototype.toString.call(lhs) === '[object Date]' && Object.prototype.toString.call(rhs) === '[object Date]' && ((lhs - rhs) !== 0)) {
+	      changes(new DiffEdit(currentPath, lhs, rhs));
+	    } else if (ltype === 'object' && lhs !== null && rhs !== null) {
+	      stack = stack || [];
+	      if (stack.indexOf(lhs) < 0) {
+	        stack.push(lhs);
+	        if (Array.isArray(lhs)) {
+	          var i, len = lhs.length;
+	          for (i = 0; i < lhs.length; i++) {
+	            if (i >= rhs.length) {
+	              changes(new DiffArray(currentPath, i, new DiffDeleted(undefined, lhs[i])));
+	            } else {
+	              deepDiff(lhs[i], rhs[i], changes, prefilter, currentPath, i, stack);
+	            }
+	          }
+	          while (i < rhs.length) {
+	            changes(new DiffArray(currentPath, i, new DiffNew(undefined, rhs[i++])));
+	          }
+	        } else {
+	          var akeys = Object.keys(lhs);
+	          var pkeys = Object.keys(rhs);
+	          akeys.forEach(function(k, i) {
+	            var other = pkeys.indexOf(k);
+	            if (other >= 0) {
+	              deepDiff(lhs[k], rhs[k], changes, prefilter, currentPath, k, stack);
+	              pkeys = arrayRemove(pkeys, other);
+	            } else {
+	              deepDiff(lhs[k], undefined, changes, prefilter, currentPath, k, stack);
+	            }
+	          });
+	          pkeys.forEach(function(k) {
+	            deepDiff(undefined, rhs[k], changes, prefilter, currentPath, k, stack);
+	          });
+	        }
+	        stack.length = stack.length - 1;
+	      }
+	    } else if (lhs !== rhs) {
+	      if (!(ltype === 'number' && isNaN(lhs) && isNaN(rhs))) {
+	        changes(new DiffEdit(currentPath, lhs, rhs));
+	      }
+	    }
+	  }
+
+	  function accumulateDiff(lhs, rhs, prefilter, accum) {
+	    accum = accum || [];
+	    deepDiff(lhs, rhs,
+	      function(diff) {
+	        if (diff) {
+	          accum.push(diff);
+	        }
+	      },
+	      prefilter);
+	    return (accum.length) ? accum : undefined;
+	  }
+
+	  function applyArrayChange(arr, index, change) {
+	    if (change.path && change.path.length) {
+	      var it = arr[index],
+	          i, u = change.path.length - 1;
+	      for (i = 0; i < u; i++) {
+	        it = it[change.path[i]];
+	      }
+	      switch (change.kind) {
+	        case 'A':
+	          applyArrayChange(it[change.path[i]], change.index, change.item);
+	          break;
+	        case 'D':
+	          delete it[change.path[i]];
+	          break;
+	        case 'E':
+	        case 'N':
+	          it[change.path[i]] = change.rhs;
+	          break;
+	      }
+	    } else {
+	      switch (change.kind) {
+	        case 'A':
+	          applyArrayChange(arr[index], change.index, change.item);
+	          break;
+	        case 'D':
+	          arr = arrayRemove(arr, index);
+	          break;
+	        case 'E':
+	        case 'N':
+	          arr[index] = change.rhs;
+	          break;
+	      }
+	    }
+	    return arr;
+	  }
+
+	  function applyChange(target, source, change) {
+	    if (target && source && change && change.kind) {
+	      var it = target,
+	          i = -1,
+	          last = change.path ? change.path.length - 1 : 0;
+	      while (++i < last) {
+	        if (typeof it[change.path[i]] === 'undefined') {
+	          it[change.path[i]] = (typeof change.path[i] === 'number') ? [] : {};
+	        }
+	        it = it[change.path[i]];
+	      }
+	      switch (change.kind) {
+	        case 'A':
+	          applyArrayChange(change.path ? it[change.path[i]] : it, change.index, change.item);
+	          break;
+	        case 'D':
+	          delete it[change.path[i]];
+	          break;
+	        case 'E':
+	        case 'N':
+	          it[change.path[i]] = change.rhs;
+	          break;
+	      }
+	    }
+	  }
+
+	  function revertArrayChange(arr, index, change) {
+	    if (change.path && change.path.length) {
+	      // the structure of the object at the index has changed...
+	      var it = arr[index],
+	          i, u = change.path.length - 1;
+	      for (i = 0; i < u; i++) {
+	        it = it[change.path[i]];
+	      }
+	      switch (change.kind) {
+	        case 'A':
+	          revertArrayChange(it[change.path[i]], change.index, change.item);
+	          break;
+	        case 'D':
+	          it[change.path[i]] = change.lhs;
+	          break;
+	        case 'E':
+	          it[change.path[i]] = change.lhs;
+	          break;
+	        case 'N':
+	          delete it[change.path[i]];
+	          break;
+	      }
+	    } else {
+	      // the array item is different...
+	      switch (change.kind) {
+	        case 'A':
+	          revertArrayChange(arr[index], change.index, change.item);
+	          break;
+	        case 'D':
+	          arr[index] = change.lhs;
+	          break;
+	        case 'E':
+	          arr[index] = change.lhs;
+	          break;
+	        case 'N':
+	          arr = arrayRemove(arr, index);
+	          break;
+	      }
+	    }
+	    return arr;
+	  }
+
+	  function revertChange(target, source, change) {
+	    if (target && source && change && change.kind) {
+	      var it = target,
+	          i, u;
+	      u = change.path.length - 1;
+	      for (i = 0; i < u; i++) {
+	        if (typeof it[change.path[i]] === 'undefined') {
+	          it[change.path[i]] = {};
+	        }
+	        it = it[change.path[i]];
+	      }
+	      switch (change.kind) {
+	        case 'A':
+	          // Array was modified...
+	          // it will be an array...
+	          revertArrayChange(it[change.path[i]], change.index, change.item);
+	          break;
+	        case 'D':
+	          // Item was deleted...
+	          it[change.path[i]] = change.lhs;
+	          break;
+	        case 'E':
+	          // Item was edited...
+	          it[change.path[i]] = change.lhs;
+	          break;
+	        case 'N':
+	          // Item is new...
+	          delete it[change.path[i]];
+	          break;
+	      }
+	    }
+	  }
+
+	  function applyDiff(target, source, filter) {
+	    if (target && source) {
+	      var onChange = function(change) {
+	        if (!filter || filter(target, source, change)) {
+	          applyChange(target, source, change);
+	        }
+	      };
+	      deepDiff(target, source, onChange);
+	    }
+	  }
+
+	  Object.defineProperties(accumulateDiff, {
+
+	    diff: {
+	      value: accumulateDiff,
+	      enumerable: true
+	    },
+	    observableDiff: {
+	      value: deepDiff,
+	      enumerable: true
+	    },
+	    applyDiff: {
+	      value: applyDiff,
+	      enumerable: true
+	    },
+	    applyChange: {
+	      value: applyChange,
+	      enumerable: true
+	    },
+	    revertChange: {
+	      value: revertChange,
+	      enumerable: true
+	    },
+	    isConflict: {
+	      value: function() {
+	        return 'undefined' !== typeof conflict;
+	      },
+	      enumerable: true
+	    },
+	    noConflict: {
+	      value: function() {
+	        if (conflictResolution) {
+	          conflictResolution.forEach(function(it) {
+	            it();
+	          });
+	          conflictResolution = null;
+	        }
+	        return accumulateDiff;
+	      },
+	      enumerable: true
+	    }
+	  });
+
+	  return accumulateDiff;
+	}));
+
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 440 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  level: "log",
+	  logger: console,
+	  logErrors: true,
+	  collapsed: undefined,
+	  predicate: undefined,
+	  duration: false,
+	  timestamp: true,
+	  stateTransformer: function stateTransformer(state) {
+	    return state;
+	  },
+	  actionTransformer: function actionTransformer(action) {
+	    return action;
+	  },
+	  errorTransformer: function errorTransformer(error) {
+	    return error;
+	  },
+	  colors: {
+	    title: function title() {
+	      return "inherit";
+	    },
+	    prevState: function prevState() {
+	      return "#9E9E9E";
+	    },
+	    action: function action() {
+	      return "#03A9F4";
+	    },
+	    nextState: function nextState() {
+	      return "#4CAF50";
+	    },
+	    error: function error() {
+	      return "#F20404";
+	    }
+	  },
+	  diff: false,
+	  diffPredicate: undefined,
+
+	  // Deprecated options
+	  transformer: undefined
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 441 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.routerMiddleware = exports.routerActions = exports.goForward = exports.goBack = exports.go = exports.replace = exports.push = exports.CALL_HISTORY_METHOD = exports.routerReducer = exports.LOCATION_CHANGE = exports.syncHistoryWithStore = undefined;
+
+	var _reducer = __webpack_require__(442);
+
+	Object.defineProperty(exports, 'LOCATION_CHANGE', {
+	  enumerable: true,
+	  get: function get() {
+	    return _reducer.LOCATION_CHANGE;
+	  }
+	});
+	Object.defineProperty(exports, 'routerReducer', {
+	  enumerable: true,
+	  get: function get() {
+	    return _reducer.routerReducer;
+	  }
+	});
+
+	var _actions = __webpack_require__(443);
+
+	Object.defineProperty(exports, 'CALL_HISTORY_METHOD', {
+	  enumerable: true,
+	  get: function get() {
+	    return _actions.CALL_HISTORY_METHOD;
+	  }
+	});
+	Object.defineProperty(exports, 'push', {
+	  enumerable: true,
+	  get: function get() {
+	    return _actions.push;
+	  }
+	});
+	Object.defineProperty(exports, 'replace', {
+	  enumerable: true,
+	  get: function get() {
+	    return _actions.replace;
+	  }
+	});
+	Object.defineProperty(exports, 'go', {
+	  enumerable: true,
+	  get: function get() {
+	    return _actions.go;
+	  }
+	});
+	Object.defineProperty(exports, 'goBack', {
+	  enumerable: true,
+	  get: function get() {
+	    return _actions.goBack;
+	  }
+	});
+	Object.defineProperty(exports, 'goForward', {
+	  enumerable: true,
+	  get: function get() {
+	    return _actions.goForward;
+	  }
+	});
+	Object.defineProperty(exports, 'routerActions', {
+	  enumerable: true,
+	  get: function get() {
+	    return _actions.routerActions;
+	  }
+	});
+
+	var _sync = __webpack_require__(444);
+
+	var _sync2 = _interopRequireDefault(_sync);
+
+	var _middleware = __webpack_require__(445);
+
+	var _middleware2 = _interopRequireDefault(_middleware);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	exports.syncHistoryWithStore = _sync2['default'];
+	exports.routerMiddleware = _middleware2['default'];
+
+/***/ },
+/* 442 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	exports.routerReducer = routerReducer;
+	/**
+	 * This action type will be dispatched when your history
+	 * receives a location change.
+	 */
+	var LOCATION_CHANGE = exports.LOCATION_CHANGE = '@@router/LOCATION_CHANGE';
+
+	var initialState = {
+	  locationBeforeTransitions: null
+	};
+
+	/**
+	 * This reducer will update the state with the most recent location history
+	 * has transitioned to. This may not be in sync with the router, particularly
+	 * if you have asynchronously-loaded routes, so reading from and relying on
+	 * this state is discouraged.
+	 */
+	function routerReducer() {
+	  var state = arguments.length <= 0 || arguments[0] === undefined ? initialState : arguments[0];
+
+	  var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+	  var type = _ref.type;
+	  var payload = _ref.payload;
+
+	  if (type === LOCATION_CHANGE) {
+	    return _extends({}, state, { locationBeforeTransitions: payload });
+	  }
+
+	  return state;
+	}
+
+/***/ },
+/* 443 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	/**
+	 * This action type will be dispatched by the history actions below.
+	 * If you're writing a middleware to watch for navigation events, be sure to
+	 * look for actions of this type.
+	 */
+	var CALL_HISTORY_METHOD = exports.CALL_HISTORY_METHOD = '@@router/CALL_HISTORY_METHOD';
+
+	function updateLocation(method) {
+	  return function () {
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+
+	    return {
+	      type: CALL_HISTORY_METHOD,
+	      payload: { method: method, args: args }
+	    };
+	  };
+	}
+
+	/**
+	 * These actions correspond to the history API.
+	 * The associated routerMiddleware will capture these events before they get to
+	 * your reducer and reissue them as the matching function on your history.
+	 */
+	var push = exports.push = updateLocation('push');
+	var replace = exports.replace = updateLocation('replace');
+	var go = exports.go = updateLocation('go');
+	var goBack = exports.goBack = updateLocation('goBack');
+	var goForward = exports.goForward = updateLocation('goForward');
+
+	var routerActions = exports.routerActions = { push: push, replace: replace, go: go, goBack: goBack, goForward: goForward };
+
+/***/ },
+/* 444 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	exports['default'] = syncHistoryWithStore;
+
+	var _reducer = __webpack_require__(442);
+
+	var defaultSelectLocationState = function defaultSelectLocationState(state) {
+	  return state.routing;
+	};
+
+	/**
+	 * This function synchronizes your history state with the Redux store.
+	 * Location changes flow from history to the store. An enhanced history is
+	 * returned with a listen method that responds to store updates for location.
+	 *
+	 * When this history is provided to the router, this means the location data
+	 * will flow like this:
+	 * history.push -> store.dispatch -> enhancedHistory.listen -> router
+	 * This ensures that when the store state changes due to a replay or other
+	 * event, the router will be updated appropriately and can transition to the
+	 * correct router state.
+	 */
+	function syncHistoryWithStore(history, store) {
+	  var _ref = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
+
+	  var _ref$selectLocationSt = _ref.selectLocationState;
+	  var selectLocationState = _ref$selectLocationSt === undefined ? defaultSelectLocationState : _ref$selectLocationSt;
+	  var _ref$adjustUrlOnRepla = _ref.adjustUrlOnReplay;
+	  var adjustUrlOnReplay = _ref$adjustUrlOnRepla === undefined ? true : _ref$adjustUrlOnRepla;
+
+	  // Ensure that the reducer is mounted on the store and functioning properly.
+	  if (typeof selectLocationState(store.getState()) === 'undefined') {
+	    throw new Error('Expected the routing state to be available either as `state.routing` ' + 'or as the custom expression you can specify as `selectLocationState` ' + 'in the `syncHistoryWithStore()` options. ' + 'Ensure you have added the `routerReducer` to your store\'s ' + 'reducers via `combineReducers` or whatever method you use to isolate ' + 'your reducers.');
+	  }
+
+	  var initialLocation = void 0;
+	  var isTimeTraveling = void 0;
+	  var unsubscribeFromStore = void 0;
+	  var unsubscribeFromHistory = void 0;
+	  var currentLocation = void 0;
+
+	  // What does the store say about current location?
+	  var getLocationInStore = function getLocationInStore(useInitialIfEmpty) {
+	    var locationState = selectLocationState(store.getState());
+	    return locationState.locationBeforeTransitions || (useInitialIfEmpty ? initialLocation : undefined);
+	  };
+
+	  // Init initialLocation with potential location in store
+	  initialLocation = getLocationInStore();
+
+	  // If the store is replayed, update the URL in the browser to match.
+	  if (adjustUrlOnReplay) {
+	    var handleStoreChange = function handleStoreChange() {
+	      var locationInStore = getLocationInStore(true);
+	      if (currentLocation === locationInStore || initialLocation === locationInStore) {
+	        return;
+	      }
+
+	      // Update address bar to reflect store state
+	      isTimeTraveling = true;
+	      currentLocation = locationInStore;
+	      history.transitionTo(_extends({}, locationInStore, {
+	        action: 'PUSH'
+	      }));
+	      isTimeTraveling = false;
+	    };
+
+	    unsubscribeFromStore = store.subscribe(handleStoreChange);
+	    handleStoreChange();
+	  }
+
+	  // Whenever location changes, dispatch an action to get it in the store
+	  var handleLocationChange = function handleLocationChange(location) {
+	    // ... unless we just caused that location change
+	    if (isTimeTraveling) {
+	      return;
+	    }
+
+	    // Remember where we are
+	    currentLocation = location;
+
+	    // Are we being called for the first time?
+	    if (!initialLocation) {
+	      // Remember as a fallback in case state is reset
+	      initialLocation = location;
+
+	      // Respect persisted location, if any
+	      if (getLocationInStore()) {
+	        return;
+	      }
+	    }
+
+	    // Tell the store to update by dispatching an action
+	    store.dispatch({
+	      type: _reducer.LOCATION_CHANGE,
+	      payload: location
+	    });
+	  };
+	  unsubscribeFromHistory = history.listen(handleLocationChange);
+
+	  // The enhanced history uses store as source of truth
+	  return _extends({}, history, {
+	    // The listeners are subscribed to the store instead of history
+	    listen: function listen(listener) {
+	      // Copy of last location.
+	      var lastPublishedLocation = getLocationInStore(true);
+
+	      // Keep track of whether we unsubscribed, as Redux store
+	      // only applies changes in subscriptions on next dispatch
+	      var unsubscribed = false;
+	      var unsubscribeFromStore = store.subscribe(function () {
+	        var currentLocation = getLocationInStore(true);
+	        if (currentLocation === lastPublishedLocation) {
+	          return;
+	        }
+	        lastPublishedLocation = currentLocation;
+	        if (!unsubscribed) {
+	          listener(lastPublishedLocation);
+	        }
+	      });
+
+	      // History listeners expect a synchronous call. Make the first call to the
+	      // listener after subscribing to the store, in case the listener causes a
+	      // location change (e.g. when it redirects)
+	      listener(lastPublishedLocation);
+
+	      // Let user unsubscribe later
+	      return function () {
+	        unsubscribed = true;
+	        unsubscribeFromStore();
+	      };
+	    },
+
+
+	    // It also provides a way to destroy internal listeners
+	    unsubscribe: function unsubscribe() {
+	      if (adjustUrlOnReplay) {
+	        unsubscribeFromStore();
+	      }
+	      unsubscribeFromHistory();
+	    }
+	  });
+	}
+
+/***/ },
+/* 445 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports['default'] = routerMiddleware;
+
+	var _actions = __webpack_require__(443);
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+	/**
+	 * This middleware captures CALL_HISTORY_METHOD actions to redirect to the
+	 * provided history object. This will prevent these actions from reaching your
+	 * reducer or any middleware that comes after this one.
+	 */
+	function routerMiddleware(history) {
+	  return function () {
+	    return function (next) {
+	      return function (action) {
+	        if (action.type !== _actions.CALL_HISTORY_METHOD) {
+	          return next(action);
+	        }
+
+	        var _action$payload = action.payload;
+	        var method = _action$payload.method;
+	        var args = _action$payload.args;
+
+	        history[method].apply(history, _toConsumableArray(args));
+	      };
+	    };
+	  };
+	}
+
+/***/ },
+/* 446 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56226,63 +58872,178 @@
 		value: true
 	});
 
-	var _alisa = __webpack_require__(428);
+	var _redux = __webpack_require__(177);
+
+	var _reactRouterRedux = __webpack_require__(441);
+
+	var _characterDataReducer = __webpack_require__(447);
+
+	var _characterDataReducer2 = _interopRequireDefault(_characterDataReducer);
+
+	var _filterReducer = __webpack_require__(448);
+
+	var _filterReducer2 = _interopRequireDefault(_filterReducer);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var rootReducer = (0, _redux.combineReducers)({
+		characterData: _characterDataReducer2.default,
+		filter: _filterReducer2.default,
+		routing: _reactRouterRedux.routerReducer
+	});
+
+	exports.default = rootReducer;
+
+/***/ },
+/* 447 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _actionCreators = __webpack_require__(201);
+
+	// reducer takes in two things:
+
+	// 1. the action (info about what happened)
+	// 2. copy of current state
+	var initialState = {
+	  character: "",
+	  frameData: [],
+	  metaData: [],
+	  loading: false
+	};
+
+	function characterData() {
+	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+	  var action = arguments[1];
+
+	  switch (action.type) {
+
+	    case _actionCreators.CHARDATA_FETCHING:
+	      console.log('payload', action.payload);
+	      return _extends({}, state, {
+	        loading: true
+	      });
+	      break;
+
+	    case _actionCreators.CHARDATA_FETCH_SUCCESS:
+	      console.log('payload', action.payload);
+	      return _extends({}, state, {
+	        frameData: action.payload.moves,
+	        metaData: action.payload.metadata,
+	        character: action.character,
+	        loading: false
+	      });
+
+	    case _actionCreators.CHARDATA_FETCH_SUCCESS:
+	      return _extends({}, state, {
+	        character: action.character,
+	        error: actiona.error,
+	        loading: false
+	      });
+	  }
+
+	  return state;
+	}
+
+	exports.default = characterData;
+
+/***/ },
+/* 448 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	function filter() {
+		var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'SHOW_ALL';
+		var action = arguments[1];
+
+		switch (action.type) {
+			case 'SET_VISIBILITY_FILTER':
+				return action.filter;
+			default:
+				return state;
+		}
+	}
+
+	exports.default = filter;
+
+/***/ },
+/* 449 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _alisa = __webpack_require__(450);
 
 	var _alisa2 = _interopRequireDefault(_alisa);
 
-	var _feng = __webpack_require__(429);
+	var _feng = __webpack_require__(451);
 
 	var _feng2 = _interopRequireDefault(_feng);
 
-	var _asuka = __webpack_require__(430);
+	var _asuka = __webpack_require__(452);
 
 	var _asuka2 = _interopRequireDefault(_asuka);
 
-	var _bryan = __webpack_require__(431);
+	var _bryan = __webpack_require__(453);
 
 	var _bryan2 = _interopRequireDefault(_bryan);
 
-	var _claudio = __webpack_require__(432);
+	var _claudio = __webpack_require__(454);
 
 	var _claudio2 = _interopRequireDefault(_claudio);
 
-	var _dragunov = __webpack_require__(433);
+	var _dragunov = __webpack_require__(455);
 
 	var _dragunov2 = _interopRequireDefault(_dragunov);
 
-	var _heihachi = __webpack_require__(434);
+	var _heihachi = __webpack_require__(456);
 
 	var _heihachi2 = _interopRequireDefault(_heihachi);
 
-	var _hwoarang = __webpack_require__(435);
+	var _hwoarang = __webpack_require__(457);
 
 	var _hwoarang2 = _interopRequireDefault(_hwoarang);
 
-	var _katarina = __webpack_require__(436);
+	var _katarina = __webpack_require__(458);
 
 	var _katarina2 = _interopRequireDefault(_katarina);
 
-	var _kazuya = __webpack_require__(437);
+	var _kazuya = __webpack_require__(459);
 
 	var _kazuya2 = _interopRequireDefault(_kazuya);
 
-	var _king = __webpack_require__(438);
+	var _king = __webpack_require__(460);
 
 	var _king2 = _interopRequireDefault(_king);
 
-	var _lars = __webpack_require__(439);
+	var _lars = __webpack_require__(461);
 
 	var _lars2 = _interopRequireDefault(_lars);
 
-	var _leo = __webpack_require__(440);
+	var _leo = __webpack_require__(462);
 
 	var _leo2 = _interopRequireDefault(_leo);
 
-	var _paul = __webpack_require__(441);
+	var _paul = __webpack_require__(463);
 
 	var _paul2 = _interopRequireDefault(_paul);
 
-	var _shaheen = __webpack_require__(442);
+	var _shaheen = __webpack_require__(464);
 
 	var _shaheen2 = _interopRequireDefault(_shaheen);
 
@@ -56310,7 +59071,7 @@
 	exports.default = frameData;
 
 /***/ },
-/* 428 */
+/* 450 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -57825,7 +60586,7 @@
 	exports.default = alisa;
 
 /***/ },
-/* 429 */
+/* 451 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -59169,7 +61930,7 @@
 	exports.default = feng;
 
 /***/ },
-/* 430 */
+/* 452 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -60189,7 +62950,7 @@
 	exports.default = asuka;
 
 /***/ },
-/* 431 */
+/* 453 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -61551,7 +64312,7 @@
 	exports.default = bryan;
 
 /***/ },
-/* 432 */
+/* 454 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -62184,7 +64945,7 @@
 	exports.default = claudio;
 
 /***/ },
-/* 433 */
+/* 455 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63267,7 +66028,7 @@
 	exports.default = dragunov;
 
 /***/ },
-/* 434 */
+/* 456 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -64125,7 +66886,7 @@
 	exports.default = heihachi;
 
 /***/ },
-/* 435 */
+/* 457 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -65883,7 +68644,7 @@
 	exports.default = hwoarang;
 
 /***/ },
-/* 436 */
+/* 458 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -66705,7 +69466,7 @@
 	exports.default = katarina;
 
 /***/ },
-/* 437 */
+/* 459 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -67746,7 +70507,7 @@
 	exports.default = kazuya;
 
 /***/ },
-/* 438 */
+/* 460 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -68982,7 +71743,7 @@
 	exports.default = king;
 
 /***/ },
-/* 439 */
+/* 461 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -70218,7 +72979,7 @@
 	exports.default = lars;
 
 /***/ },
-/* 440 */
+/* 462 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -71427,7 +74188,7 @@
 	exports.default = leo;
 
 /***/ },
-/* 441 */
+/* 463 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -72240,7 +75001,7 @@
 	exports.default = paul;
 
 /***/ },
-/* 442 */
+/* 464 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -72853,1521 +75614,6 @@
 	};
 
 	exports.default = shaheen;
-
-/***/ },
-/* 443 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var characters = ['alisa', 'asuka', 'bryan', 'claudio', 'dragunov', 'feng', 'heihachi', 'hwoarang', 'katarina', 'kazuya', 'king', 'lars', 'leo', 'paul', 'shaheen'];
-
-	exports.default = { characters: characters };
-
-/***/ },
-/* 444 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	exports.default = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Register = function (_React$Component) {
-		_inherits(Register, _React$Component);
-
-		function Register() {
-			_classCallCheck(this, Register);
-
-			return _possibleConstructorReturn(this, (Register.__proto__ || Object.getPrototypeOf(Register)).apply(this, arguments));
-		}
-
-		_createClass(Register, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					{ className: 'register-container row' },
-					_react2.default.createElement(
-						'div',
-						{ className: 'small-8 columns centered' },
-						_react2.default.createElement(
-							'form',
-							{ className: 'form-signin', method: 'POST' },
-							_react2.default.createElement(
-								'h2',
-								{ className: 'form-signin-header text-center' },
-								'Register'
-							),
-							_react2.default.createElement('label', { className: 'form-label', htmlFor: 'register-email' }),
-							_react2.default.createElement('input', { className: 'form-input form-control', name: 'register-email', type: 'text', placeholder: 'email', required: '' }),
-							_react2.default.createElement('label', { className: 'form-label', htmlFor: 'register-username' }),
-							_react2.default.createElement('input', { className: 'form-input form-control', name: 'register-username', type: 'text', placeholder: 'username', required: '' }),
-							_react2.default.createElement('label', { className: 'form-label', htmlFor: 'register-password' }),
-							_react2.default.createElement('input', { className: 'form-input form-control', name: 'register-password', type: 'text', placeholder: 'password', required: '' }),
-							_react2.default.createElement('label', { className: 'form-label', htmlFor: 'confirm-password' }),
-							_react2.default.createElement('input', { className: 'form-input form-control', name: 'confirm-password', type: 'text', placeholder: 'confirm password', required: '' }),
-							_react2.default.createElement(
-								'button',
-								{ className: 'btn btn-lg btn-primary btn-block', type: 'submit' },
-								'Create Account'
-							)
-						)
-					)
-				);
-			}
-		}]);
-
-		return Register;
-	}(_react2.default.Component);
-
-	exports.default = Register;
-
-/***/ },
-/* 445 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.history = exports.defaultState = undefined;
-
-	var _redux = __webpack_require__(177);
-
-	var _reduxThunk = __webpack_require__(446);
-
-	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
-
-	var _reduxLogger = __webpack_require__(447);
-
-	var _reduxLogger2 = _interopRequireDefault(_reduxLogger);
-
-	var _reactRouterRedux = __webpack_require__(453);
-
-	var _reactRouter = __webpack_require__(204);
-
-	var _index = __webpack_require__(458);
-
-	var _index2 = _interopRequireDefault(_index);
-
-	var _test = __webpack_require__(427);
-
-	var _test2 = _interopRequireDefault(_test);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	//import root reducer
-	var loggerMiddleware = (0, _reduxLogger2.default)();
-
-	//create object for default data
-	var defaultState = exports.defaultState = {
-	  frameData: _test2.default
-	};
-
-	/**
-	  DATA DIAGRAM
-	  ------------
-
-	  {
-	    characterData: {
-	      frameData: (array)[],
-	      metaData: (object){},
-	      characterName: (string)""
-	    }
-	  }
-	  
-	**/
-
-	var store = (0, _redux.createStore)(_index2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default, loggerMiddleware));
-
-	var history = exports.history = (0, _reactRouterRedux.syncHistoryWithStore)(_reactRouter.browserHistory, store);
-
-	exports.default = store;
-
-/***/ },
-/* 446 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	exports.__esModule = true;
-	function createThunkMiddleware(extraArgument) {
-	  return function (_ref) {
-	    var dispatch = _ref.dispatch;
-	    var getState = _ref.getState;
-	    return function (next) {
-	      return function (action) {
-	        if (typeof action === 'function') {
-	          return action(dispatch, getState, extraArgument);
-	        }
-
-	        return next(action);
-	      };
-	    };
-	  };
-	}
-
-	var thunk = createThunkMiddleware();
-	thunk.withExtraArgument = createThunkMiddleware;
-
-	exports['default'] = thunk;
-
-/***/ },
-/* 447 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _core = __webpack_require__(448);
-
-	var _helpers = __webpack_require__(449);
-
-	var _defaults = __webpack_require__(452);
-
-	var _defaults2 = _interopRequireDefault(_defaults);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * Creates logger with following options
-	 *
-	 * @namespace
-	 * @param {object} options - options for logger
-	 * @param {string | function | object} options.level - console[level]
-	 * @param {boolean} options.duration - print duration of each action?
-	 * @param {boolean} options.timestamp - print timestamp with each action?
-	 * @param {object} options.colors - custom colors
-	 * @param {object} options.logger - implementation of the `console` API
-	 * @param {boolean} options.logErrors - should errors in action execution be caught, logged, and re-thrown?
-	 * @param {boolean} options.collapsed - is group collapsed?
-	 * @param {boolean} options.predicate - condition which resolves logger behavior
-	 * @param {function} options.stateTransformer - transform state before print
-	 * @param {function} options.actionTransformer - transform action before print
-	 * @param {function} options.errorTransformer - transform error before print
-	 *
-	 * @returns {function} logger middleware
-	 */
-	function createLogger() {
-	  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-	  var loggerOptions = _extends({}, _defaults2.default, options);
-
-	  var logger = loggerOptions.logger;
-	  var transformer = loggerOptions.transformer;
-	  var stateTransformer = loggerOptions.stateTransformer;
-	  var errorTransformer = loggerOptions.errorTransformer;
-	  var predicate = loggerOptions.predicate;
-	  var logErrors = loggerOptions.logErrors;
-	  var diffPredicate = loggerOptions.diffPredicate;
-
-	  // Return if 'console' object is not defined
-
-	  if (typeof logger === 'undefined') {
-	    return function () {
-	      return function (next) {
-	        return function (action) {
-	          return next(action);
-	        };
-	      };
-	    };
-	  }
-
-	  if (transformer) {
-	    console.error('Option \'transformer\' is deprecated, use \'stateTransformer\' instead!'); // eslint-disable-line no-console
-	  }
-
-	  var logBuffer = [];
-
-	  return function (_ref) {
-	    var getState = _ref.getState;
-	    return function (next) {
-	      return function (action) {
-	        // Exit early if predicate function returns 'false'
-	        if (typeof predicate === 'function' && !predicate(getState, action)) {
-	          return next(action);
-	        }
-
-	        var logEntry = {};
-	        logBuffer.push(logEntry);
-
-	        logEntry.started = _helpers.timer.now();
-	        logEntry.startedTime = new Date();
-	        logEntry.prevState = stateTransformer(getState());
-	        logEntry.action = action;
-
-	        var returnedValue = undefined;
-	        if (logErrors) {
-	          try {
-	            returnedValue = next(action);
-	          } catch (e) {
-	            logEntry.error = errorTransformer(e);
-	          }
-	        } else {
-	          returnedValue = next(action);
-	        }
-
-	        logEntry.took = _helpers.timer.now() - logEntry.started;
-	        logEntry.nextState = stateTransformer(getState());
-
-	        var diff = loggerOptions.diff && typeof diffPredicate === 'function' ? diffPredicate(getState, action) : loggerOptions.diff;
-
-	        (0, _core.printBuffer)(logBuffer, _extends({}, loggerOptions, { diff: diff }));
-	        logBuffer.length = 0;
-
-	        if (logEntry.error) throw logEntry.error;
-	        return returnedValue;
-	      };
-	    };
-	  };
-	}
-
-	exports.default = createLogger;
-	module.exports = exports['default'];
-
-/***/ },
-/* 448 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.printBuffer = printBuffer;
-
-	var _helpers = __webpack_require__(449);
-
-	var _diff = __webpack_require__(450);
-
-	var _diff2 = _interopRequireDefault(_diff);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
-
-	/**
-	 * Get log level string based on supplied params
-	 *
-	 * @param {string | function | object} level - console[level]
-	 * @param {object} action - selected action
-	 * @param {array} payload - selected payload
-	 * @param {string} type - log entry type
-	 *
-	 * @returns {string} level
-	 */
-	function getLogLevel(level, action, payload, type) {
-	  switch (typeof level === 'undefined' ? 'undefined' : _typeof(level)) {
-	    case 'object':
-	      return typeof level[type] === 'function' ? level[type].apply(level, _toConsumableArray(payload)) : level[type];
-	    case 'function':
-	      return level(action);
-	    default:
-	      return level;
-	  }
-	}
-
-	function defaultTitleFormatter(options) {
-	  var timestamp = options.timestamp;
-	  var duration = options.duration;
-
-	  return function (action, time, took) {
-	    var parts = ['action'];
-	    if (timestamp) {
-	      parts.push('@ ' + time);
-	    }
-	    parts.push(action.type);
-	    if (duration) {
-	      parts.push('(in ' + took.toFixed(2) + ' ms)');
-	    }
-	    return parts.join(' ');
-	  };
-	}
-
-	function printBuffer(buffer, options) {
-	  var logger = options.logger;
-	  var actionTransformer = options.actionTransformer;
-	  var _options$titleFormatt = options.titleFormatter;
-	  var titleFormatter = _options$titleFormatt === undefined ? defaultTitleFormatter(options) : _options$titleFormatt;
-	  var collapsed = options.collapsed;
-	  var colors = options.colors;
-	  var level = options.level;
-	  var diff = options.diff;
-
-	  buffer.forEach(function (logEntry, key) {
-	    var started = logEntry.started;
-	    var startedTime = logEntry.startedTime;
-	    var action = logEntry.action;
-	    var prevState = logEntry.prevState;
-	    var error = logEntry.error;
-	    var took = logEntry.took;
-	    var nextState = logEntry.nextState;
-
-	    var nextEntry = buffer[key + 1];
-
-	    if (nextEntry) {
-	      nextState = nextEntry.prevState;
-	      took = nextEntry.started - started;
-	    }
-
-	    // Message
-	    var formattedAction = actionTransformer(action);
-	    var isCollapsed = typeof collapsed === 'function' ? collapsed(function () {
-	      return nextState;
-	    }, action) : collapsed;
-
-	    var formattedTime = (0, _helpers.formatTime)(startedTime);
-	    var titleCSS = colors.title ? 'color: ' + colors.title(formattedAction) + ';' : null;
-	    var title = titleFormatter(formattedAction, formattedTime, took);
-
-	    // Render
-	    try {
-	      if (isCollapsed) {
-	        if (colors.title) logger.groupCollapsed('%c ' + title, titleCSS);else logger.groupCollapsed(title);
-	      } else {
-	        if (colors.title) logger.group('%c ' + title, titleCSS);else logger.group(title);
-	      }
-	    } catch (e) {
-	      logger.log(title);
-	    }
-
-	    var prevStateLevel = getLogLevel(level, formattedAction, [prevState], 'prevState');
-	    var actionLevel = getLogLevel(level, formattedAction, [formattedAction], 'action');
-	    var errorLevel = getLogLevel(level, formattedAction, [error, prevState], 'error');
-	    var nextStateLevel = getLogLevel(level, formattedAction, [nextState], 'nextState');
-
-	    if (prevStateLevel) {
-	      if (colors.prevState) logger[prevStateLevel]('%c prev state', 'color: ' + colors.prevState(prevState) + '; font-weight: bold', prevState);else logger[prevStateLevel]('prev state', prevState);
-	    }
-
-	    if (actionLevel) {
-	      if (colors.action) logger[actionLevel]('%c action', 'color: ' + colors.action(formattedAction) + '; font-weight: bold', formattedAction);else logger[actionLevel]('action', formattedAction);
-	    }
-
-	    if (error && errorLevel) {
-	      if (colors.error) logger[errorLevel]('%c error', 'color: ' + colors.error(error, prevState) + '; font-weight: bold', error);else logger[errorLevel]('error', error);
-	    }
-
-	    if (nextStateLevel) {
-	      if (colors.nextState) logger[nextStateLevel]('%c next state', 'color: ' + colors.nextState(nextState) + '; font-weight: bold', nextState);else logger[nextStateLevel]('next state', nextState);
-	    }
-
-	    if (diff) {
-	      (0, _diff2.default)(prevState, nextState, logger, isCollapsed);
-	    }
-
-	    try {
-	      logger.groupEnd();
-	    } catch (e) {
-	      logger.log('—— log end ——');
-	    }
-	  });
-	}
-
-/***/ },
-/* 449 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var repeat = exports.repeat = function repeat(str, times) {
-	  return new Array(times + 1).join(str);
-	};
-
-	var pad = exports.pad = function pad(num, maxLength) {
-	  return repeat("0", maxLength - num.toString().length) + num;
-	};
-
-	var formatTime = exports.formatTime = function formatTime(time) {
-	  return pad(time.getHours(), 2) + ":" + pad(time.getMinutes(), 2) + ":" + pad(time.getSeconds(), 2) + "." + pad(time.getMilliseconds(), 3);
-	};
-
-	// Use performance API if it's available in order to get better precision
-	var timer = exports.timer = typeof performance !== "undefined" && performance !== null && typeof performance.now === "function" ? performance : Date;
-
-/***/ },
-/* 450 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = diffLogger;
-
-	var _deepDiff = __webpack_require__(451);
-
-	var _deepDiff2 = _interopRequireDefault(_deepDiff);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	// https://github.com/flitbit/diff#differences
-	var dictionary = {
-	  'E': {
-	    color: '#2196F3',
-	    text: 'CHANGED:'
-	  },
-	  'N': {
-	    color: '#4CAF50',
-	    text: 'ADDED:'
-	  },
-	  'D': {
-	    color: '#F44336',
-	    text: 'DELETED:'
-	  },
-	  'A': {
-	    color: '#2196F3',
-	    text: 'ARRAY:'
-	  }
-	};
-
-	function style(kind) {
-	  return 'color: ' + dictionary[kind].color + '; font-weight: bold';
-	}
-
-	function render(diff) {
-	  var kind = diff.kind;
-	  var path = diff.path;
-	  var lhs = diff.lhs;
-	  var rhs = diff.rhs;
-	  var index = diff.index;
-	  var item = diff.item;
-
-	  switch (kind) {
-	    case 'E':
-	      return path.join('.') + ' ' + lhs + ' → ' + rhs;
-	    case 'N':
-	      return path.join('.') + ' ' + rhs;
-	    case 'D':
-	      return '' + path.join('.');
-	    case 'A':
-	      return [path.join('.') + '[' + index + ']', item];
-	    default:
-	      return null;
-	  }
-	}
-
-	function diffLogger(prevState, newState, logger, isCollapsed) {
-	  var diff = (0, _deepDiff2.default)(prevState, newState);
-
-	  try {
-	    if (isCollapsed) {
-	      logger.groupCollapsed('diff');
-	    } else {
-	      logger.group('diff');
-	    }
-	  } catch (e) {
-	    logger.log('diff');
-	  }
-
-	  if (diff) {
-	    diff.forEach(function (elem) {
-	      var kind = elem.kind;
-
-	      var output = render(elem);
-
-	      logger.log('%c ' + dictionary[kind].text, style(kind), output);
-	    });
-	  } else {
-	    logger.log('—— no diff ——');
-	  }
-
-	  try {
-	    logger.groupEnd();
-	  } catch (e) {
-	    logger.log('—— diff end —— ');
-	  }
-	}
-	module.exports = exports['default'];
-
-/***/ },
-/* 451 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {/*!
-	 * deep-diff.
-	 * Licensed under the MIT License.
-	 */
-	;(function(root, factory) {
-	  'use strict';
-	  if (true) {
-	    // AMD. Register as an anonymous module.
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	      return factory();
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	  } else if (typeof exports === 'object') {
-	    // Node. Does not work with strict CommonJS, but
-	    // only CommonJS-like environments that support module.exports,
-	    // like Node.
-	    module.exports = factory();
-	  } else {
-	    // Browser globals (root is window)
-	    root.DeepDiff = factory();
-	  }
-	}(this, function(undefined) {
-	  'use strict';
-
-	  var $scope, conflict, conflictResolution = [];
-	  if (typeof global === 'object' && global) {
-	    $scope = global;
-	  } else if (typeof window !== 'undefined') {
-	    $scope = window;
-	  } else {
-	    $scope = {};
-	  }
-	  conflict = $scope.DeepDiff;
-	  if (conflict) {
-	    conflictResolution.push(
-	      function() {
-	        if ('undefined' !== typeof conflict && $scope.DeepDiff === accumulateDiff) {
-	          $scope.DeepDiff = conflict;
-	          conflict = undefined;
-	        }
-	      });
-	  }
-
-	  // nodejs compatible on server side and in the browser.
-	  function inherits(ctor, superCtor) {
-	    ctor.super_ = superCtor;
-	    ctor.prototype = Object.create(superCtor.prototype, {
-	      constructor: {
-	        value: ctor,
-	        enumerable: false,
-	        writable: true,
-	        configurable: true
-	      }
-	    });
-	  }
-
-	  function Diff(kind, path) {
-	    Object.defineProperty(this, 'kind', {
-	      value: kind,
-	      enumerable: true
-	    });
-	    if (path && path.length) {
-	      Object.defineProperty(this, 'path', {
-	        value: path,
-	        enumerable: true
-	      });
-	    }
-	  }
-
-	  function DiffEdit(path, origin, value) {
-	    DiffEdit.super_.call(this, 'E', path);
-	    Object.defineProperty(this, 'lhs', {
-	      value: origin,
-	      enumerable: true
-	    });
-	    Object.defineProperty(this, 'rhs', {
-	      value: value,
-	      enumerable: true
-	    });
-	  }
-	  inherits(DiffEdit, Diff);
-
-	  function DiffNew(path, value) {
-	    DiffNew.super_.call(this, 'N', path);
-	    Object.defineProperty(this, 'rhs', {
-	      value: value,
-	      enumerable: true
-	    });
-	  }
-	  inherits(DiffNew, Diff);
-
-	  function DiffDeleted(path, value) {
-	    DiffDeleted.super_.call(this, 'D', path);
-	    Object.defineProperty(this, 'lhs', {
-	      value: value,
-	      enumerable: true
-	    });
-	  }
-	  inherits(DiffDeleted, Diff);
-
-	  function DiffArray(path, index, item) {
-	    DiffArray.super_.call(this, 'A', path);
-	    Object.defineProperty(this, 'index', {
-	      value: index,
-	      enumerable: true
-	    });
-	    Object.defineProperty(this, 'item', {
-	      value: item,
-	      enumerable: true
-	    });
-	  }
-	  inherits(DiffArray, Diff);
-
-	  function arrayRemove(arr, from, to) {
-	    var rest = arr.slice((to || from) + 1 || arr.length);
-	    arr.length = from < 0 ? arr.length + from : from;
-	    arr.push.apply(arr, rest);
-	    return arr;
-	  }
-
-	  function realTypeOf(subject) {
-	    var type = typeof subject;
-	    if (type !== 'object') {
-	      return type;
-	    }
-
-	    if (subject === Math) {
-	      return 'math';
-	    } else if (subject === null) {
-	      return 'null';
-	    } else if (Array.isArray(subject)) {
-	      return 'array';
-	    } else if (Object.prototype.toString.call(subject) === '[object Date]') {
-	      return 'date';
-	    } else if (typeof subject.toString !== 'undefined' && /^\/.*\//.test(subject.toString())) {
-	      return 'regexp';
-	    }
-	    return 'object';
-	  }
-
-	  function deepDiff(lhs, rhs, changes, prefilter, path, key, stack) {
-	    path = path || [];
-	    var currentPath = path.slice(0);
-	    if (typeof key !== 'undefined') {
-	      if (prefilter) {
-	        if (typeof(prefilter) === 'function' && prefilter(currentPath, key)) { return; }
-	        else if (typeof(prefilter) === 'object') {
-	          if (prefilter.prefilter && prefilter.prefilter(currentPath, key)) { return; }
-	          if (prefilter.normalize) {
-	            var alt = prefilter.normalize(currentPath, key, lhs, rhs);
-	            if (alt) {
-	              lhs = alt[0];
-	              rhs = alt[1];
-	            }
-	          }
-	        }
-	      }
-	      currentPath.push(key);
-	    }
-
-	    // Use string comparison for regexes
-	    if (realTypeOf(lhs) === 'regexp' && realTypeOf(rhs) === 'regexp') {
-	      lhs = lhs.toString();
-	      rhs = rhs.toString();
-	    }
-
-	    var ltype = typeof lhs;
-	    var rtype = typeof rhs;
-	    if (ltype === 'undefined') {
-	      if (rtype !== 'undefined') {
-	        changes(new DiffNew(currentPath, rhs));
-	      }
-	    } else if (rtype === 'undefined') {
-	      changes(new DiffDeleted(currentPath, lhs));
-	    } else if (realTypeOf(lhs) !== realTypeOf(rhs)) {
-	      changes(new DiffEdit(currentPath, lhs, rhs));
-	    } else if (Object.prototype.toString.call(lhs) === '[object Date]' && Object.prototype.toString.call(rhs) === '[object Date]' && ((lhs - rhs) !== 0)) {
-	      changes(new DiffEdit(currentPath, lhs, rhs));
-	    } else if (ltype === 'object' && lhs !== null && rhs !== null) {
-	      stack = stack || [];
-	      if (stack.indexOf(lhs) < 0) {
-	        stack.push(lhs);
-	        if (Array.isArray(lhs)) {
-	          var i, len = lhs.length;
-	          for (i = 0; i < lhs.length; i++) {
-	            if (i >= rhs.length) {
-	              changes(new DiffArray(currentPath, i, new DiffDeleted(undefined, lhs[i])));
-	            } else {
-	              deepDiff(lhs[i], rhs[i], changes, prefilter, currentPath, i, stack);
-	            }
-	          }
-	          while (i < rhs.length) {
-	            changes(new DiffArray(currentPath, i, new DiffNew(undefined, rhs[i++])));
-	          }
-	        } else {
-	          var akeys = Object.keys(lhs);
-	          var pkeys = Object.keys(rhs);
-	          akeys.forEach(function(k, i) {
-	            var other = pkeys.indexOf(k);
-	            if (other >= 0) {
-	              deepDiff(lhs[k], rhs[k], changes, prefilter, currentPath, k, stack);
-	              pkeys = arrayRemove(pkeys, other);
-	            } else {
-	              deepDiff(lhs[k], undefined, changes, prefilter, currentPath, k, stack);
-	            }
-	          });
-	          pkeys.forEach(function(k) {
-	            deepDiff(undefined, rhs[k], changes, prefilter, currentPath, k, stack);
-	          });
-	        }
-	        stack.length = stack.length - 1;
-	      }
-	    } else if (lhs !== rhs) {
-	      if (!(ltype === 'number' && isNaN(lhs) && isNaN(rhs))) {
-	        changes(new DiffEdit(currentPath, lhs, rhs));
-	      }
-	    }
-	  }
-
-	  function accumulateDiff(lhs, rhs, prefilter, accum) {
-	    accum = accum || [];
-	    deepDiff(lhs, rhs,
-	      function(diff) {
-	        if (diff) {
-	          accum.push(diff);
-	        }
-	      },
-	      prefilter);
-	    return (accum.length) ? accum : undefined;
-	  }
-
-	  function applyArrayChange(arr, index, change) {
-	    if (change.path && change.path.length) {
-	      var it = arr[index],
-	          i, u = change.path.length - 1;
-	      for (i = 0; i < u; i++) {
-	        it = it[change.path[i]];
-	      }
-	      switch (change.kind) {
-	        case 'A':
-	          applyArrayChange(it[change.path[i]], change.index, change.item);
-	          break;
-	        case 'D':
-	          delete it[change.path[i]];
-	          break;
-	        case 'E':
-	        case 'N':
-	          it[change.path[i]] = change.rhs;
-	          break;
-	      }
-	    } else {
-	      switch (change.kind) {
-	        case 'A':
-	          applyArrayChange(arr[index], change.index, change.item);
-	          break;
-	        case 'D':
-	          arr = arrayRemove(arr, index);
-	          break;
-	        case 'E':
-	        case 'N':
-	          arr[index] = change.rhs;
-	          break;
-	      }
-	    }
-	    return arr;
-	  }
-
-	  function applyChange(target, source, change) {
-	    if (target && source && change && change.kind) {
-	      var it = target,
-	          i = -1,
-	          last = change.path ? change.path.length - 1 : 0;
-	      while (++i < last) {
-	        if (typeof it[change.path[i]] === 'undefined') {
-	          it[change.path[i]] = (typeof change.path[i] === 'number') ? [] : {};
-	        }
-	        it = it[change.path[i]];
-	      }
-	      switch (change.kind) {
-	        case 'A':
-	          applyArrayChange(change.path ? it[change.path[i]] : it, change.index, change.item);
-	          break;
-	        case 'D':
-	          delete it[change.path[i]];
-	          break;
-	        case 'E':
-	        case 'N':
-	          it[change.path[i]] = change.rhs;
-	          break;
-	      }
-	    }
-	  }
-
-	  function revertArrayChange(arr, index, change) {
-	    if (change.path && change.path.length) {
-	      // the structure of the object at the index has changed...
-	      var it = arr[index],
-	          i, u = change.path.length - 1;
-	      for (i = 0; i < u; i++) {
-	        it = it[change.path[i]];
-	      }
-	      switch (change.kind) {
-	        case 'A':
-	          revertArrayChange(it[change.path[i]], change.index, change.item);
-	          break;
-	        case 'D':
-	          it[change.path[i]] = change.lhs;
-	          break;
-	        case 'E':
-	          it[change.path[i]] = change.lhs;
-	          break;
-	        case 'N':
-	          delete it[change.path[i]];
-	          break;
-	      }
-	    } else {
-	      // the array item is different...
-	      switch (change.kind) {
-	        case 'A':
-	          revertArrayChange(arr[index], change.index, change.item);
-	          break;
-	        case 'D':
-	          arr[index] = change.lhs;
-	          break;
-	        case 'E':
-	          arr[index] = change.lhs;
-	          break;
-	        case 'N':
-	          arr = arrayRemove(arr, index);
-	          break;
-	      }
-	    }
-	    return arr;
-	  }
-
-	  function revertChange(target, source, change) {
-	    if (target && source && change && change.kind) {
-	      var it = target,
-	          i, u;
-	      u = change.path.length - 1;
-	      for (i = 0; i < u; i++) {
-	        if (typeof it[change.path[i]] === 'undefined') {
-	          it[change.path[i]] = {};
-	        }
-	        it = it[change.path[i]];
-	      }
-	      switch (change.kind) {
-	        case 'A':
-	          // Array was modified...
-	          // it will be an array...
-	          revertArrayChange(it[change.path[i]], change.index, change.item);
-	          break;
-	        case 'D':
-	          // Item was deleted...
-	          it[change.path[i]] = change.lhs;
-	          break;
-	        case 'E':
-	          // Item was edited...
-	          it[change.path[i]] = change.lhs;
-	          break;
-	        case 'N':
-	          // Item is new...
-	          delete it[change.path[i]];
-	          break;
-	      }
-	    }
-	  }
-
-	  function applyDiff(target, source, filter) {
-	    if (target && source) {
-	      var onChange = function(change) {
-	        if (!filter || filter(target, source, change)) {
-	          applyChange(target, source, change);
-	        }
-	      };
-	      deepDiff(target, source, onChange);
-	    }
-	  }
-
-	  Object.defineProperties(accumulateDiff, {
-
-	    diff: {
-	      value: accumulateDiff,
-	      enumerable: true
-	    },
-	    observableDiff: {
-	      value: deepDiff,
-	      enumerable: true
-	    },
-	    applyDiff: {
-	      value: applyDiff,
-	      enumerable: true
-	    },
-	    applyChange: {
-	      value: applyChange,
-	      enumerable: true
-	    },
-	    revertChange: {
-	      value: revertChange,
-	      enumerable: true
-	    },
-	    isConflict: {
-	      value: function() {
-	        return 'undefined' !== typeof conflict;
-	      },
-	      enumerable: true
-	    },
-	    noConflict: {
-	      value: function() {
-	        if (conflictResolution) {
-	          conflictResolution.forEach(function(it) {
-	            it();
-	          });
-	          conflictResolution = null;
-	        }
-	        return accumulateDiff;
-	      },
-	      enumerable: true
-	    }
-	  });
-
-	  return accumulateDiff;
-	}));
-
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 452 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = {
-	  level: "log",
-	  logger: console,
-	  logErrors: true,
-	  collapsed: undefined,
-	  predicate: undefined,
-	  duration: false,
-	  timestamp: true,
-	  stateTransformer: function stateTransformer(state) {
-	    return state;
-	  },
-	  actionTransformer: function actionTransformer(action) {
-	    return action;
-	  },
-	  errorTransformer: function errorTransformer(error) {
-	    return error;
-	  },
-	  colors: {
-	    title: function title() {
-	      return "inherit";
-	    },
-	    prevState: function prevState() {
-	      return "#9E9E9E";
-	    },
-	    action: function action() {
-	      return "#03A9F4";
-	    },
-	    nextState: function nextState() {
-	      return "#4CAF50";
-	    },
-	    error: function error() {
-	      return "#F20404";
-	    }
-	  },
-	  diff: false,
-	  diffPredicate: undefined,
-
-	  // Deprecated options
-	  transformer: undefined
-	};
-	module.exports = exports['default'];
-
-/***/ },
-/* 453 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.routerMiddleware = exports.routerActions = exports.goForward = exports.goBack = exports.go = exports.replace = exports.push = exports.CALL_HISTORY_METHOD = exports.routerReducer = exports.LOCATION_CHANGE = exports.syncHistoryWithStore = undefined;
-
-	var _reducer = __webpack_require__(454);
-
-	Object.defineProperty(exports, 'LOCATION_CHANGE', {
-	  enumerable: true,
-	  get: function get() {
-	    return _reducer.LOCATION_CHANGE;
-	  }
-	});
-	Object.defineProperty(exports, 'routerReducer', {
-	  enumerable: true,
-	  get: function get() {
-	    return _reducer.routerReducer;
-	  }
-	});
-
-	var _actions = __webpack_require__(455);
-
-	Object.defineProperty(exports, 'CALL_HISTORY_METHOD', {
-	  enumerable: true,
-	  get: function get() {
-	    return _actions.CALL_HISTORY_METHOD;
-	  }
-	});
-	Object.defineProperty(exports, 'push', {
-	  enumerable: true,
-	  get: function get() {
-	    return _actions.push;
-	  }
-	});
-	Object.defineProperty(exports, 'replace', {
-	  enumerable: true,
-	  get: function get() {
-	    return _actions.replace;
-	  }
-	});
-	Object.defineProperty(exports, 'go', {
-	  enumerable: true,
-	  get: function get() {
-	    return _actions.go;
-	  }
-	});
-	Object.defineProperty(exports, 'goBack', {
-	  enumerable: true,
-	  get: function get() {
-	    return _actions.goBack;
-	  }
-	});
-	Object.defineProperty(exports, 'goForward', {
-	  enumerable: true,
-	  get: function get() {
-	    return _actions.goForward;
-	  }
-	});
-	Object.defineProperty(exports, 'routerActions', {
-	  enumerable: true,
-	  get: function get() {
-	    return _actions.routerActions;
-	  }
-	});
-
-	var _sync = __webpack_require__(456);
-
-	var _sync2 = _interopRequireDefault(_sync);
-
-	var _middleware = __webpack_require__(457);
-
-	var _middleware2 = _interopRequireDefault(_middleware);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	exports.syncHistoryWithStore = _sync2['default'];
-	exports.routerMiddleware = _middleware2['default'];
-
-/***/ },
-/* 454 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	exports.routerReducer = routerReducer;
-	/**
-	 * This action type will be dispatched when your history
-	 * receives a location change.
-	 */
-	var LOCATION_CHANGE = exports.LOCATION_CHANGE = '@@router/LOCATION_CHANGE';
-
-	var initialState = {
-	  locationBeforeTransitions: null
-	};
-
-	/**
-	 * This reducer will update the state with the most recent location history
-	 * has transitioned to. This may not be in sync with the router, particularly
-	 * if you have asynchronously-loaded routes, so reading from and relying on
-	 * this state is discouraged.
-	 */
-	function routerReducer() {
-	  var state = arguments.length <= 0 || arguments[0] === undefined ? initialState : arguments[0];
-
-	  var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-	  var type = _ref.type;
-	  var payload = _ref.payload;
-
-	  if (type === LOCATION_CHANGE) {
-	    return _extends({}, state, { locationBeforeTransitions: payload });
-	  }
-
-	  return state;
-	}
-
-/***/ },
-/* 455 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	/**
-	 * This action type will be dispatched by the history actions below.
-	 * If you're writing a middleware to watch for navigation events, be sure to
-	 * look for actions of this type.
-	 */
-	var CALL_HISTORY_METHOD = exports.CALL_HISTORY_METHOD = '@@router/CALL_HISTORY_METHOD';
-
-	function updateLocation(method) {
-	  return function () {
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	      args[_key] = arguments[_key];
-	    }
-
-	    return {
-	      type: CALL_HISTORY_METHOD,
-	      payload: { method: method, args: args }
-	    };
-	  };
-	}
-
-	/**
-	 * These actions correspond to the history API.
-	 * The associated routerMiddleware will capture these events before they get to
-	 * your reducer and reissue them as the matching function on your history.
-	 */
-	var push = exports.push = updateLocation('push');
-	var replace = exports.replace = updateLocation('replace');
-	var go = exports.go = updateLocation('go');
-	var goBack = exports.goBack = updateLocation('goBack');
-	var goForward = exports.goForward = updateLocation('goForward');
-
-	var routerActions = exports.routerActions = { push: push, replace: replace, go: go, goBack: goBack, goForward: goForward };
-
-/***/ },
-/* 456 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	exports['default'] = syncHistoryWithStore;
-
-	var _reducer = __webpack_require__(454);
-
-	var defaultSelectLocationState = function defaultSelectLocationState(state) {
-	  return state.routing;
-	};
-
-	/**
-	 * This function synchronizes your history state with the Redux store.
-	 * Location changes flow from history to the store. An enhanced history is
-	 * returned with a listen method that responds to store updates for location.
-	 *
-	 * When this history is provided to the router, this means the location data
-	 * will flow like this:
-	 * history.push -> store.dispatch -> enhancedHistory.listen -> router
-	 * This ensures that when the store state changes due to a replay or other
-	 * event, the router will be updated appropriately and can transition to the
-	 * correct router state.
-	 */
-	function syncHistoryWithStore(history, store) {
-	  var _ref = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
-
-	  var _ref$selectLocationSt = _ref.selectLocationState;
-	  var selectLocationState = _ref$selectLocationSt === undefined ? defaultSelectLocationState : _ref$selectLocationSt;
-	  var _ref$adjustUrlOnRepla = _ref.adjustUrlOnReplay;
-	  var adjustUrlOnReplay = _ref$adjustUrlOnRepla === undefined ? true : _ref$adjustUrlOnRepla;
-
-	  // Ensure that the reducer is mounted on the store and functioning properly.
-	  if (typeof selectLocationState(store.getState()) === 'undefined') {
-	    throw new Error('Expected the routing state to be available either as `state.routing` ' + 'or as the custom expression you can specify as `selectLocationState` ' + 'in the `syncHistoryWithStore()` options. ' + 'Ensure you have added the `routerReducer` to your store\'s ' + 'reducers via `combineReducers` or whatever method you use to isolate ' + 'your reducers.');
-	  }
-
-	  var initialLocation = void 0;
-	  var isTimeTraveling = void 0;
-	  var unsubscribeFromStore = void 0;
-	  var unsubscribeFromHistory = void 0;
-	  var currentLocation = void 0;
-
-	  // What does the store say about current location?
-	  var getLocationInStore = function getLocationInStore(useInitialIfEmpty) {
-	    var locationState = selectLocationState(store.getState());
-	    return locationState.locationBeforeTransitions || (useInitialIfEmpty ? initialLocation : undefined);
-	  };
-
-	  // Init initialLocation with potential location in store
-	  initialLocation = getLocationInStore();
-
-	  // If the store is replayed, update the URL in the browser to match.
-	  if (adjustUrlOnReplay) {
-	    var handleStoreChange = function handleStoreChange() {
-	      var locationInStore = getLocationInStore(true);
-	      if (currentLocation === locationInStore || initialLocation === locationInStore) {
-	        return;
-	      }
-
-	      // Update address bar to reflect store state
-	      isTimeTraveling = true;
-	      currentLocation = locationInStore;
-	      history.transitionTo(_extends({}, locationInStore, {
-	        action: 'PUSH'
-	      }));
-	      isTimeTraveling = false;
-	    };
-
-	    unsubscribeFromStore = store.subscribe(handleStoreChange);
-	    handleStoreChange();
-	  }
-
-	  // Whenever location changes, dispatch an action to get it in the store
-	  var handleLocationChange = function handleLocationChange(location) {
-	    // ... unless we just caused that location change
-	    if (isTimeTraveling) {
-	      return;
-	    }
-
-	    // Remember where we are
-	    currentLocation = location;
-
-	    // Are we being called for the first time?
-	    if (!initialLocation) {
-	      // Remember as a fallback in case state is reset
-	      initialLocation = location;
-
-	      // Respect persisted location, if any
-	      if (getLocationInStore()) {
-	        return;
-	      }
-	    }
-
-	    // Tell the store to update by dispatching an action
-	    store.dispatch({
-	      type: _reducer.LOCATION_CHANGE,
-	      payload: location
-	    });
-	  };
-	  unsubscribeFromHistory = history.listen(handleLocationChange);
-
-	  // The enhanced history uses store as source of truth
-	  return _extends({}, history, {
-	    // The listeners are subscribed to the store instead of history
-	    listen: function listen(listener) {
-	      // Copy of last location.
-	      var lastPublishedLocation = getLocationInStore(true);
-
-	      // Keep track of whether we unsubscribed, as Redux store
-	      // only applies changes in subscriptions on next dispatch
-	      var unsubscribed = false;
-	      var unsubscribeFromStore = store.subscribe(function () {
-	        var currentLocation = getLocationInStore(true);
-	        if (currentLocation === lastPublishedLocation) {
-	          return;
-	        }
-	        lastPublishedLocation = currentLocation;
-	        if (!unsubscribed) {
-	          listener(lastPublishedLocation);
-	        }
-	      });
-
-	      // History listeners expect a synchronous call. Make the first call to the
-	      // listener after subscribing to the store, in case the listener causes a
-	      // location change (e.g. when it redirects)
-	      listener(lastPublishedLocation);
-
-	      // Let user unsubscribe later
-	      return function () {
-	        unsubscribed = true;
-	        unsubscribeFromStore();
-	      };
-	    },
-
-
-	    // It also provides a way to destroy internal listeners
-	    unsubscribe: function unsubscribe() {
-	      if (adjustUrlOnReplay) {
-	        unsubscribeFromStore();
-	      }
-	      unsubscribeFromHistory();
-	    }
-	  });
-	}
-
-/***/ },
-/* 457 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports['default'] = routerMiddleware;
-
-	var _actions = __webpack_require__(455);
-
-	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-	/**
-	 * This middleware captures CALL_HISTORY_METHOD actions to redirect to the
-	 * provided history object. This will prevent these actions from reaching your
-	 * reducer or any middleware that comes after this one.
-	 */
-	function routerMiddleware(history) {
-	  return function () {
-	    return function (next) {
-	      return function (action) {
-	        if (action.type !== _actions.CALL_HISTORY_METHOD) {
-	          return next(action);
-	        }
-
-	        var _action$payload = action.payload;
-	        var method = _action$payload.method;
-	        var args = _action$payload.args;
-
-	        history[method].apply(history, _toConsumableArray(args));
-	      };
-	    };
-	  };
-	}
-
-/***/ },
-/* 458 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _redux = __webpack_require__(177);
-
-	var _reactRouterRedux = __webpack_require__(453);
-
-	var _characterDataReducer = __webpack_require__(459);
-
-	var _characterDataReducer2 = _interopRequireDefault(_characterDataReducer);
-
-	var _filterReducer = __webpack_require__(460);
-
-	var _filterReducer2 = _interopRequireDefault(_filterReducer);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var rootReducer = (0, _redux.combineReducers)({
-		characterData: _characterDataReducer2.default,
-		filter: _filterReducer2.default,
-		routing: _reactRouterRedux.routerReducer
-	});
-
-	exports.default = rootReducer;
-
-/***/ },
-/* 459 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _actionCreators = __webpack_require__(201);
-
-	// reducer takes in two things:
-
-	// 1. the action (info about what happened)
-	// 2. copy of current state
-	var initialState = {
-	  character: "",
-	  frameData: [],
-	  metaData: [],
-	  loading: false
-	};
-
-	function characterData() {
-	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-	  var action = arguments[1];
-
-	  switch (action.type) {
-
-	    case _actionCreators.CHARDATA_FETCHING:
-	      console.log('payload', action.payload);
-	      return _extends({}, state, {
-	        loading: true
-	      });
-	      break;
-
-	    case _actionCreators.CHARDATA_FETCH_SUCCESS:
-	      console.log('payload', action.payload);
-	      return _extends({}, state, {
-	        frameData: action.payload.moves,
-	        metaData: action.payload.metadata,
-	        character: action.character,
-	        loading: false
-	      });
-
-	    case _actionCreators.CHARDATA_FETCH_SUCCESS:
-	      return _extends({}, state, {
-	        character: action.character,
-	        error: actiona.error,
-	        loading: false
-	      });
-	  }
-
-	  return state;
-	}
-
-	exports.default = characterData;
-
-/***/ },
-/* 460 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	function filter() {
-		var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'SHOW_ALL';
-		var action = arguments[1];
-
-		switch (action.type) {
-			case 'SET_VISIBILITY_FILTER':
-				return action.filter;
-			default:
-				return state;
-		}
-	}
-
-	exports.default = filter;
 
 /***/ }
 /******/ ]);

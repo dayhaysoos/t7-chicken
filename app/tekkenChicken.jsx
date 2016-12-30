@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-//import css 
+//import css
 import css from './components/App.scss';
 
 // import components
@@ -16,12 +16,6 @@ import {Router, Route, browserHistory, IndexRedirect} from 'react-router';
 import { Provider } from 'react-redux';
 import store from './components/redux/store/store.js';
 
-
-// const requireAuth = (nextState, replace) => {
-//   if (!auth.loggedIn()) {
-//     replace({ pathname: '/login' })
-//   }
-// }
 
 const router = (
 		<Provider store={store}>
