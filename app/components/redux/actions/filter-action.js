@@ -1,10 +1,11 @@
 import {
-	SET_VISIBILITY_FILTER
+	SET_VISIBILITY_FILTER,
+	UPDATE_VISIBILITY_FILTER
 } from './actionCreators';
 
-export function selectCharacter(filter) {
+export function updateVisbilityFilter(filter) {
 	return {
-		type: SET_VISIBILITY_FILTER,
+		type: UPDATE_VISIBILITY_FILTER,
 		filter
 	}
 }
