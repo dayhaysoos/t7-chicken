@@ -4,7 +4,6 @@ import * as actionCreators from './redux/actions/actionCreators';
 import Main from './Main';
 
 function mapStateToProps(state) {
-	console.log(state);
 	return {
 	}
 }

@@ -7,30 +7,21 @@ import FrameDataTableHeader from './FrameDataTableHeader';
 import FrameDataTable from './FrameDataTable';
 import SearchBar from './../SearchBar/SearchBar';
 import SearchInput, {createFilter} from 'react-search-input';
+import Categories from './../Categories/Categories';
 import PracticalAttacks from './PracticalAttacks';
 
 /* dispatch actions */
 import { fetchCharacterData } from '../redux/actions/character-data-action';
+import { updateSearchFilter } from '../redux/actions/search-filter-action';
 
 /* json list of characters (MOVE TO AN API CALL IN FUTURE)*/
 import selectOptions from '../../json/characters';
-
-const KEYS_TO_FILTERS = [
-	'notation',
-	'hit_level',
-	'damage',
-	'speed',
-	'on_block',
-	'on_hit',
-	'on_ch'
-	];
-
 
 class FrameData extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {	
+		this.state = {
 			hitLevelCheckbox: true,
 			damageCheckbox: true,
 			speedCheckbox: true,
@@ -39,6 +30,11 @@ class FrameData extends React.Component {
 			onCHcheckbox: true,
 			searchTerm: ''
 		}
+		this.frameDataFilter = this.props.frameData;
+	}
+
+	componentWillReceiveProps(nextProps) {
+		this.filterList(nextProps.searchFilter.searchFilter, nextProps.frameData);
 	}
 
 	handleChange = (event) => {
@@ -82,13 +78,28 @@ class FrameData extends React.Component {
 		this.setState({[checkboxName]: this.state[checkboxName] ? false : true});
 	}
 
-	searchUpdated(move) {
-		this.setState({searchTerm: move})
+
+	searchDispatcher(event) {
+		let text = event.target.value;
+		this.props.dispatch( updateSearchFilter(text) );
 	}
+
+	updateFilter = () => {
+		console.log('filter update triggered');
+		this.props.dispatch( (updateSearchFilter('waddup')))
+	}
+
+	filterList(text, frameData) {
+		console.log(text, 'please work');
+		let updatedList = frameData;
+		updatedList = updatedList.filter(function(move) {
+		return move.notation.toLowerCase().search(text.toLowerCase()) !== -1;
+	});
+	return this.frameDataFilter = updatedList;
+}
 
 	render() {
 		const { frameData } = this.props;
-		const filteredMoves = frameData.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS));
 		return(
 			<div className="frame-data-container">
 					<h2>Frame Data</h2>
@@ -97,9 +108,9 @@ class FrameData extends React.Component {
 							<option defaultValue="Select Character">Select Character</option>
 							{this.renderCharacterSelectOptions(selectOptions.characters)}
 						</select>
-						<SearchInput className="search-input" onChange={(move) => this.searchUpdated(move)} />
+						<input className="search-input" onChange={(text) => this.searchDispatcher(text)} />
 					</div>
-					<div className="checkbox-container">				
+					<div className="checkbox-container">
 						Hit Level <input name="hitLevelCheckbox" checked={this.state.hitLevelCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
 						Damage <input name="damageCheckbox" checked={this.state.damageCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
 						Speed <input name="speedCheckbox" checked={this.state.speedCheckbox} onChange={(event) => this.hideColumnToggle(event)} type="checkbox" />
@@ -110,7 +121,7 @@ class FrameData extends React.Component {
 					<div className="table-container">
 						<table cellSpacing="0" cellPadding="1">
 							<tbody>
-								{this.renderFrameData(filteredMoves)}
+								{this.renderFrameData(this.frameDataFilter)}
 							</tbody>
 						<FrameDataTableHeader checkBoxStates={this.state} />
 						</table>
@@ -122,9 +133,12 @@ class FrameData extends React.Component {
 }
 
 const mapStateToProps = function(state) {
+	console.log(state, 'some state shit');
 	return {
 		frameData: state.characterData.frameData,
-		character: state.characterData.character
+		character: state.characterData.character,
+		filter: state.filter,
+		searchFilter: state.searchFilter
 	}
 }
 
@@ -133,4 +147,3 @@ const mapDispatchToProps = function(dispatch) {
 }
 
 export default connect( mapStateToProps, mapDispatchToProps )(FrameData);
-
