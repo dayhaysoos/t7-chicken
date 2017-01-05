@@ -13,6 +13,7 @@ import PracticalAttacks from './PracticalAttacks';
 /* dispatch actions */
 import { fetchCharacterData } from '../redux/actions/character-data-action';
 import { updateSearchFilter } from '../redux/actions/search-filter-action';
+import { toggleHighCrush } from '../redux/actions/filter-action';
 
 /* json list of characters (MOVE TO AN API CALL IN FUTURE)*/
 import selectOptions from '../../json/characters';
@@ -34,7 +35,8 @@ class FrameData extends React.Component {
 	}
 
 	componentWillReceiveProps(nextProps) {
-		this.filterList(nextProps.searchFilter.searchFilter, nextProps.frameData);
+		this.categoryFilterList(nextProps);
+		this.searchFilterList(nextProps.searchFilter.searchFilter, nextProps.frameData);
 	}
 
 	handleChange = (event) => {
@@ -78,30 +80,34 @@ class FrameData extends React.Component {
 		this.setState({[checkboxName]: this.state[checkboxName] ? false : true});
 	}
 
+	toggleHighCrush = () => {
+		console.log('yo wtf');
+		this.props.dispatch( toggleHighCrush('highCrush') );
+	}
 
 	searchDispatcher(event) {
 		let text = event.target.value;
 		this.props.dispatch( updateSearchFilter(text) );
 	}
 
-	updateFilter = () => {
-		console.log('filter update triggered');
-		this.props.dispatch( (updateSearchFilter('waddup')))
-	}
-
-	filterList(text, frameData) {
-		console.log(text, 'please work');
+	searchFilterList(text, frameData) {
 		let updatedList = frameData;
 		updatedList = updatedList.filter(function(move) {
 		return move.notation.toLowerCase().search(text.toLowerCase()) !== -1;
 	});
-	return this.frameDataFilter = updatedList;
-}
+		return this.frameDataFilter = updatedList;
+	}
+
+	categoryFilterList(filterStates, frameData) {
+		console.log(filterStates.filter, 'filter states');
+	}
 
 	render() {
+		console.log(this.props);
 		const { frameData } = this.props;
 		return(
 			<div className="frame-data-container">
+				<button onClick={this.toggleHighCrush}>Test Button</button>
 					<h2>Frame Data</h2>
 					<div className="input-container">
 						<select onChange={(event) => this.handleChange(event)}>
@@ -133,7 +139,7 @@ class FrameData extends React.Component {
 }
 
 const mapStateToProps = function(state) {
-	console.log(state, 'some state shit');
+	console.log(state, 'some state stuff');
 	return {
 		frameData: state.characterData.frameData,
 		character: state.characterData.character,
