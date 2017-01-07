@@ -28,15 +28,18 @@ class FrameData extends React.Component {
 			speedCheckbox: true,
 			onBlockCheckbox: true,
 			onHitCheckbox: true,
-			onCHcheckbox: true,
-			searchTerm: ''
+			onCHcheckbox: true
 		}
 		this.frameDataFilter = this.props.frameData;
 	}
 
 	componentWillReceiveProps(nextProps) {
-		this.categoryFilterList(nextProps);
-		this.searchFilterList(nextProps.searchFilter.searchFilter, nextProps.frameData);
+	  let nextFrameData = nextProps.frameData.slice()
+
+	  nextFrameData = this.categoryFilterList(nextProps.filter, nextFrameData);
+	  nextFrameData = this.searchFilterList(nextProps.searchFilter.searchFilter, nextFrameData);
+
+	  this.frameDataFilter = nextFrameData;
 	}
 
 	handleChange = (event) => {
@@ -81,8 +84,8 @@ class FrameData extends React.Component {
 	}
 
 	toggleHighCrush = () => {
-		console.log('yo wtf');
-		this.props.dispatch( toggleHighCrush('highCrush') );
+		let highCrushFilter = this.props.filter.highCrush;
+		this.props.dispatch( toggleHighCrush(highCrushFilter ? false : true) );
 	}
 
 	searchDispatcher(event) {
@@ -91,19 +94,28 @@ class FrameData extends React.Component {
 	}
 
 	searchFilterList(text, frameData) {
+		console.log(frameData, 'search filter frameData');
 		let updatedList = frameData;
 		updatedList = updatedList.filter(function(move) {
 		return move.notation.toLowerCase().search(text.toLowerCase()) !== -1;
 	});
-		return this.frameDataFilter = updatedList;
+	return updatedList;
 	}
 
 	categoryFilterList(filterStates, frameData) {
-		console.log(filterStates.filter, 'filter states');
+		let updatedList = frameData;
+		if(filterStates.highCrush == true) {
+			updatedList = updatedList.filter(function(move) {
+				let highCrushing = move.hit_level.search('TC');
+				return highCrushing !== -1
+			});
+		} else {
+			return updatedList;
+		}
+		return updatedList;
 	}
 
 	render() {
-		console.log(this.props);
 		const { frameData } = this.props;
 		return(
 			<div className="frame-data-container">
@@ -139,7 +151,6 @@ class FrameData extends React.Component {
 }
 
 const mapStateToProps = function(state) {
-	console.log(state, 'some state stuff');
 	return {
 		frameData: state.characterData.frameData,
 		character: state.characterData.character,
