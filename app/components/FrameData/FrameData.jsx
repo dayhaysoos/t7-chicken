@@ -36,7 +36,6 @@ class FrameData extends React.Component {
 	componentWillReceiveProps(nextProps) {
 	  let nextFrameData = nextProps.frameData.slice()
 
-	  nextFrameData = this.categoryFilterList(nextProps.filter, nextFrameData);
 	  nextFrameData = this.searchFilterList(nextProps.searchFilter.searchFilter, nextFrameData);
 
 	  this.frameDataFilter = nextFrameData;
@@ -72,6 +71,7 @@ class FrameData extends React.Component {
 						onHit={move.on_hit}
 						onCH={move.on_ch}
 						checkBoxStates={this.state}
+						filter={this.props.filter}
 					/>
 				);
 			})
@@ -84,8 +84,9 @@ class FrameData extends React.Component {
 	}
 
 	toggleHighCrush = () => {
-		let highCrushFilter = this.props.filter.highCrush;
+		let highCrushFilter = (this.props.filter.hitLevel.levels.indexOf('TC') != -1);
 		this.props.dispatch( toggleHighCrush(highCrushFilter ? false : true) );
+
 	}
 
 	searchDispatcher(event) {
@@ -100,19 +101,6 @@ class FrameData extends React.Component {
 		return move.notation.toLowerCase().search(text.toLowerCase()) !== -1;
 	});
 	return updatedList;
-	}
-
-	categoryFilterList(filterStates, frameData) {
-		let updatedList = frameData;
-		if(filterStates.highCrush == true) {
-			updatedList = updatedList.filter(function(move) {
-				let highCrushing = move.hit_level.search('TC');
-				return highCrushing !== -1
-			});
-		} else {
-			return updatedList;
-		}
-		return updatedList;
 	}
 
 	render() {
