@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 /* component dependencies */
 import CharacterSelect from './CharacterSelect';
@@ -9,15 +10,29 @@ import SearchBar from './../SearchBar/SearchBar';
 import SearchInput, {createFilter} from 'react-search-input';
 import Categories from './../Categories/Categories';
 import PracticalAttacks from './PracticalAttacks';
+import { isHighAttack } from './filters.js';
 
 /* dispatch actions */
 import { fetchCharacterData } from '../redux/actions/character-data-action';
 import { updateSearchFilter } from '../redux/actions/search-filter-action';
 import { toggleHighCrush } from '../redux/actions/filter-action';
+import { addFilter } from '../redux/actions/filter-action';
+import { removeFilter } from '../redux/actions/filter-action';
 
 /* json list of characters (MOVE TO AN API CALL IN FUTURE)*/
 import selectOptions from '../../json/characters';
 
+function FilterBy ({filterName, filterFn, addFilter }) {
+	return <button onClick={() => addFilter(filterFn)}>{filterName}</button>
+}
+
+function RemoveFilterBy({filterName, filterFn, removeFilter }) {
+	return <button onClick={() => removeFilter(filterFn)}>{filterName}</button>
+}
+
+const FilterByContainer = connect(() => ({}), { addFilter })(FilterBy);
+
+const RemoveFilterByContainer = connect(() => ({}), {removeFilter})(RemoveFilterBy);
 class FrameData extends React.Component {
 
 	constructor(props) {
@@ -30,11 +45,11 @@ class FrameData extends React.Component {
 			onHitCheckbox: true,
 			onCHcheckbox: true
 		}
-		this.frameDataFilter = this.props.frameData;
+		this.frameDataFilter = this.props.filteredData;
 	}
 
 	componentWillReceiveProps(nextProps) {
-	  let nextFrameData = nextProps.frameData.slice()
+	  let nextFrameData = nextProps.filteredData.slice()
 
 	  nextFrameData = this.searchFilterList(nextProps.searchFilter.searchFilter, nextFrameData);
 
@@ -103,11 +118,13 @@ class FrameData extends React.Component {
 	return updatedList;
 	}
 
+
 	render() {
-		const { frameData } = this.props;
+		console.log(this.props);
 		return(
 			<div className="frame-data-container">
-				<button onClick={this.toggleHighCrush}>Test Button</button>
+				<FilterByContainer filterName="High Attacks" filterFn={isHighAttack} />
+				<RemoveFilterByContainer filterName="Remove High Filter" filterFn={isHighAttack} />
 					<h2>Frame Data</h2>
 					<div className="input-container">
 						<select onChange={(event) => this.handleChange(event)}>
@@ -138,17 +155,30 @@ class FrameData extends React.Component {
 	}
 }
 
-const mapStateToProps = function(state) {
-	return {
-		frameData: state.characterData.frameData,
-		character: state.characterData.character,
-		filter: state.filter,
-		searchFilter: state.searchFilter
-	}
+function filteredAttacks(state) {
+	let { attackFilters } = state;
+	let { frameData } = state.characterData;
+	return frameData.filter(attack => attackFilters.every(filter => filter(attack)));
 }
 
+const mapStateToProps = function(state) {
+    let { frameData, character} = state.characterData;
+    let { filter, searchFilter, attackFilters } = state;
+    return {
+        character,
+        filter,
+        searchFilter,
+				filteredData: filteredAttacks(state)
+    }
+}
+
+
 const mapDispatchToProps = function(dispatch) {
-	return { dispatch };
+	return {
+		dispatch,
+		addFilter,
+		removeFilter
+	 };
 }
 
 export default connect( mapStateToProps, mapDispatchToProps )(FrameData);

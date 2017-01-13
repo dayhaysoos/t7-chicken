@@ -15,6 +15,7 @@ const initialState = {
 };
 
 function characterData(state = initialState, action) {
+  console.log(action);
   switch (action.type) {
 
     case CHARDATA_FETCHING:
@@ -22,7 +23,6 @@ function characterData(state = initialState, action) {
       return Object.assign({}, state, {
         loading: true
       });
-      break;
 
     case CHARDATA_FETCH_SUCCESS:
       console.log('payload', action.payload);
@@ -40,7 +40,6 @@ function characterData(state = initialState, action) {
         loading: false
       });
   }
-
 	return state;
 }
 

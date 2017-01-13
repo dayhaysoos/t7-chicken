@@ -1,11 +1,19 @@
 import {
-	TOGGLE_HIGH_CRUSH_ATTACKS
+	ADD_ATTACK_FILTER,
+	REMOVE_ATTACK_FILTER
 } from './actionCreators';
 
 
-export function toggleHighCrush(filter) {
+export function addFilter(payload) {
 	return {
-		type: TOGGLE_HIGH_CRUSH_ATTACKS,
-		filter
+		type: ADD_ATTACK_FILTER,
+		payload
+	}
+}
+
+export function removeFilter(payload) {
+	return {
+		type: REMOVE_ATTACK_FILTER,
+		payload
 	}
 }

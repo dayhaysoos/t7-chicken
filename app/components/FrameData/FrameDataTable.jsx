@@ -42,29 +42,9 @@ export default class FrameDataTable extends React.Component {
 		}
 	}
 
-	filterStateCheck() {
 
-		//No active filters
-		if(this.props.filter.activeFilters == 0)
-			return true;
-
-		let isFiltered = true;
-		//Check hitLevel filter
-		let hitLevelFilter = this.props.filter.hitLevel;
-		if(hitLevelFilter.active) {
-			hitLevelFilter.levels.forEach(function(level){
-				if(this.props.hitLevel.search(level) !== -1)
-					isFiltered = false;
-			}.bind(this));
-		}
-
-		return !isFiltered;
-	}
-	
 	render() {
 
-		if(this.filterStateCheck()){
-			console.log("Passed.");
 			return (
 				<tr className="attack-data">
 					<td>{this.props.notation}</td>
@@ -76,9 +56,6 @@ export default class FrameDataTable extends React.Component {
 					<td className={this.onCHStateCheck()}>{this.props.onCH}</td>
 				</tr>
 			);
-		}
-		else
-			return null;
 
 	}
 }
