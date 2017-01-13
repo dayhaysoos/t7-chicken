@@ -22,17 +22,22 @@ import { removeFilter } from '../redux/actions/filter-action';
 /* json list of characters (MOVE TO AN API CALL IN FUTURE)*/
 import selectOptions from '../../json/characters';
 
+// reuseable component for choosing filters
 function FilterBy ({filterName, filterFn, addFilter }) {
 	return <button onClick={() => addFilter(filterFn)}>{filterName}</button>
 }
-
+//reuseable component for removing filters
 function RemoveFilterBy({filterName, filterFn, removeFilter }) {
 	return <button onClick={() => removeFilter(filterFn)}>{filterName}</button>
 }
 
+//connecting FilterBy component so that we can use addFilter on it (needs investigating)
 const FilterByContainer = connect(() => ({}), { addFilter })(FilterBy);
 
+//connecting FilterBy component so that we can use removeFilter on it (needs investigating)
 const RemoveFilterByContainer = connect(() => ({}), {removeFilter})(RemoveFilterBy);
+
+
 class FrameData extends React.Component {
 
 	constructor(props) {
@@ -155,11 +160,13 @@ class FrameData extends React.Component {
 	}
 }
 
+//apply each filter in the attackFilters array to every attack
 function filteredAttacks(state) {
 	let { attackFilters } = state;
 	let { frameData } = state.characterData;
 	return frameData.filter(attack => attackFilters.every(filter => filter(attack)));
 }
+
 
 const mapStateToProps = function(state) {
     let { frameData, character} = state.characterData;
@@ -168,6 +175,7 @@ const mapStateToProps = function(state) {
         character,
         filter,
         searchFilter,
+				//array of attacks after being filtered
 				filteredData: filteredAttacks(state)
     }
 }
@@ -176,6 +184,7 @@ const mapStateToProps = function(state) {
 const mapDispatchToProps = function(dispatch) {
 	return {
 		dispatch,
+		//binding addFilter and removeFilter to props
 		addFilter,
 		removeFilter
 	 };
