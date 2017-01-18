@@ -10,32 +10,30 @@ import SearchBar from './../SearchBar/SearchBar';
 import SearchInput, {createFilter} from 'react-search-input';
 import Categories from './../Categories/Categories';
 import PracticalAttacks from './PracticalAttacks';
-import { isHighAttack } from './filters.js';
+import { isHighAttack, isLowAttack } from './filters';
 
 /* dispatch actions */
 import { fetchCharacterData } from '../redux/actions/character-data-action';
 import { updateSearchFilter } from '../redux/actions/search-filter-action';
-import { toggleHighCrush } from '../redux/actions/filter-action';
-import { addFilter } from '../redux/actions/filter-action';
-import { removeFilter } from '../redux/actions/filter-action';
+import { toggleFilter } from '../redux/actions/filter-action';
+
 
 /* json list of characters (MOVE TO AN API CALL IN FUTURE)*/
 import selectOptions from '../../json/characters';
 
-// reuseable component for choosing filters
-function FilterBy ({filterName, filterFn, addFilter }) {
-	return <button onClick={() => addFilter(filterFn)}>{filterName}</button>
-}
-//reuseable component for removing filters
-function RemoveFilterBy({filterName, filterFn, removeFilter }) {
-	return <button onClick={() => removeFilter(filterFn)}>{filterName}</button>
+
+function FilterButton({filterName, filterFn, toggleFilter, activeFilters}) {
+	function filterFinder(f) {
+		console.log(f)
+		return f == filterFn
+	}
+	return (
+		<button onClick={() => toggleFilter(filterFn)}>{filterName} {activeFilters.find(filterFinder) ? 'active' : 'inactive'}</button>
+	)
 }
 
-//connecting FilterBy component so that we can use addFilter on it (needs investigating)
-const FilterByContainer = connect(() => ({}), { addFilter })(FilterBy);
 
-//connecting FilterBy component so that we can use removeFilter on it (needs investigating)
-const RemoveFilterByContainer = connect(() => ({}), {removeFilter})(RemoveFilterBy);
+const FilterButtonContainer = connect(() => ({}), { toggleFilter })(FilterButton);
 
 
 class FrameData extends React.Component {
@@ -66,6 +64,7 @@ class FrameData extends React.Component {
 		this.props.dispatch( fetchCharacterData(event.target.value) );
 	}
 
+
 	renderCharacterSelectOptions(options = []) {
 		return options.map((name, key) => {
 			return (
@@ -76,6 +75,7 @@ class FrameData extends React.Component {
 			)
 		})
 	}
+
 
 	renderFrameData(data = []) {
 		{
@@ -103,12 +103,6 @@ class FrameData extends React.Component {
 		this.setState({[checkboxName]: this.state[checkboxName] ? false : true});
 	}
 
-	toggleHighCrush = () => {
-		let highCrushFilter = (this.props.filter.hitLevel.levels.indexOf('TC') != -1);
-		this.props.dispatch( toggleHighCrush(highCrushFilter ? false : true) );
-
-	}
-
 	searchDispatcher(event) {
 		let text = event.target.value;
 		this.props.dispatch( updateSearchFilter(text) );
@@ -125,11 +119,11 @@ class FrameData extends React.Component {
 
 
 	render() {
-		console.log(this.props);
+		console.log(this.props.attackFilters);
 		return(
 			<div className="frame-data-container">
-				<FilterByContainer filterName="High Attacks" filterFn={isHighAttack} />
-				<RemoveFilterByContainer filterName="Remove High Filter" filterFn={isHighAttack} />
+				 <FilterButtonContainer filterName="High Attacks" filterFn={isHighAttack} activeFilters={this.props.attackFilters} />
+				 <FilterButtonContainer filterName="Low Attacks" filterFn={isLowAttack} activeFilters={this.props.attackFilters}/>
 					<h2>Frame Data</h2>
 					<div className="input-container">
 						<select onChange={(event) => this.handleChange(event)}>
@@ -171,10 +165,12 @@ function filteredAttacks(state) {
 const mapStateToProps = function(state) {
     let { frameData, character} = state.characterData;
     let { filter, searchFilter, attackFilters } = state;
+
     return {
         character,
         filter,
         searchFilter,
+				attackFilters,
 				//array of attacks after being filtered
 				filteredData: filteredAttacks(state)
     }
@@ -184,9 +180,8 @@ const mapStateToProps = function(state) {
 const mapDispatchToProps = function(dispatch) {
 	return {
 		dispatch,
-		//binding addFilter and removeFilter to props
-		addFilter,
-		removeFilter
+		//binding toggleFilter
+		toggleFilter
 	 };
 }
 
