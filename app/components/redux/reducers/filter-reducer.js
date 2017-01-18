@@ -1,28 +1,21 @@
 
 import {
-	TOGGLE_HIGH_CRUSH_ATTACKS
+	ADD_ATTACK_FILTER,
+	REMOVE_ATTACK_FILTER,
+	TOGGLE_ATTACK_FILTER
+
 } from '../actions/actionCreators';
 
-const initialState = {
-	highCrush: false,
-	lowCrush: false,
-	advantage: false,
-	disadvantage: false,
+
+export function attackFilters (state = [], action) {
+  let { type, payload } = action
+  switch (type) {
+    case 'TOGGLE_ATTACK_FILTER':
+		function actionFinder(a) {
+			return a == payload
+		}
+      // if the function exists in the store, remove it, otherwise add it:
+      return state.find(actionFinder) ? state.filter(f => f !== payload) : state.concat(payload)
+  }
+  return state
 }
-
-function filter(state = initialState, action) {
-	switch (action.type) {
-		case 'SET_VISIBILITY_FILTER':
-			return action.filter
-		default:
-			return state
-
-			case 'TOGGLE_HIGH_CRUSH_ATTACKS':
-			console.log('toggling high crush attacks', action.filter);
-			return Object.assign({}, state, {
-				highCrush: action.filter
-			})
-	}
-}
-
-export default filter;

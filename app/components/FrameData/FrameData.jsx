@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 /* component dependencies */
 import CharacterSelect from './CharacterSelect';
@@ -9,14 +10,31 @@ import SearchBar from './../SearchBar/SearchBar';
 import SearchInput, {createFilter} from 'react-search-input';
 import Categories from './../Categories/Categories';
 import PracticalAttacks from './PracticalAttacks';
+import { isHighAttack, isLowAttack } from './filters';
 
 /* dispatch actions */
 import { fetchCharacterData } from '../redux/actions/character-data-action';
 import { updateSearchFilter } from '../redux/actions/search-filter-action';
-import { toggleHighCrush } from '../redux/actions/filter-action';
+import { toggleFilter } from '../redux/actions/filter-action';
+
 
 /* json list of characters (MOVE TO AN API CALL IN FUTURE)*/
 import selectOptions from '../../json/characters';
+
+
+function FilterButton({filterName, filterFn, toggleFilter, activeFilters}) {
+	function filterFinder(f) {
+		console.log(f)
+		return f == filterFn
+	}
+	return (
+		<button onClick={() => toggleFilter(filterFn)}>{filterName} {activeFilters.find(filterFinder) ? 'active' : 'inactive'}</button>
+	)
+}
+
+
+const FilterButtonContainer = connect(() => ({}), { toggleFilter })(FilterButton);
+
 
 class FrameData extends React.Component {
 
@@ -30,13 +48,12 @@ class FrameData extends React.Component {
 			onHitCheckbox: true,
 			onCHcheckbox: true
 		}
-		this.frameDataFilter = this.props.frameData;
+		this.frameDataFilter = this.props.filteredData;
 	}
 
 	componentWillReceiveProps(nextProps) {
-	  let nextFrameData = nextProps.frameData.slice()
+	  let nextFrameData = nextProps.filteredData.slice()
 
-	  nextFrameData = this.categoryFilterList(nextProps.filter, nextFrameData);
 	  nextFrameData = this.searchFilterList(nextProps.searchFilter.searchFilter, nextFrameData);
 
 	  this.frameDataFilter = nextFrameData;
@@ -46,6 +63,7 @@ class FrameData extends React.Component {
 		const character = event.target.value;
 		this.props.dispatch( fetchCharacterData(event.target.value) );
 	}
+
 
 	renderCharacterSelectOptions(options = []) {
 		return options.map((name, key) => {
@@ -57,6 +75,7 @@ class FrameData extends React.Component {
 			)
 		})
 	}
+
 
 	renderFrameData(data = []) {
 		{
@@ -72,6 +91,7 @@ class FrameData extends React.Component {
 						onHit={move.on_hit}
 						onCH={move.on_ch}
 						checkBoxStates={this.state}
+						filter={this.props.filter}
 					/>
 				);
 			})
@@ -81,11 +101,6 @@ class FrameData extends React.Component {
 	hideColumnToggle(event) {
 		let checkboxName = event.target.name;
 		this.setState({[checkboxName]: this.state[checkboxName] ? false : true});
-	}
-
-	toggleHighCrush = () => {
-		let highCrushFilter = this.props.filter.highCrush;
-		this.props.dispatch( toggleHighCrush(highCrushFilter ? false : true) );
 	}
 
 	searchDispatcher(event) {
@@ -102,24 +117,13 @@ class FrameData extends React.Component {
 	return updatedList;
 	}
 
-	categoryFilterList(filterStates, frameData) {
-		let updatedList = frameData;
-		if(filterStates.highCrush == true) {
-			updatedList = updatedList.filter(function(move) {
-				let highCrushing = move.hit_level.search('TC');
-				return highCrushing !== -1
-			});
-		} else {
-			return updatedList;
-		}
-		return updatedList;
-	}
 
 	render() {
-		const { frameData } = this.props;
+		console.log(this.props.attackFilters);
 		return(
 			<div className="frame-data-container">
-				<button onClick={this.toggleHighCrush}>Test Button</button>
+				 <FilterButtonContainer filterName="High Attacks" filterFn={isHighAttack} activeFilters={this.props.attackFilters} />
+				 <FilterButtonContainer filterName="Low Attacks" filterFn={isLowAttack} activeFilters={this.props.attackFilters}/>
 					<h2>Frame Data</h2>
 					<div className="input-container">
 						<select onChange={(event) => this.handleChange(event)}>
@@ -150,17 +154,35 @@ class FrameData extends React.Component {
 	}
 }
 
-const mapStateToProps = function(state) {
-	return {
-		frameData: state.characterData.frameData,
-		character: state.characterData.character,
-		filter: state.filter,
-		searchFilter: state.searchFilter
-	}
+//apply each filter in the attackFilters array to every attack
+function filteredAttacks(state) {
+	let { attackFilters } = state;
+	let { frameData } = state.characterData;
+	return frameData.filter(attack => attackFilters.every(filter => filter(attack)));
 }
 
+
+const mapStateToProps = function(state) {
+    let { frameData, character} = state.characterData;
+    let { filter, searchFilter, attackFilters } = state;
+
+    return {
+        character,
+        filter,
+        searchFilter,
+				attackFilters,
+				//array of attacks after being filtered
+				filteredData: filteredAttacks(state)
+    }
+}
+
+
 const mapDispatchToProps = function(dispatch) {
-	return { dispatch };
+	return {
+		dispatch,
+		//binding toggleFilter
+		toggleFilter
+	 };
 }
 
 export default connect( mapStateToProps, mapDispatchToProps )(FrameData);

@@ -8,18 +8,15 @@ const initialState = {
 }
 
 function searchFilter(state = initialState, action) {
+  console.log(action);
   switch (action.type) {
-  case 'SET_SEARCH_FILTER':
-    return action.filter
-  default:
-    return state
-
     case 'UPDATE_SEARCH_FILTER':
     console.log('updateSearchFilter', action.text);
     return Object.assign({}, state, {
       searchFilter: action.text
     })
   }
+  return state;
 }
 
 export default searchFilter;

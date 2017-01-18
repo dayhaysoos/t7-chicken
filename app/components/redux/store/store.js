@@ -16,22 +16,6 @@ export const defaultState = {
 	frameData: frameDataJSON
 };
 
-/**
-  DATA DIAGRAM
-  ------------
-
-  {
-    characterData: {
-      frameData: (array)[],
-      metaData: (object){},
-      characterName: (string)""
-    }
-  }
-  
-**/
-
-
-
 const store = createStore(rootReducer, applyMiddleware(thunk, loggerMiddleware));
 
 export const history = syncHistoryWithStore(browserHistory, store);
