@@ -1,7 +1,5 @@
 
 import {
-	ADD_ATTACK_FILTER,
-	REMOVE_ATTACK_FILTER,
 	TOGGLE_ATTACK_FILTER
 
 } from '../actions/actionCreators';
